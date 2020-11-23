@@ -1,0 +1,17 @@
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.Init.resources
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.deleteprototype.resources
+C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.updateprototype.resources
