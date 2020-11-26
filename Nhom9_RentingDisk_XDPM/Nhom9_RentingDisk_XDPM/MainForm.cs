@@ -18,9 +18,14 @@ namespace Nhom9_RentingDisk_XDPM
 
         }
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private void lb_Title_Click(object sender, EventArgs e)
         {
-
+            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+           .ToList().ForEach(x => x.Close());
+            TitleForm titleForm = new TitleForm();
+            titleForm.TopLevel = false;
+            titleForm.Parent = pnl_FormConnect;
+            titleForm.Show();
         }
 
         private void bunifuCustomLabel1_Click(object sender, EventArgs e)
@@ -55,6 +60,16 @@ namespace Nhom9_RentingDisk_XDPM
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lb_Customer_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+              .ToList().ForEach(x => x.Close());
+            CustomerForm CF = new CustomerForm();
+            CF.TopLevel = false;
+            CF.Parent = pnl_FormConnect;
+            CF.Show();
         }
     }
 }
