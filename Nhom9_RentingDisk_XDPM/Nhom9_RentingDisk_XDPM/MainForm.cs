@@ -46,7 +46,7 @@ namespace Nhom9_RentingDisk_XDPM
         private void Form1_Load(object sender, EventArgs e)
         {
             lb_CD.BackColor = Color.FromArgb(26, 32, 40);
-            lb_Customer.BackColor = Color.FromArgb(26, 32, 40);
+            btn_KhachHang.BackColor = Color.FromArgb(26, 32, 40);
             lb_Report.BackColor = Color.FromArgb(26, 32, 40);
             lb_Title.BackColor = Color.FromArgb(26, 32, 40);
             //TitleLogo.BackColor = 
@@ -70,6 +70,71 @@ namespace Nhom9_RentingDisk_XDPM
             CF.TopLevel = false;
             CF.Parent = pnl_FormConnect;
             CF.Show();
+        }
+
+        private void btn_Menu_Click(object sender, EventArgs e)
+        {
+            if(pnl_MenuOption.Width == 200)
+            {
+                pnl_MenuOption.Width = 50;
+            }
+            else
+            {
+                pnl_MenuOption.Width = 200;
+            }    
+        }
+
+        private void lb_CD_Click(object sender, EventArgs e)
+        {
+            if(pnl_CD_DVD.Visible == true)
+            {
+                pnl_CD_DVD.Visible = false;
+
+            }    
+            else
+            {
+                pnl_CD_DVD.Visible = true;
+            }    
+        }
+
+        private void btn_ThueDVD_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+              .ToList().ForEach(x => x.Close());
+            RentingForm rentForm = new RentingForm();
+            rentForm.TopLevel = false;
+            rentForm.Parent = pnl_FormConnect;
+            rentForm.Show();
+        }
+
+        private void btn_TraDVD_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+              .ToList().ForEach(x => x.Close());
+            ReturnDVDForm returnDVDForm = new ReturnDVDForm();
+            returnDVDForm.TopLevel = false;
+            returnDVDForm.Parent = pnl_FormConnect;
+            returnDVDForm.Show();
+        }
+
+        private void btn_DatVD_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+              .ToList().ForEach(x => x.Close());
+            ReservationForm reservationForm = new ReservationForm();
+            reservationForm.TopLevel = false;
+            reservationForm.Parent = pnl_FormConnect;
+            reservationForm.Show();
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+              .ToList().ForEach(x => x.Close());
+            LoginForm loginForm = new LoginForm();
+            loginForm.TopLevel = false;
+            loginForm.Parent = pnl_FormConnect;
+            loginForm.Show();
         }
     }
 }

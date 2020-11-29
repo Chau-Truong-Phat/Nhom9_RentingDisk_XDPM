@@ -30,25 +30,24 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_Search_KhachHang = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_DatHang = new Bunifu.Framework.UI.BunifuTileButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Location = new System.Drawing.Point(12, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 395);
+            this.panel1.Size = new System.Drawing.Size(776, 361);
             this.panel1.TabIndex = 15;
             // 
             // txt_Search_KhachHang
             // 
-            this.txt_Search_KhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Search_KhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Search_KhachHang.Depth = 0;
             this.txt_Search_KhachHang.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -65,24 +64,9 @@
             this.txt_Search_KhachHang.Text = "Nhập ID hoặc số điện thoại khách hàng";
             this.txt_Search_KhachHang.UseSystemPasswordChar = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
             // btn_DatHang
             // 
-            this.btn_DatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_DatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_DatHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_DatHang.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btn_DatHang.colorActive = System.Drawing.Color.Blue;
@@ -95,10 +79,40 @@
             this.btn_DatHang.LabelPosition = 22;
             this.btn_DatHang.LabelText = "Đặt hàng";
             this.btn_DatHang.Location = new System.Drawing.Point(639, 11);
-            this.btn_DatHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DatHang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DatHang.Name = "btn_DatHang";
             this.btn_DatHang.Size = new System.Drawing.Size(150, 23);
             this.btn_DatHang.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Back.FlatAppearance.BorderSize = 0;
+            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
+            this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Back.Location = new System.Drawing.Point(12, 410);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(150, 32);
+            this.btn_Back.TabIndex = 20;
+            this.btn_Back.Text = "          Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // ReservationForm
             // 
@@ -107,6 +121,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.btn_DatHang);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_Search_KhachHang);
@@ -125,5 +140,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialSingleLineTextField txt_Search_KhachHang;
         private Bunifu.Framework.UI.BunifuTileButton btn_DatHang;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

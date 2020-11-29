@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_Search_IDDia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuCustomTextbox3 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.btnIMG_Delete = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnIMG_menu = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomTextbox2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -41,7 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_TraHang = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuCustomTextbox3 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -55,12 +56,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_Back);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txt_Search_IDDia);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(-4, 0);
+            this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(806, 450);
+            this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -68,7 +70,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -83,14 +85,14 @@
             this.txt_Search_IDDia.Depth = 0;
             this.txt_Search_IDDia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Search_IDDia.Hint = "";
-            this.txt_Search_IDDia.Location = new System.Drawing.Point(41, 14);
+            this.txt_Search_IDDia.Location = new System.Drawing.Point(29, 3);
             this.txt_Search_IDDia.MouseState = MaterialSkin.MouseState.HOVER;
             this.txt_Search_IDDia.Name = "txt_Search_IDDia";
             this.txt_Search_IDDia.PasswordChar = '\0';
             this.txt_Search_IDDia.SelectedText = "";
             this.txt_Search_IDDia.SelectionLength = 0;
             this.txt_Search_IDDia.SelectionStart = 0;
-            this.txt_Search_IDDia.Size = new System.Drawing.Size(440, 23);
+            this.txt_Search_IDDia.Size = new System.Drawing.Size(446, 23);
             this.txt_Search_IDDia.TabIndex = 17;
             this.txt_Search_IDDia.Text = "Hãy nhập mã đĩa ";
             this.txt_Search_IDDia.UseSystemPasswordChar = false;
@@ -109,10 +111,19 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btn_TraHang);
-            this.panel2.Location = new System.Drawing.Point(487, 0);
+            this.panel2.Location = new System.Drawing.Point(481, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(317, 448);
             this.panel2.TabIndex = 0;
+            // 
+            // bunifuCustomTextbox3
+            // 
+            this.bunifuCustomTextbox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuCustomTextbox3.BorderColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCustomTextbox3.Location = new System.Drawing.Point(7, 367);
+            this.bunifuCustomTextbox3.Name = "bunifuCustomTextbox3";
+            this.bunifuCustomTextbox3.Size = new System.Drawing.Size(304, 20);
+            this.bunifuCustomTextbox3.TabIndex = 4;
             // 
             // btnIMG_Delete
             // 
@@ -225,14 +236,22 @@
             this.btn_TraHang.Size = new System.Drawing.Size(305, 46);
             this.btn_TraHang.TabIndex = 0;
             // 
-            // bunifuCustomTextbox3
+            // btn_Back
             // 
-            this.bunifuCustomTextbox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCustomTextbox3.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox3.Location = new System.Drawing.Point(7, 367);
-            this.bunifuCustomTextbox3.Name = "bunifuCustomTextbox3";
-            this.bunifuCustomTextbox3.Size = new System.Drawing.Size(304, 20);
-            this.bunifuCustomTextbox3.TabIndex = 4;
+            this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Back.FlatAppearance.BorderSize = 0;
+            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
+            this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Back.Location = new System.Drawing.Point(3, 413);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(150, 32);
+            this.btn_Back.TabIndex = 19;
+            this.btn_Back.Text = "          Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
             // 
             // ReturnDVDForm
             // 
@@ -271,5 +290,6 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuImageButton btnIMG_Delete;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox3;
+        private System.Windows.Forms.Button btn_Back;
     }
 }
