@@ -204,6 +204,7 @@
             this.btn_DatVD.ButtonText = "Đặt CD/DVD";
             this.btn_DatVD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_DatVD.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_DatVD.ForeColor = System.Drawing.Color.White;
             this.btn_DatVD.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_DatVD.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_DatVD.Iconimage")));
             this.btn_DatVD.Iconimage_right = null;
