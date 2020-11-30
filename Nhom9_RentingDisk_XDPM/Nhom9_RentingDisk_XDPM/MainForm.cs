@@ -74,27 +74,27 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void btn_Menu_Click(object sender, EventArgs e)
         {
-            if(pnl_MenuOption.Width == 200)
+            if (pnl_MenuOption.Width == 200)
             {
                 pnl_MenuOption.Width = 50;
             }
             else
             {
                 pnl_MenuOption.Width = 200;
-            }    
+            }
         }
 
         private void lb_CD_Click(object sender, EventArgs e)
         {
-            if(pnl_CD_DVD.Visible == true)
+            if (pnl_CD_DVD.Visible == true)
             {
                 pnl_CD_DVD.Visible = false;
 
-            }    
+            }
             else
             {
                 pnl_CD_DVD.Visible = true;
-            }    
+            }
         }
 
         private void btn_ThueDVD_Click(object sender, EventArgs e)
@@ -125,16 +125,6 @@ namespace Nhom9_RentingDisk_XDPM
             reservationForm.TopLevel = false;
             reservationForm.Parent = pnl_FormConnect;
             reservationForm.Show();
-        }
-
-        private void btn_Login_Click(object sender, EventArgs e)
-        {
-            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
-              .ToList().ForEach(x => x.Close());
-            LoginForm loginForm = new LoginForm();
-            loginForm.TopLevel = false;
-            loginForm.Parent = pnl_FormConnect;
-            loginForm.Show();
         }
     }
 }
