@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Nhom9_RentingDisk_XDPM
 {
-    public partial class TitleForm_UpdatePrice : Form
+    public partial class ReportTitleForm : Form
     {
-        public TitleForm_UpdatePrice()
+        public ReportTitleForm()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btn_back_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

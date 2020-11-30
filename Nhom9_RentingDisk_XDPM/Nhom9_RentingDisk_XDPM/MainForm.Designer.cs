@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnl_MenuOption = new System.Windows.Forms.Panel();
+            this.lb_Title = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lb_Report = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_KhachHang = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnl_CD_DVD = new System.Windows.Forms.Panel();
             this.btn_ThueDVD = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_DatVD = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -40,9 +43,6 @@
             this.btn_Menu = new Bunifu.Framework.UI.BunifuImageButton();
             this.TitleLogo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_KhachHang = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lb_Report = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lb_Title = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -50,18 +50,22 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_FormConnect = new System.Windows.Forms.Panel();
             this.bunifuColorTransition1 = new Bunifu.Framework.UI.BunifuColorTransition(this.components);
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnl_MenuOption.SuspendLayout();
             this.pnl_CD_DVD.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_MenuOption
             // 
             this.pnl_MenuOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.pnl_MenuOption.Controls.Add(this.lb_Title);
+            this.pnl_MenuOption.Controls.Add(this.bunifuGradientPanel1);
             this.pnl_MenuOption.Controls.Add(this.lb_Report);
             this.pnl_MenuOption.Controls.Add(this.btn_KhachHang);
             this.pnl_MenuOption.Controls.Add(this.pnl_CD_DVD);
@@ -72,6 +76,115 @@
             this.pnl_MenuOption.Name = "pnl_MenuOption";
             this.pnl_MenuOption.Size = new System.Drawing.Size(200, 699);
             this.pnl_MenuOption.TabIndex = 0;
+            // 
+            // lb_Title
+            // 
+            this.lb_Title.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.lb_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.lb_Title.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lb_Title.BorderRadius = 0;
+            this.lb_Title.ButtonText = "      TỰA CD / DVD";
+            this.lb_Title.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_Title.DisabledColor = System.Drawing.Color.White;
+            this.lb_Title.ForeColor = System.Drawing.Color.Black;
+            this.lb_Title.Iconcolor = System.Drawing.Color.Transparent;
+            this.lb_Title.Iconimage = ((System.Drawing.Image)(resources.GetObject("lb_Title.Iconimage")));
+            this.lb_Title.Iconimage_right = null;
+            this.lb_Title.Iconimage_right_Selected = null;
+            this.lb_Title.Iconimage_Selected = null;
+            this.lb_Title.IconMarginLeft = 2;
+            this.lb_Title.IconMarginRight = 0;
+            this.lb_Title.IconRightVisible = true;
+            this.lb_Title.IconRightZoom = 0D;
+            this.lb_Title.IconVisible = true;
+            this.lb_Title.IconZoom = 90D;
+            this.lb_Title.IsTab = false;
+            this.lb_Title.Location = new System.Drawing.Point(0, 6);
+            this.lb_Title.Name = "lb_Title";
+            this.lb_Title.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.lb_Title.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lb_Title.OnHoverTextColor = System.Drawing.Color.Black;
+            this.lb_Title.selected = false;
+            this.lb_Title.Size = new System.Drawing.Size(200, 52);
+            this.lb_Title.TabIndex = 4;
+            this.lb_Title.Text = "      TỰA CD / DVD";
+            this.lb_Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_Title.Textcolor = System.Drawing.Color.Black;
+            this.lb_Title.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Title.Click += new System.EventHandler(this.lb_Title_Click);
+            // 
+            // lb_Report
+            // 
+            this.lb_Report.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.lb_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.lb_Report.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lb_Report.BorderRadius = 0;
+            this.lb_Report.ButtonText = "      BÁO CÁO";
+            this.lb_Report.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_Report.DisabledColor = System.Drawing.Color.Gray;
+            this.lb_Report.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lb_Report.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.lb_Report.Iconcolor = System.Drawing.Color.Transparent;
+            this.lb_Report.Iconimage = ((System.Drawing.Image)(resources.GetObject("lb_Report.Iconimage")));
+            this.lb_Report.Iconimage_right = null;
+            this.lb_Report.Iconimage_right_Selected = null;
+            this.lb_Report.Iconimage_Selected = null;
+            this.lb_Report.IconMarginLeft = 0;
+            this.lb_Report.IconMarginRight = 0;
+            this.lb_Report.IconRightVisible = true;
+            this.lb_Report.IconRightZoom = 0D;
+            this.lb_Report.IconVisible = true;
+            this.lb_Report.IconZoom = 90D;
+            this.lb_Report.IsTab = false;
+            this.lb_Report.Location = new System.Drawing.Point(0, 311);
+            this.lb_Report.Name = "lb_Report";
+            this.lb_Report.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.lb_Report.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lb_Report.OnHoverTextColor = System.Drawing.Color.Black;
+            this.lb_Report.selected = false;
+            this.lb_Report.Size = new System.Drawing.Size(200, 50);
+            this.lb_Report.TabIndex = 5;
+            this.lb_Report.Text = "      BÁO CÁO";
+            this.lb_Report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_Report.Textcolor = System.Drawing.Color.Black;
+            this.lb_Report.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btn_KhachHang
+            // 
+            this.btn_KhachHang.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.btn_KhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.btn_KhachHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_KhachHang.BorderRadius = 0;
+            this.btn_KhachHang.ButtonText = "      KHÁCH HÀNG";
+            this.btn_KhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_KhachHang.DisabledColor = System.Drawing.Color.White;
+            this.btn_KhachHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_KhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.btn_KhachHang.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_KhachHang.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_KhachHang.Iconimage")));
+            this.btn_KhachHang.Iconimage_right = null;
+            this.btn_KhachHang.Iconimage_right_Selected = null;
+            this.btn_KhachHang.Iconimage_Selected = null;
+            this.btn_KhachHang.IconMarginLeft = 2;
+            this.btn_KhachHang.IconMarginRight = 0;
+            this.btn_KhachHang.IconRightVisible = true;
+            this.btn_KhachHang.IconRightZoom = 0D;
+            this.btn_KhachHang.IconVisible = true;
+            this.btn_KhachHang.IconZoom = 90D;
+            this.btn_KhachHang.IsTab = false;
+            this.btn_KhachHang.Location = new System.Drawing.Point(0, 259);
+            this.btn_KhachHang.Name = "btn_KhachHang";
+            this.btn_KhachHang.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.btn_KhachHang.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_KhachHang.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btn_KhachHang.selected = false;
+            this.btn_KhachHang.Size = new System.Drawing.Size(200, 52);
+            this.btn_KhachHang.TabIndex = 3;
+            this.btn_KhachHang.Text = "      KHÁCH HÀNG";
+            this.btn_KhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_KhachHang.Textcolor = System.Drawing.Color.Black;
+            this.btn_KhachHang.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_KhachHang.Click += new System.EventHandler(this.lb_Customer_Click);
             // 
             // pnl_CD_DVD
             // 
@@ -290,116 +403,6 @@
             this.label1.Text = "Renting Disk";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btn_KhachHang
-            // 
-            this.btn_KhachHang.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.btn_KhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.btn_KhachHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_KhachHang.BorderRadius = 0;
-            this.btn_KhachHang.ButtonText = "      KHÁCH HÀNG";
-            this.btn_KhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_KhachHang.DisabledColor = System.Drawing.Color.White;
-            this.btn_KhachHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_KhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.btn_KhachHang.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_KhachHang.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_KhachHang.Iconimage")));
-            this.btn_KhachHang.Iconimage_right = null;
-            this.btn_KhachHang.Iconimage_right_Selected = null;
-            this.btn_KhachHang.Iconimage_Selected = null;
-            this.btn_KhachHang.IconMarginLeft = 2;
-            this.btn_KhachHang.IconMarginRight = 0;
-            this.btn_KhachHang.IconRightVisible = true;
-            this.btn_KhachHang.IconRightZoom = 0D;
-            this.btn_KhachHang.IconVisible = true;
-            this.btn_KhachHang.IconZoom = 90D;
-            this.btn_KhachHang.IsTab = false;
-            this.btn_KhachHang.Location = new System.Drawing.Point(0, 259);
-            this.btn_KhachHang.Name = "btn_KhachHang";
-            this.btn_KhachHang.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.btn_KhachHang.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_KhachHang.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btn_KhachHang.selected = false;
-            this.btn_KhachHang.Size = new System.Drawing.Size(200, 52);
-            this.btn_KhachHang.TabIndex = 3;
-            this.btn_KhachHang.Text = "      KHÁCH HÀNG";
-            this.btn_KhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_KhachHang.Textcolor = System.Drawing.Color.Black;
-            this.btn_KhachHang.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KhachHang.Click += new System.EventHandler(this.lb_Customer_Click);
-            // 
-            // lb_Report
-            // 
-            this.lb_Report.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.lb_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.lb_Report.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lb_Report.BorderRadius = 0;
-            this.lb_Report.ButtonText = "      BÁO CÁO";
-            this.lb_Report.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_Report.DisabledColor = System.Drawing.Color.Gray;
-            this.lb_Report.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lb_Report.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.lb_Report.Iconcolor = System.Drawing.Color.Transparent;
-            this.lb_Report.Iconimage = ((System.Drawing.Image)(resources.GetObject("lb_Report.Iconimage")));
-            this.lb_Report.Iconimage_right = null;
-            this.lb_Report.Iconimage_right_Selected = null;
-            this.lb_Report.Iconimage_Selected = null;
-            this.lb_Report.IconMarginLeft = 0;
-            this.lb_Report.IconMarginRight = 0;
-            this.lb_Report.IconRightVisible = true;
-            this.lb_Report.IconRightZoom = 0D;
-            this.lb_Report.IconVisible = true;
-            this.lb_Report.IconZoom = 90D;
-            this.lb_Report.IsTab = false;
-            this.lb_Report.Location = new System.Drawing.Point(0, 311);
-            this.lb_Report.Name = "lb_Report";
-            this.lb_Report.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.lb_Report.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lb_Report.OnHoverTextColor = System.Drawing.Color.Black;
-            this.lb_Report.selected = false;
-            this.lb_Report.Size = new System.Drawing.Size(200, 50);
-            this.lb_Report.TabIndex = 5;
-            this.lb_Report.Text = "      BÁO CÁO";
-            this.lb_Report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lb_Report.Textcolor = System.Drawing.Color.Black;
-            this.lb_Report.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // lb_Title
-            // 
-            this.lb_Title.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.lb_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.lb_Title.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lb_Title.BorderRadius = 0;
-            this.lb_Title.ButtonText = "      TỰA CD / DVD";
-            this.lb_Title.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_Title.DisabledColor = System.Drawing.Color.White;
-            this.lb_Title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lb_Title.ForeColor = System.Drawing.Color.Black;
-            this.lb_Title.Iconcolor = System.Drawing.Color.Transparent;
-            this.lb_Title.Iconimage = ((System.Drawing.Image)(resources.GetObject("lb_Title.Iconimage")));
-            this.lb_Title.Iconimage_right = null;
-            this.lb_Title.Iconimage_right_Selected = null;
-            this.lb_Title.Iconimage_Selected = null;
-            this.lb_Title.IconMarginLeft = 2;
-            this.lb_Title.IconMarginRight = 0;
-            this.lb_Title.IconRightVisible = true;
-            this.lb_Title.IconRightZoom = 0D;
-            this.lb_Title.IconVisible = true;
-            this.lb_Title.IconZoom = 90D;
-            this.lb_Title.IsTab = false;
-            this.lb_Title.Location = new System.Drawing.Point(0, 361);
-            this.lb_Title.Name = "lb_Title";
-            this.lb_Title.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.lb_Title.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lb_Title.OnHoverTextColor = System.Drawing.Color.Black;
-            this.lb_Title.selected = false;
-            this.lb_Title.Size = new System.Drawing.Size(200, 52);
-            this.lb_Title.TabIndex = 4;
-            this.lb_Title.Text = "      TỰA CD / DVD";
-            this.lb_Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lb_Title.Textcolor = System.Drawing.Color.Black;
-            this.lb_Title.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Title.Click += new System.EventHandler(this.lb_Title_Click);
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -464,6 +467,36 @@
             this.bunifuColorTransition1.Color2 = System.Drawing.Color.White;
             this.bunifuColorTransition1.ProgessValue = 0;
             // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
+            this.bunifuGradientPanel1.Controls.Add(this.lb_Title);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 361);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(200, 100);
+            this.bunifuGradientPanel1.TabIndex = 18;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(162, 6);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(22, 33);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 5;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,6 +521,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -514,6 +549,8 @@
         private Bunifu.Framework.UI.BunifuColorTransition bunifuColorTransition1;
         private System.Windows.Forms.Panel pnl_CD_DVD;
         private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }
 

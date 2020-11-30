@@ -84,6 +84,18 @@
     <Compile Include="RentingForm.Designer.cs">
       <DependentUpon>RentingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportCustomerForm.Designer.cs">
+      <DependentUpon>ReportCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportTitleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportTitleForm.Designer.cs">
+      <DependentUpon>ReportTitleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReservationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,18 +113,6 @@
     </Compile>
     <Compile Include="TitleForm.Designer.cs">
       <DependentUpon>TitleForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TitleForm_AddTitle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TitleForm_AddTitle.Designer.cs">
-      <DependentUpon>TitleForm_AddTitle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TitleForm_UpdatePrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TitleForm_UpdatePrice.Designer.cs">
-      <DependentUpon>TitleForm_UpdatePrice.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
@@ -133,6 +133,12 @@
     <EmbeddedResource Include="RentingForm.resx">
       <DependentUpon>RentingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportCustomerForm.resx">
+      <DependentUpon>ReportCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportTitleForm.resx">
+      <DependentUpon>ReportTitleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,12 +147,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TitleForm.resx">
       <DependentUpon>TitleForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TitleForm_AddTitle.resx">
-      <DependentUpon>TitleForm_AddTitle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TitleForm_UpdatePrice.resx">
-      <DependentUpon>TitleForm_UpdatePrice.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

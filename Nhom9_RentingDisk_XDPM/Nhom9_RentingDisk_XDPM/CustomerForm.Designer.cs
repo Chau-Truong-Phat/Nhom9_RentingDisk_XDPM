@@ -29,249 +29,325 @@
         private void InitializeComponent()
         {
             this.pnl_customerInfo = new System.Windows.Forms.Panel();
-            this.btn_Back = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.mateneTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_customerName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_numberPhone = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_update_customer = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_detele_customer = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_add_customer = new Bunifu.Framework.UI.BunifuTileButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_search_customer = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_SDT = new System.Windows.Forms.TextBox();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.txt_DiaChi = new System.Windows.Forms.TextBox();
-            this.txt_HoTen = new System.Windows.Forms.TextBox();
-            this.btn_TraHang = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.dataGridView_customer = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_email = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_address = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker_BirthDate = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_back = new System.Windows.Forms.Button();
             this.pnl_customerInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_customer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_customerInfo
             // 
-            this.pnl_customerInfo.Controls.Add(this.btn_Back);
-            this.pnl_customerInfo.Controls.Add(this.listView1);
-            this.pnl_customerInfo.Controls.Add(this.pictureBox2);
-            this.pnl_customerInfo.Controls.Add(this.mateneTextField1);
+            this.pnl_customerInfo.Controls.Add(this.panel3);
+            this.pnl_customerInfo.Controls.Add(this.panel2);
+            this.pnl_customerInfo.Controls.Add(this.panel1);
             this.pnl_customerInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_customerInfo.Location = new System.Drawing.Point(0, 0);
             this.pnl_customerInfo.Name = "pnl_customerInfo";
             this.pnl_customerInfo.Size = new System.Drawing.Size(875, 660);
             this.pnl_customerInfo.TabIndex = 0;
             // 
-            // btn_Back
+            // panel1
             // 
-            this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Back.FlatAppearance.BorderSize = 0;
-            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
-            this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Back.Location = new System.Drawing.Point(13, 621);
-            this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(150, 32);
-            this.btn_Back.TabIndex = 5;
-            this.btn_Back.Text = "          Back";
-            this.btn_Back.UseVisualStyleBackColor = true;
-            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(13, 41);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(541, 559);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.materialLabel4);
+            this.panel1.Controls.Add(this.btn_back);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(875, 38);
+            this.panel1.TabIndex = 6;
             // 
-            // pictureBox2
+            // materialLabel4
             // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pictureBox2.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.materialLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(376, 9);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(86, 18);
+            this.materialLabel4.TabIndex = 18;
+            this.materialLabel4.Text = "Khách hàng";
+            this.materialLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // mateneTextField1
+            // label1
             // 
-            this.mateneTextField1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 20);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Số điện thoại";
+            // 
+            // txt_customerName
+            // 
+            this.txt_customerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_customerName.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txt_customerName.Location = new System.Drawing.Point(9, 32);
+            this.txt_customerName.Name = "txt_customerName";
+            this.txt_customerName.Size = new System.Drawing.Size(271, 20);
+            this.txt_customerName.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 20);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Tên khách hàng";
+            // 
+            // txt_numberPhone
+            // 
+            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_numberPhone.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txt_numberPhone.Location = new System.Drawing.Point(9, 78);
+            this.txt_numberPhone.Name = "txt_numberPhone";
+            this.txt_numberPhone.Size = new System.Drawing.Size(271, 20);
+            this.txt_numberPhone.TabIndex = 22;
+            // 
+            // btn_update_customer
+            // 
+            this.btn_update_customer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_update_customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_update_customer.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_update_customer.colorActive = System.Drawing.Color.Blue;
+            this.btn_update_customer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_update_customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update_customer.ForeColor = System.Drawing.Color.White;
+            this.btn_update_customer.Image = null;
+            this.btn_update_customer.ImagePosition = 20;
+            this.btn_update_customer.ImageZoom = 50;
+            this.btn_update_customer.LabelPosition = 27;
+            this.btn_update_customer.LabelText = "Sửa";
+            this.btn_update_customer.Location = new System.Drawing.Point(6, 575);
+            this.btn_update_customer.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_update_customer.Name = "btn_update_customer";
+            this.btn_update_customer.Size = new System.Drawing.Size(271, 31);
+            this.btn_update_customer.TabIndex = 24;
+            this.btn_update_customer.Click += new System.EventHandler(this.btn_update_customer_Click);
+            // 
+            // btn_detele_customer
+            // 
+            this.btn_detele_customer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_detele_customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_detele_customer.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_detele_customer.colorActive = System.Drawing.Color.Blue;
+            this.btn_detele_customer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_detele_customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_detele_customer.ForeColor = System.Drawing.Color.White;
+            this.btn_detele_customer.Image = null;
+            this.btn_detele_customer.ImagePosition = 20;
+            this.btn_detele_customer.ImageZoom = 50;
+            this.btn_detele_customer.LabelPosition = 27;
+            this.btn_detele_customer.LabelText = "Xóa";
+            this.btn_detele_customer.Location = new System.Drawing.Point(6, 532);
+            this.btn_detele_customer.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_detele_customer.Name = "btn_detele_customer";
+            this.btn_detele_customer.Size = new System.Drawing.Size(271, 31);
+            this.btn_detele_customer.TabIndex = 24;
+            // 
+            // btn_add_customer
+            // 
+            this.btn_add_customer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add_customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_add_customer.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_add_customer.colorActive = System.Drawing.Color.Blue;
+            this.btn_add_customer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add_customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_customer.ForeColor = System.Drawing.Color.White;
+            this.btn_add_customer.Image = null;
+            this.btn_add_customer.ImagePosition = 20;
+            this.btn_add_customer.ImageZoom = 50;
+            this.btn_add_customer.LabelPosition = 27;
+            this.btn_add_customer.LabelText = "Thêm";
+            this.btn_add_customer.Location = new System.Drawing.Point(6, 489);
+            this.btn_add_customer.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_add_customer.Name = "btn_add_customer";
+            this.btn_add_customer.Size = new System.Drawing.Size(271, 31);
+            this.btn_add_customer.TabIndex = 24;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mateneTextField1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.mateneTextField1.Depth = 0;
-            this.mateneTextField1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mateneTextField1.Hint = "";
-            this.mateneTextField1.Location = new System.Drawing.Point(38, 12);
-            this.mateneTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mateneTextField1.Name = "mateneTextField1";
-            this.mateneTextField1.PasswordChar = '\0';
-            this.mateneTextField1.SelectedText = "";
-            this.mateneTextField1.SelectionLength = 0;
-            this.mateneTextField1.SelectionStart = 0;
-            this.mateneTextField1.Size = new System.Drawing.Size(516, 23);
-            this.mateneTextField1.TabIndex = 0;
-            this.mateneTextField1.Text = "Nhập ID hoặc số điện thoại khách hàng";
-            this.mateneTextField1.UseSystemPasswordChar = false;
+            this.panel3.Controls.Add(this.dateTimePicker_BirthDate);
+            this.panel3.Controls.Add(this.btn_add_customer);
+            this.panel3.Controls.Add(this.btn_detele_customer);
+            this.panel3.Controls.Add(this.btn_update_customer);
+            this.panel3.Controls.Add(this.txt_address);
+            this.panel3.Controls.Add(this.txt_email);
+            this.panel3.Controls.Add(this.txt_numberPhone);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txt_customerName);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(590, 42);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(285, 618);
+            this.panel3.TabIndex = 8;
+            // 
+            // txt_search_customer
+            // 
+            this.txt_search_customer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_search_customer.Depth = 0;
+            this.txt_search_customer.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search_customer.Hint = "Nhập ID hoặc số điện thoại khách hàng";
+            this.txt_search_customer.Location = new System.Drawing.Point(31, 6);
+            this.txt_search_customer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_search_customer.Name = "txt_search_customer";
+            this.txt_search_customer.PasswordChar = '\0';
+            this.txt_search_customer.SelectedText = "";
+            this.txt_search_customer.SelectionLength = 0;
+            this.txt_search_customer.SelectionStart = 0;
+            this.txt_search_customer.Size = new System.Drawing.Size(554, 23);
+            this.txt_search_customer.TabIndex = 18;
+            this.txt_search_customer.UseSystemPasswordChar = false;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.bunifuTileButton2);
-            this.panel2.Controls.Add(this.bunifuTileButton1);
-            this.panel2.Controls.Add(this.btn_TraHang);
-            this.panel2.Controls.Add(this.txt_SDT);
-            this.panel2.Controls.Add(this.materialLabel2);
-            this.panel2.Controls.Add(this.materialLabel3);
-            this.panel2.Controls.Add(this.materialLabel1);
-            this.panel2.Controls.Add(this.txt_DiaChi);
-            this.panel2.Controls.Add(this.txt_HoTen);
-            this.panel2.Location = new System.Drawing.Point(560, 0);
+            this.panel2.Controls.Add(this.dataGridView_customer);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.txt_search_customer);
+            this.panel2.Location = new System.Drawing.Point(0, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 660);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(590, 618);
+            this.panel2.TabIndex = 7;
             // 
-            // txt_SDT
+            // dataGridView_customer
             // 
-            this.txt_SDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_SDT.BackColor = System.Drawing.Color.Silver;
-            this.txt_SDT.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SDT.Location = new System.Drawing.Point(19, 90);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(284, 27);
-            this.txt_SDT.TabIndex = 19;
+            this.dataGridView_customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_customer.Location = new System.Drawing.Point(4, 34);
+            this.dataGridView_customer.Name = "dataGridView_customer";
+            this.dataGridView_customer.Size = new System.Drawing.Size(580, 572);
+            this.dataGridView_customer.TabIndex = 20;
             // 
-            // materialLabel2
+            // label3
             // 
-            this.materialLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(15, 68);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(98, 19);
-            this.materialLabel2.TabIndex = 16;
-            this.materialLabel2.Text = "Số điện thoại";
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Email";
             // 
-            // materialLabel3
+            // txt_email
             // 
-            this.materialLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(15, 120);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(55, 19);
-            this.materialLabel3.TabIndex = 15;
-            this.materialLabel3.Text = "Địa chỉ";
+            this.txt_email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_email.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txt_email.Location = new System.Drawing.Point(9, 124);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(271, 20);
+            this.txt_email.TabIndex = 22;
             // 
-            // materialLabel1
+            // label4
             // 
-            this.materialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(15, 16);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(54, 19);
-            this.materialLabel1.TabIndex = 17;
-            this.materialLabel1.Text = "Họ tên";
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Địa chỉ";
             // 
-            // txt_DiaChi
+            // txt_address
             // 
-            this.txt_DiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DiaChi.BackColor = System.Drawing.Color.Silver;
-            this.txt_DiaChi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DiaChi.Location = new System.Drawing.Point(19, 142);
-            this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(284, 27);
-            this.txt_DiaChi.TabIndex = 18;
+            this.txt_address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_address.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txt_address.Location = new System.Drawing.Point(9, 170);
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(271, 20);
+            this.txt_address.TabIndex = 22;
             // 
-            // txt_HoTen
+            // label5
             // 
-            this.txt_HoTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_HoTen.BackColor = System.Drawing.Color.Silver;
-            this.txt_HoTen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_HoTen.Location = new System.Drawing.Point(19, 38);
-            this.txt_HoTen.Name = "txt_HoTen";
-            this.txt_HoTen.Size = new System.Drawing.Size(284, 27);
-            this.txt_HoTen.TabIndex = 20;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 193);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Ngày sinh";
             // 
-            // btn_TraHang
+            // dateTimePicker_BirthDate
             // 
-            this.btn_TraHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TraHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_TraHang.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_TraHang.colorActive = System.Drawing.Color.Blue;
-            this.btn_TraHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TraHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TraHang.ForeColor = System.Drawing.Color.White;
-            this.btn_TraHang.Image = null;
-            this.btn_TraHang.ImagePosition = 17;
-            this.btn_TraHang.ImageZoom = 50;
-            this.btn_TraHang.LabelPosition = 25;
-            this.btn_TraHang.LabelText = "Thêm";
-            this.btn_TraHang.Location = new System.Drawing.Point(18, 612);
-            this.btn_TraHang.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_TraHang.Name = "btn_TraHang";
-            this.btn_TraHang.Size = new System.Drawing.Size(285, 30);
-            this.btn_TraHang.TabIndex = 21;
+            this.dateTimePicker_BirthDate.Location = new System.Drawing.Point(10, 217);
+            this.dateTimePicker_BirthDate.Name = "dateTimePicker_BirthDate";
+            this.dateTimePicker_BirthDate.Size = new System.Drawing.Size(270, 20);
+            this.dateTimePicker_BirthDate.TabIndex = 25;
             // 
-            // bunifuTileButton1
+            // pictureBox1
             // 
-            this.bunifuTileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuTileButton1.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.Blue;
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = null;
-            this.bunifuTileButton1.ImagePosition = 17;
-            this.bunifuTileButton1.ImageZoom = 50;
-            this.bunifuTileButton1.LabelPosition = 25;
-            this.bunifuTileButton1.LabelText = "Xóa";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(19, 572);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(285, 30);
-            this.bunifuTileButton1.TabIndex = 21;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
-            // bunifuTileButton2
+            // btn_back
             // 
-            this.bunifuTileButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTileButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuTileButton2.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuTileButton2.colorActive = System.Drawing.Color.Blue;
-            this.bunifuTileButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTileButton2.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton2.Image = null;
-            this.bunifuTileButton2.ImagePosition = 17;
-            this.bunifuTileButton2.ImageZoom = 50;
-            this.bunifuTileButton2.LabelPosition = 25;
-            this.bunifuTileButton2.LabelText = "Sửa";
-            this.bunifuTileButton2.Location = new System.Drawing.Point(19, 532);
-            this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuTileButton2.Name = "bunifuTileButton2";
-            this.bunifuTileButton2.Size = new System.Drawing.Size(285, 30);
-            this.bunifuTileButton2.TabIndex = 21;
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.FlatAppearance.BorderSize = 0;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
+            this.btn_back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_back.Location = new System.Drawing.Point(3, 1);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(150, 32);
+            this.btn_back.TabIndex = 5;
+            this.btn_back.Text = "          Back";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // CustomerForm
             // 
@@ -279,16 +355,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(875, 660);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_customerInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerForm";
             this.Text = "CustomerForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnl_customerInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_customer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,19 +375,26 @@
         #endregion
 
         private System.Windows.Forms.Panel pnl_customerInfo;
-        private MaterialSkin.Controls.MaterialSingleLineTextField mateneTextField1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button btn_Back;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private System.Windows.Forms.Panel panel3;
+        private Bunifu.Framework.UI.BunifuTileButton btn_add_customer;
+        private Bunifu.Framework.UI.BunifuTileButton btn_detele_customer;
+        private Bunifu.Framework.UI.BunifuTileButton btn_update_customer;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txt_numberPhone;
+        private System.Windows.Forms.Label label2;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txt_customerName;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txt_SDT;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.TextBox txt_DiaChi;
-        private System.Windows.Forms.TextBox txt_HoTen;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton2;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
-        private Bunifu.Framework.UI.BunifuTileButton btn_TraHang;
+        private System.Windows.Forms.DataGridView dataGridView_customer;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_search_customer;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_BirthDate;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txt_address;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txt_email;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

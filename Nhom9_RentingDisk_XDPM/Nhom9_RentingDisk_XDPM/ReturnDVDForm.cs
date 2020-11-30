@@ -21,5 +21,10 @@ namespace Nhom9_RentingDisk_XDPM
         {
 
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
