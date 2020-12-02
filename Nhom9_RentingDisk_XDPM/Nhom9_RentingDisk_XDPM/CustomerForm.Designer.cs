@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.pnl_customerInfo = new System.Windows.Forms.Panel();
+            this.pnl_searchItem = new System.Windows.Forms.Panel();
+            this.txt_searchItem = new System.Windows.Forms.TextBox();
             this.btn_Back = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.mateneTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_updateCustomer = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_deleteCustomer = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_addCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.txt_SDT = new System.Windows.Forms.TextBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.txt_HoTen = new System.Windows.Forms.TextBox();
-            this.btn_TraHang = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
             this.pnl_customerInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -50,15 +51,38 @@
             // 
             // pnl_customerInfo
             // 
+            this.pnl_customerInfo.Controls.Add(this.pnl_searchItem);
+            this.pnl_customerInfo.Controls.Add(this.txt_searchItem);
             this.pnl_customerInfo.Controls.Add(this.btn_Back);
             this.pnl_customerInfo.Controls.Add(this.listView1);
             this.pnl_customerInfo.Controls.Add(this.pictureBox2);
-            this.pnl_customerInfo.Controls.Add(this.mateneTextField1);
             this.pnl_customerInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_customerInfo.Location = new System.Drawing.Point(0, 0);
             this.pnl_customerInfo.Name = "pnl_customerInfo";
             this.pnl_customerInfo.Size = new System.Drawing.Size(875, 660);
             this.pnl_customerInfo.TabIndex = 0;
+            // 
+            // pnl_searchItem
+            // 
+            this.pnl_searchItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_searchItem.BackColor = System.Drawing.Color.DarkGray;
+            this.pnl_searchItem.Location = new System.Drawing.Point(30, 38);
+            this.pnl_searchItem.Name = "pnl_searchItem";
+            this.pnl_searchItem.Size = new System.Drawing.Size(468, 1);
+            this.pnl_searchItem.TabIndex = 23;
+            // 
+            // txt_searchItem
+            // 
+            this.txt_searchItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_searchItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_searchItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_searchItem.Location = new System.Drawing.Point(30, 18);
+            this.txt_searchItem.Multiline = true;
+            this.txt_searchItem.Name = "txt_searchItem";
+            this.txt_searchItem.Size = new System.Drawing.Size(468, 22);
+            this.txt_searchItem.TabIndex = 22;
             // 
             // btn_Back
             // 
@@ -68,9 +92,9 @@
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
+            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.double_left_26px;
             this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Back.Location = new System.Drawing.Point(13, 621);
+            this.btn_Back.Location = new System.Drawing.Point(0, 628);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(150, 32);
             this.btn_Back.TabIndex = 5;
@@ -85,9 +109,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(13, 41);
+            this.listView1.Location = new System.Drawing.Point(13, 90);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(541, 559);
+            this.listView1.Size = new System.Drawing.Size(541, 510);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -96,50 +120,89 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox2.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 18);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(21, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // mateneTextField1
-            // 
-            this.mateneTextField1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mateneTextField1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.mateneTextField1.Depth = 0;
-            this.mateneTextField1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mateneTextField1.Hint = "";
-            this.mateneTextField1.Location = new System.Drawing.Point(38, 12);
-            this.mateneTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mateneTextField1.Name = "mateneTextField1";
-            this.mateneTextField1.PasswordChar = '\0';
-            this.mateneTextField1.SelectedText = "";
-            this.mateneTextField1.SelectionLength = 0;
-            this.mateneTextField1.SelectionStart = 0;
-            this.mateneTextField1.Size = new System.Drawing.Size(516, 23);
-            this.mateneTextField1.TabIndex = 0;
-            this.mateneTextField1.Text = "Nhập ID hoặc số điện thoại khách hàng";
-            this.mateneTextField1.UseSystemPasswordChar = false;
-            // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.bunifuTileButton2);
-            this.panel2.Controls.Add(this.bunifuTileButton1);
-            this.panel2.Controls.Add(this.btn_TraHang);
+            this.panel2.Controls.Add(this.btn_updateCustomer);
+            this.panel2.Controls.Add(this.btn_deleteCustomer);
+            this.panel2.Controls.Add(this.btn_addCustomer);
             this.panel2.Controls.Add(this.txt_SDT);
             this.panel2.Controls.Add(this.materialLabel2);
             this.panel2.Controls.Add(this.materialLabel3);
             this.panel2.Controls.Add(this.materialLabel1);
             this.panel2.Controls.Add(this.txt_DiaChi);
             this.panel2.Controls.Add(this.txt_HoTen);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(560, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 660);
             this.panel2.TabIndex = 1;
+            // 
+            // btn_updateCustomer
+            // 
+            this.btn_updateCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_updateCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_updateCustomer.color = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_updateCustomer.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(135)))), ((int)(((byte)(205)))));
+            this.btn_updateCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_updateCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_updateCustomer.ForeColor = System.Drawing.Color.White;
+            this.btn_updateCustomer.Image = null;
+            this.btn_updateCustomer.ImagePosition = 17;
+            this.btn_updateCustomer.ImageZoom = 50;
+            this.btn_updateCustomer.LabelPosition = 25;
+            this.btn_updateCustomer.LabelText = "Sửa";
+            this.btn_updateCustomer.Location = new System.Drawing.Point(19, 532);
+            this.btn_updateCustomer.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_updateCustomer.Name = "btn_updateCustomer";
+            this.btn_updateCustomer.Size = new System.Drawing.Size(285, 30);
+            this.btn_updateCustomer.TabIndex = 21;
+            // 
+            // btn_deleteCustomer
+            // 
+            this.btn_deleteCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_deleteCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_deleteCustomer.color = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_deleteCustomer.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(135)))), ((int)(((byte)(205)))));
+            this.btn_deleteCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_deleteCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteCustomer.ForeColor = System.Drawing.Color.White;
+            this.btn_deleteCustomer.Image = null;
+            this.btn_deleteCustomer.ImagePosition = 17;
+            this.btn_deleteCustomer.ImageZoom = 50;
+            this.btn_deleteCustomer.LabelPosition = 25;
+            this.btn_deleteCustomer.LabelText = "Xóa";
+            this.btn_deleteCustomer.Location = new System.Drawing.Point(19, 572);
+            this.btn_deleteCustomer.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_deleteCustomer.Name = "btn_deleteCustomer";
+            this.btn_deleteCustomer.Size = new System.Drawing.Size(285, 30);
+            this.btn_deleteCustomer.TabIndex = 21;
+            // 
+            // btn_addCustomer
+            // 
+            this.btn_addCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_addCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_addCustomer.color = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_addCustomer.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(135)))), ((int)(((byte)(205)))));
+            this.btn_addCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addCustomer.ForeColor = System.Drawing.Color.White;
+            this.btn_addCustomer.Image = null;
+            this.btn_addCustomer.ImagePosition = 17;
+            this.btn_addCustomer.ImageZoom = 50;
+            this.btn_addCustomer.LabelPosition = 25;
+            this.btn_addCustomer.LabelText = "Thêm";
+            this.btn_addCustomer.Location = new System.Drawing.Point(18, 612);
+            this.btn_addCustomer.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_addCustomer.Name = "btn_addCustomer";
+            this.btn_addCustomer.Size = new System.Drawing.Size(285, 30);
+            this.btn_addCustomer.TabIndex = 21;
             // 
             // txt_SDT
             // 
@@ -213,66 +276,6 @@
             this.txt_HoTen.Size = new System.Drawing.Size(284, 27);
             this.txt_HoTen.TabIndex = 20;
             // 
-            // btn_TraHang
-            // 
-            this.btn_TraHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TraHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_TraHang.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_TraHang.colorActive = System.Drawing.Color.Blue;
-            this.btn_TraHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TraHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TraHang.ForeColor = System.Drawing.Color.White;
-            this.btn_TraHang.Image = null;
-            this.btn_TraHang.ImagePosition = 17;
-            this.btn_TraHang.ImageZoom = 50;
-            this.btn_TraHang.LabelPosition = 25;
-            this.btn_TraHang.LabelText = "Thêm";
-            this.btn_TraHang.Location = new System.Drawing.Point(18, 612);
-            this.btn_TraHang.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_TraHang.Name = "btn_TraHang";
-            this.btn_TraHang.Size = new System.Drawing.Size(285, 30);
-            this.btn_TraHang.TabIndex = 21;
-            // 
-            // bunifuTileButton1
-            // 
-            this.bunifuTileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuTileButton1.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.Blue;
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = null;
-            this.bunifuTileButton1.ImagePosition = 17;
-            this.bunifuTileButton1.ImageZoom = 50;
-            this.bunifuTileButton1.LabelPosition = 25;
-            this.bunifuTileButton1.LabelText = "Xóa";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(19, 572);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(285, 30);
-            this.bunifuTileButton1.TabIndex = 21;
-            // 
-            // bunifuTileButton2
-            // 
-            this.bunifuTileButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTileButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuTileButton2.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuTileButton2.colorActive = System.Drawing.Color.Blue;
-            this.bunifuTileButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTileButton2.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton2.Image = null;
-            this.bunifuTileButton2.ImagePosition = 17;
-            this.bunifuTileButton2.ImageZoom = 50;
-            this.bunifuTileButton2.LabelPosition = 25;
-            this.bunifuTileButton2.LabelText = "Sửa";
-            this.bunifuTileButton2.Location = new System.Drawing.Point(19, 532);
-            this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuTileButton2.Name = "bunifuTileButton2";
-            this.bunifuTileButton2.Size = new System.Drawing.Size(285, 30);
-            this.bunifuTileButton2.TabIndex = 21;
-            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +289,7 @@
             this.Text = "CustomerForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnl_customerInfo.ResumeLayout(false);
+            this.pnl_customerInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -296,7 +300,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnl_customerInfo;
-        private MaterialSkin.Controls.MaterialSingleLineTextField mateneTextField1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -307,8 +310,10 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.TextBox txt_HoTen;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton2;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
-        private Bunifu.Framework.UI.BunifuTileButton btn_TraHang;
+        private Bunifu.Framework.UI.BunifuTileButton btn_updateCustomer;
+        private Bunifu.Framework.UI.BunifuTileButton btn_deleteCustomer;
+        private Bunifu.Framework.UI.BunifuTileButton btn_addCustomer;
+        private System.Windows.Forms.Panel pnl_searchItem;
+        private System.Windows.Forms.TextBox txt_searchItem;
     }
 }

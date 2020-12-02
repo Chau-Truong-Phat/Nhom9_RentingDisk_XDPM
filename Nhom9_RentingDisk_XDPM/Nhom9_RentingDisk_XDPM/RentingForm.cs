@@ -38,6 +38,5 @@ namespace Nhom9_RentingDisk_XDPM
             pnl_searchItem.BackColor = Color.FromArgb(20, 173, 196);
 
         }
-
     }
 }
