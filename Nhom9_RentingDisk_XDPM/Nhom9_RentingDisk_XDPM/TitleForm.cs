@@ -24,14 +24,17 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void btn_DatHang_Click_1(object sender, EventArgs e)
         {
-            TitleForm_AddTitle ttaddForm = new TitleForm_AddTitle();
-            ttaddForm.Show();
+            
         }
 
         private void btn_DatLaiGiaThue_Click(object sender, EventArgs e)
         {
-            TitleForm_UpdatePrice titleForm_UpdatePrice = new TitleForm_UpdatePrice();
-            titleForm_UpdatePrice.Show();
+            
+        }
+
+        private void btn_back_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

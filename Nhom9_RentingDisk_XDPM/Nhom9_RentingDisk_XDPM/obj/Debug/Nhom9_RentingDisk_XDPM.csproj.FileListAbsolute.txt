@@ -35,10 +35,9 @@ D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_R
 D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.pdb
 D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.CustomerForm.resources
 D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.TitleForm.resources
-D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.TitleForm_AddTitle.resources
-D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.TitleForm_UpdatePrice.resources
 D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReservationForm.resources
 D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReturnDVDForm.resources
+<<<<<<< HEAD
 D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\Nhom9_RentingDisk_XDPM.exe.config
 D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\Nhom9_RentingDisk_XDPM.exe
 D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\Nhom9_RentingDisk_XDPM.pdb
@@ -62,3 +61,7 @@ D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nh
 D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.exe
 D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.pdb
 D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.csprojAssemblyReference.cache
+=======
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReportCustomerForm.resources
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReportTitleForm.resources
+>>>>>>> origin/301120_tuan
