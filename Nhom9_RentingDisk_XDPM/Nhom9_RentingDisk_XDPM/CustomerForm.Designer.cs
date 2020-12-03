@@ -35,15 +35,19 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pnl_numberPhone = new System.Windows.Forms.Panel();
+            this.txt_numberPhone = new System.Windows.Forms.TextBox();
             this.btn_updateCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_deleteCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_addCustomer = new Bunifu.Framework.UI.BunifuTileButton();
-            this.txt_SDT = new System.Windows.Forms.TextBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.txt_DiaChi = new System.Windows.Forms.TextBox();
-            this.txt_HoTen = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnl_customerInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -51,15 +55,17 @@
             // 
             // pnl_customerInfo
             // 
+            this.pnl_customerInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_customerInfo.Controls.Add(this.pnl_searchItem);
             this.pnl_customerInfo.Controls.Add(this.txt_searchItem);
             this.pnl_customerInfo.Controls.Add(this.btn_Back);
             this.pnl_customerInfo.Controls.Add(this.listView1);
             this.pnl_customerInfo.Controls.Add(this.pictureBox2);
-            this.pnl_customerInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_customerInfo.Location = new System.Drawing.Point(0, 0);
             this.pnl_customerInfo.Name = "pnl_customerInfo";
-            this.pnl_customerInfo.Size = new System.Drawing.Size(875, 660);
+            this.pnl_customerInfo.Size = new System.Drawing.Size(615, 660);
             this.pnl_customerInfo.TabIndex = 0;
             // 
             // pnl_searchItem
@@ -69,7 +75,7 @@
             this.pnl_searchItem.BackColor = System.Drawing.Color.DarkGray;
             this.pnl_searchItem.Location = new System.Drawing.Point(30, 38);
             this.pnl_searchItem.Name = "pnl_searchItem";
-            this.pnl_searchItem.Size = new System.Drawing.Size(468, 1);
+            this.pnl_searchItem.Size = new System.Drawing.Size(565, 1);
             this.pnl_searchItem.TabIndex = 23;
             // 
             // txt_searchItem
@@ -81,7 +87,7 @@
             this.txt_searchItem.Location = new System.Drawing.Point(30, 18);
             this.txt_searchItem.Multiline = true;
             this.txt_searchItem.Name = "txt_searchItem";
-            this.txt_searchItem.Size = new System.Drawing.Size(468, 22);
+            this.txt_searchItem.Size = new System.Drawing.Size(565, 22);
             this.txt_searchItem.TabIndex = 22;
             // 
             // btn_Back
@@ -94,7 +100,7 @@
             this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.double_left_26px;
             this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Back.Location = new System.Drawing.Point(0, 628);
+            this.btn_Back.Location = new System.Drawing.Point(0, 625);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(150, 32);
             this.btn_Back.TabIndex = 5;
@@ -111,7 +117,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(13, 90);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(541, 510);
+            this.listView1.Size = new System.Drawing.Size(582, 510);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -129,20 +135,89 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.pnl_numberPhone);
+            this.panel2.Controls.Add(this.txt_numberPhone);
             this.panel2.Controls.Add(this.btn_updateCustomer);
             this.panel2.Controls.Add(this.btn_deleteCustomer);
             this.panel2.Controls.Add(this.btn_addCustomer);
-            this.panel2.Controls.Add(this.txt_SDT);
             this.panel2.Controls.Add(this.materialLabel2);
             this.panel2.Controls.Add(this.materialLabel3);
             this.panel2.Controls.Add(this.materialLabel1);
-            this.panel2.Controls.Add(this.txt_DiaChi);
-            this.panel2.Controls.Add(this.txt_HoTen);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(560, 0);
+            this.panel2.Location = new System.Drawing.Point(615, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 660);
+            this.panel2.Size = new System.Drawing.Size(260, 660);
             this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.DarkGray;
+            this.panel3.Location = new System.Drawing.Point(12, 211);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(236, 1);
+            this.panel3.TabIndex = 27;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(12, 190);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(236, 22);
+            this.textBox2.TabIndex = 26;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Location = new System.Drawing.Point(12, 141);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(236, 1);
+            this.panel1.TabIndex = 25;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(12, 120);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(236, 22);
+            this.textBox1.TabIndex = 24;
+            // 
+            // pnl_numberPhone
+            // 
+            this.pnl_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_numberPhone.BackColor = System.Drawing.Color.DarkGray;
+            this.pnl_numberPhone.Location = new System.Drawing.Point(12, 71);
+            this.pnl_numberPhone.Name = "pnl_numberPhone";
+            this.pnl_numberPhone.Size = new System.Drawing.Size(236, 1);
+            this.pnl_numberPhone.TabIndex = 23;
+            // 
+            // txt_numberPhone
+            // 
+            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_numberPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_numberPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numberPhone.Location = new System.Drawing.Point(12, 50);
+            this.txt_numberPhone.Multiline = true;
+            this.txt_numberPhone.Name = "txt_numberPhone";
+            this.txt_numberPhone.Size = new System.Drawing.Size(236, 22);
+            this.txt_numberPhone.TabIndex = 22;
             // 
             // btn_updateCustomer
             // 
@@ -156,12 +231,12 @@
             this.btn_updateCustomer.Image = null;
             this.btn_updateCustomer.ImagePosition = 17;
             this.btn_updateCustomer.ImageZoom = 50;
-            this.btn_updateCustomer.LabelPosition = 25;
+            this.btn_updateCustomer.LabelPosition = 30;
             this.btn_updateCustomer.LabelText = "Sửa";
-            this.btn_updateCustomer.Location = new System.Drawing.Point(19, 532);
+            this.btn_updateCustomer.Location = new System.Drawing.Point(12, 501);
             this.btn_updateCustomer.Margin = new System.Windows.Forms.Padding(5);
             this.btn_updateCustomer.Name = "btn_updateCustomer";
-            this.btn_updateCustomer.Size = new System.Drawing.Size(285, 30);
+            this.btn_updateCustomer.Size = new System.Drawing.Size(237, 40);
             this.btn_updateCustomer.TabIndex = 21;
             // 
             // btn_deleteCustomer
@@ -176,12 +251,12 @@
             this.btn_deleteCustomer.Image = null;
             this.btn_deleteCustomer.ImagePosition = 17;
             this.btn_deleteCustomer.ImageZoom = 50;
-            this.btn_deleteCustomer.LabelPosition = 25;
+            this.btn_deleteCustomer.LabelPosition = 30;
             this.btn_deleteCustomer.LabelText = "Xóa";
-            this.btn_deleteCustomer.Location = new System.Drawing.Point(19, 572);
+            this.btn_deleteCustomer.Location = new System.Drawing.Point(12, 551);
             this.btn_deleteCustomer.Margin = new System.Windows.Forms.Padding(5);
             this.btn_deleteCustomer.Name = "btn_deleteCustomer";
-            this.btn_deleteCustomer.Size = new System.Drawing.Size(285, 30);
+            this.btn_deleteCustomer.Size = new System.Drawing.Size(237, 40);
             this.btn_deleteCustomer.TabIndex = 21;
             // 
             // btn_addCustomer
@@ -196,23 +271,13 @@
             this.btn_addCustomer.Image = null;
             this.btn_addCustomer.ImagePosition = 17;
             this.btn_addCustomer.ImageZoom = 50;
-            this.btn_addCustomer.LabelPosition = 25;
+            this.btn_addCustomer.LabelPosition = 30;
             this.btn_addCustomer.LabelText = "Thêm";
-            this.btn_addCustomer.Location = new System.Drawing.Point(18, 612);
+            this.btn_addCustomer.Location = new System.Drawing.Point(12, 601);
             this.btn_addCustomer.Margin = new System.Windows.Forms.Padding(5);
             this.btn_addCustomer.Name = "btn_addCustomer";
-            this.btn_addCustomer.Size = new System.Drawing.Size(285, 30);
+            this.btn_addCustomer.Size = new System.Drawing.Size(237, 40);
             this.btn_addCustomer.TabIndex = 21;
-            // 
-            // txt_SDT
-            // 
-            this.txt_SDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_SDT.BackColor = System.Drawing.Color.Silver;
-            this.txt_SDT.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SDT.Location = new System.Drawing.Point(19, 90);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(284, 27);
-            this.txt_SDT.TabIndex = 19;
             // 
             // materialLabel2
             // 
@@ -221,7 +286,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(15, 68);
+            this.materialLabel2.Location = new System.Drawing.Point(8, 90);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(98, 19);
@@ -235,7 +300,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(15, 120);
+            this.materialLabel3.Location = new System.Drawing.Point(8, 160);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(55, 19);
@@ -249,32 +314,21 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(15, 16);
+            this.materialLabel1.Location = new System.Drawing.Point(8, 20);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(54, 19);
             this.materialLabel1.TabIndex = 17;
             this.materialLabel1.Text = "Họ tên";
             // 
-            // txt_DiaChi
+            // panel4
             // 
-            this.txt_DiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DiaChi.BackColor = System.Drawing.Color.Silver;
-            this.txt_DiaChi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DiaChi.Location = new System.Drawing.Point(19, 142);
-            this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(284, 27);
-            this.txt_DiaChi.TabIndex = 18;
-            // 
-            // txt_HoTen
-            // 
-            this.txt_HoTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_HoTen.BackColor = System.Drawing.Color.Silver;
-            this.txt_HoTen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_HoTen.Location = new System.Drawing.Point(19, 38);
-            this.txt_HoTen.Name = "txt_HoTen";
-            this.txt_HoTen.Size = new System.Drawing.Size(284, 27);
-            this.txt_HoTen.TabIndex = 20;
+            this.panel4.BackColor = System.Drawing.Color.DarkGray;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(613, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(2, 660);
+            this.panel4.TabIndex = 24;
             // 
             // CustomerForm
             // 
@@ -282,6 +336,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(875, 660);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_customerInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -304,16 +359,20 @@
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txt_SDT;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.TextBox txt_DiaChi;
-        private System.Windows.Forms.TextBox txt_HoTen;
         private Bunifu.Framework.UI.BunifuTileButton btn_updateCustomer;
         private Bunifu.Framework.UI.BunifuTileButton btn_deleteCustomer;
         private Bunifu.Framework.UI.BunifuTileButton btn_addCustomer;
         private System.Windows.Forms.Panel pnl_searchItem;
         private System.Windows.Forms.TextBox txt_searchItem;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel pnl_numberPhone;
+        private System.Windows.Forms.TextBox txt_numberPhone;
+        private System.Windows.Forms.Panel panel4;
     }
 }

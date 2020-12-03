@@ -50,7 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_TraHang = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btn_rentDisk = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -154,7 +154,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btn_TraHang);
+            this.panel2.Controls.Add(this.btn_rentDisk);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(539, 0);
             this.panel2.Name = "panel2";
@@ -331,25 +331,25 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Số điện thoại";
             // 
-            // btn_TraHang
+            // btn_rentDisk
             // 
-            this.btn_TraHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TraHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
-            this.btn_TraHang.color = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
-            this.btn_TraHang.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(135)))), ((int)(((byte)(205)))));
-            this.btn_TraHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TraHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TraHang.ForeColor = System.Drawing.Color.White;
-            this.btn_TraHang.Image = null;
-            this.btn_TraHang.ImagePosition = 20;
-            this.btn_TraHang.ImageZoom = 50;
-            this.btn_TraHang.LabelPosition = 35;
-            this.btn_TraHang.LabelText = "Trả hàng";
-            this.btn_TraHang.Location = new System.Drawing.Point(13, 393);
-            this.btn_TraHang.Margin = new System.Windows.Forms.Padding(6);
-            this.btn_TraHang.Name = "btn_TraHang";
-            this.btn_TraHang.Size = new System.Drawing.Size(242, 46);
-            this.btn_TraHang.TabIndex = 5;
+            this.btn_rentDisk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_rentDisk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_rentDisk.color = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_rentDisk.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(135)))), ((int)(((byte)(205)))));
+            this.btn_rentDisk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_rentDisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rentDisk.ForeColor = System.Drawing.Color.White;
+            this.btn_rentDisk.Image = null;
+            this.btn_rentDisk.ImagePosition = 20;
+            this.btn_rentDisk.ImageZoom = 50;
+            this.btn_rentDisk.LabelPosition = 32;
+            this.btn_rentDisk.LabelText = "Thanh toán";
+            this.btn_rentDisk.Location = new System.Drawing.Point(13, 396);
+            this.btn_rentDisk.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_rentDisk.Name = "btn_rentDisk";
+            this.btn_rentDisk.Size = new System.Drawing.Size(242, 40);
+            this.btn_rentDisk.TabIndex = 5;
             // 
             // panel3
             // 
@@ -398,7 +398,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuTileButton btn_TraHang;
+        private Bunifu.Framework.UI.BunifuTileButton btn_rentDisk;
         private Bunifu.Framework.UI.BunifuImageButton btn_IMG_delete_PhiMoi;
         private Bunifu.Framework.UI.BunifuImageButton btn_IMG_menu_PhiMoi;
         private System.Windows.Forms.Label label5;

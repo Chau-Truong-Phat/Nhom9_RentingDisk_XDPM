@@ -31,37 +31,37 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnl_MenuOption = new System.Windows.Forms.Panel();
             this.pnl_reportDetail = new System.Windows.Forms.Panel();
-            this.pnl_report = new System.Windows.Forms.Panel();
-            this.pnl_CD_DVD = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.TitleLogo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pnl_FormConnect = new System.Windows.Forms.Panel();
             this.btn_reportTitle = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_reportCustomer = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pnl_report = new System.Windows.Forms.Panel();
             this.pbo_dropdownReport = new System.Windows.Forms.PictureBox();
             this.btn_report = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pbo_dropdownCD_DVD = new System.Windows.Forms.PictureBox();
             this.btn_title = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_customer = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pnl_CD_DVD = new System.Windows.Forms.Panel();
             this.btn_returnDisk = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_RentDisk = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_reservationDisk = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_managementDisk = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Menu = new Bunifu.Framework.UI.BunifuImageButton();
+            this.TitleLogo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pbo_closeForm = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.pnl_FormConnect = new System.Windows.Forms.Panel();
             this.pnl_MenuOption.SuspendLayout();
             this.pnl_reportDetail.SuspendLayout();
             this.pnl_report.SuspendLayout();
-            this.pnl_CD_DVD.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbo_dropdownReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbo_dropdownCD_DVD)).BeginInit();
+            this.pnl_CD_DVD.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbo_closeForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -92,98 +92,6 @@
             this.pnl_reportDetail.Name = "pnl_reportDetail";
             this.pnl_reportDetail.Size = new System.Drawing.Size(200, 74);
             this.pnl_reportDetail.TabIndex = 19;
-            // 
-            // pnl_report
-            // 
-            this.pnl_report.Controls.Add(this.pbo_dropdownReport);
-            this.pnl_report.Controls.Add(this.btn_report);
-            this.pnl_report.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_report.Location = new System.Drawing.Point(0, 346);
-            this.pnl_report.Name = "pnl_report";
-            this.pnl_report.Size = new System.Drawing.Size(200, 52);
-            this.pnl_report.TabIndex = 18;
-            // 
-            // pnl_CD_DVD
-            // 
-            this.pnl_CD_DVD.Controls.Add(this.btn_returnDisk);
-            this.pnl_CD_DVD.Controls.Add(this.btn_RentDisk);
-            this.pnl_CD_DVD.Controls.Add(this.btn_reservationDisk);
-            this.pnl_CD_DVD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_CD_DVD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.pnl_CD_DVD.Location = new System.Drawing.Point(0, 143);
-            this.pnl_CD_DVD.Name = "pnl_CD_DVD";
-            this.pnl_CD_DVD.Size = new System.Drawing.Size(200, 103);
-            this.pnl_CD_DVD.TabIndex = 14;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.panel1.Controls.Add(this.btn_Menu);
-            this.panel1.Controls.Add(this.TitleLogo);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 93);
-            this.panel1.TabIndex = 16;
-            // 
-            // TitleLogo
-            // 
-            this.TitleLogo.AutoSize = true;
-            this.TitleLogo.BackColor = System.Drawing.Color.White;
-            this.TitleLogo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLogo.ForeColor = System.Drawing.Color.Black;
-            this.TitleLogo.Location = new System.Drawing.Point(12, 29);
-            this.TitleLogo.Name = "TitleLogo";
-            this.TitleLogo.Size = new System.Drawing.Size(70, 19);
-            this.TitleLogo.TabIndex = 10;
-            this.TitleLogo.Text = "Nhóm 9";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 19);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Renting Disk";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.pbo_closeForm);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.bunifuCustomLabel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1082, 50);
-            this.panel2.TabIndex = 1;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(51, 19);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(177, 19);
-            this.bunifuCustomLabel1.TabIndex = 0;
-            this.bunifuCustomLabel1.Text = "Nhóm 9 - Renting Disk";
-            // 
-            // pnl_FormConnect
-            // 
-            this.pnl_FormConnect.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_FormConnect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_FormConnect.Location = new System.Drawing.Point(200, 50);
-            this.pnl_FormConnect.Name = "pnl_FormConnect";
-            this.pnl_FormConnect.Size = new System.Drawing.Size(882, 699);
-            this.pnl_FormConnect.TabIndex = 2;
             // 
             // btn_reportTitle
             // 
@@ -257,12 +165,22 @@
             this.btn_reportCustomer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reportCustomer.Click += new System.EventHandler(this.btn_reportCustomer_Click);
             // 
+            // pnl_report
+            // 
+            this.pnl_report.Controls.Add(this.pbo_dropdownReport);
+            this.pnl_report.Controls.Add(this.btn_report);
+            this.pnl_report.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_report.Location = new System.Drawing.Point(0, 346);
+            this.pnl_report.Name = "pnl_report";
+            this.pnl_report.Size = new System.Drawing.Size(200, 52);
+            this.pnl_report.TabIndex = 18;
+            // 
             // pbo_dropdownReport
             // 
             this.pbo_dropdownReport.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbo_dropdownReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.pbo_dropdownReport.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.sort_down_26px;
-            this.pbo_dropdownReport.Location = new System.Drawing.Point(167, 10);
+            this.pbo_dropdownReport.Location = new System.Drawing.Point(167, 11);
             this.pbo_dropdownReport.Name = "pbo_dropdownReport";
             this.pbo_dropdownReport.Size = new System.Drawing.Size(26, 26);
             this.pbo_dropdownReport.TabIndex = 18;
@@ -310,7 +228,7 @@
             // 
             this.pbo_dropdownCD_DVD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.pbo_dropdownCD_DVD.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.sort_down_26px;
-            this.pbo_dropdownCD_DVD.Location = new System.Drawing.Point(167, 110);
+            this.pbo_dropdownCD_DVD.Location = new System.Drawing.Point(168, 102);
             this.pbo_dropdownCD_DVD.Name = "pbo_dropdownCD_DVD";
             this.pbo_dropdownCD_DVD.Size = new System.Drawing.Size(26, 26);
             this.pbo_dropdownCD_DVD.TabIndex = 17;
@@ -390,6 +308,18 @@
             this.btn_customer.Textcolor = System.Drawing.Color.Black;
             this.btn_customer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_customer.Click += new System.EventHandler(this.btn_customer_Click);
+            // 
+            // pnl_CD_DVD
+            // 
+            this.pnl_CD_DVD.Controls.Add(this.btn_returnDisk);
+            this.pnl_CD_DVD.Controls.Add(this.btn_RentDisk);
+            this.pnl_CD_DVD.Controls.Add(this.btn_reservationDisk);
+            this.pnl_CD_DVD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_CD_DVD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.pnl_CD_DVD.Location = new System.Drawing.Point(0, 143);
+            this.pnl_CD_DVD.Name = "pnl_CD_DVD";
+            this.pnl_CD_DVD.Size = new System.Drawing.Size(200, 103);
+            this.pnl_CD_DVD.TabIndex = 14;
             // 
             // btn_returnDisk
             // 
@@ -537,6 +467,18 @@
             this.btn_managementDisk.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_managementDisk.Click += new System.EventHandler(this.btn_managementDisk_click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.panel1.Controls.Add(this.btn_Menu);
+            this.panel1.Controls.Add(this.TitleLogo);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 93);
+            this.panel1.TabIndex = 16;
+            // 
             // btn_Menu
             // 
             this.btn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
@@ -551,6 +493,43 @@
             this.btn_Menu.TabStop = false;
             this.btn_Menu.Zoom = 10;
             this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
+            // 
+            // TitleLogo
+            // 
+            this.TitleLogo.AutoSize = true;
+            this.TitleLogo.BackColor = System.Drawing.Color.White;
+            this.TitleLogo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLogo.ForeColor = System.Drawing.Color.Black;
+            this.TitleLogo.Location = new System.Drawing.Point(12, 29);
+            this.TitleLogo.Name = "TitleLogo";
+            this.TitleLogo.Size = new System.Drawing.Size(70, 19);
+            this.TitleLogo.TabIndex = 10;
+            this.TitleLogo.Text = "Nhóm 9";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(12, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 19);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Renting Disk";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.pbo_closeForm);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.bunifuCustomLabel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1082, 50);
+            this.panel2.TabIndex = 1;
             // 
             // pbo_closeForm
             // 
@@ -575,6 +554,27 @@
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(51, 19);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(177, 19);
+            this.bunifuCustomLabel1.TabIndex = 0;
+            this.bunifuCustomLabel1.Text = "Nhóm 9 - Renting Disk";
+            // 
+            // pnl_FormConnect
+            // 
+            this.pnl_FormConnect.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_FormConnect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_FormConnect.Location = new System.Drawing.Point(200, 50);
+            this.pnl_FormConnect.Name = "pnl_FormConnect";
+            this.pnl_FormConnect.Size = new System.Drawing.Size(882, 699);
+            this.pnl_FormConnect.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -594,14 +594,14 @@
             this.pnl_MenuOption.ResumeLayout(false);
             this.pnl_reportDetail.ResumeLayout(false);
             this.pnl_report.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbo_dropdownReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbo_dropdownCD_DVD)).EndInit();
             this.pnl_CD_DVD.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbo_dropdownReport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbo_dropdownCD_DVD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbo_closeForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);

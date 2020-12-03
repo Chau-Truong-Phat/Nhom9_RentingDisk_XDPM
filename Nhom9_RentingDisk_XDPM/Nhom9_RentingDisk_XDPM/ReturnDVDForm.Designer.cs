@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnDVDForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_searchItemReturn = new System.Windows.Forms.Panel();
+            this.txt_searchDiskReturn = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btn_Back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,17 +40,14 @@
             this.txt_nameCustomer = new System.Windows.Forms.TextBox();
             this.pnl_numberPhone = new System.Windows.Forms.Panel();
             this.txt_numberPhone = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnIMG_Delete = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnIMG_menu = new Bunifu.Framework.UI.BunifuImageButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_TraHang = new Bunifu.Framework.UI.BunifuTileButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pnl_searchItemReturn = new System.Windows.Forms.Panel();
-            this.txt_searchDiskReturn = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,6 +68,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // pnl_searchItemReturn
+            // 
+            this.pnl_searchItemReturn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_searchItemReturn.BackColor = System.Drawing.Color.DarkGray;
+            this.pnl_searchItemReturn.Location = new System.Drawing.Point(30, 39);
+            this.pnl_searchItemReturn.Name = "pnl_searchItemReturn";
+            this.pnl_searchItemReturn.Size = new System.Drawing.Size(469, 1);
+            this.pnl_searchItemReturn.TabIndex = 22;
+            // 
+            // txt_searchDiskReturn
+            // 
+            this.txt_searchDiskReturn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_searchDiskReturn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_searchDiskReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_searchDiskReturn.Location = new System.Drawing.Point(30, 18);
+            this.txt_searchDiskReturn.Multiline = true;
+            this.txt_searchDiskReturn.Name = "txt_searchDiskReturn";
+            this.txt_searchDiskReturn.Size = new System.Drawing.Size(469, 22);
+            this.txt_searchDiskReturn.TabIndex = 21;
+            this.txt_searchDiskReturn.Click += new System.EventHandler(this.txt_searchDiskReturn_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkGray;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(537, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(2, 450);
+            this.panel4.TabIndex = 20;
             // 
             // btn_Back
             // 
@@ -164,9 +196,42 @@
             this.txt_numberPhone.TabIndex = 16;
             this.txt_numberPhone.Click += new System.EventHandler(this.txt_numberPhone_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 335);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Tổng phí";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(196, 333);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Phí trễ";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 284);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Phí trễ";
+            // 
             // btnIMG_Delete
             // 
-            this.btnIMG_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIMG_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIMG_Delete.BackColor = System.Drawing.Color.White;
             this.btnIMG_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btnIMG_Delete.Image")));
             this.btnIMG_Delete.ImageActive = null;
@@ -180,7 +245,7 @@
             // 
             // btnIMG_menu
             // 
-            this.btnIMG_menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIMG_menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIMG_menu.BackColor = System.Drawing.Color.White;
             this.btnIMG_menu.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.list_24px;
             this.btnIMG_menu.ImageActive = null;
@@ -202,29 +267,6 @@
             this.label2.Size = new System.Drawing.Size(123, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên khách hàng";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 335);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Tổng phí";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 284);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Phí trễ";
             // 
             // label1
             // 
@@ -249,57 +291,13 @@
             this.btn_TraHang.Image = null;
             this.btn_TraHang.ImagePosition = 20;
             this.btn_TraHang.ImageZoom = 50;
-            this.btn_TraHang.LabelPosition = 35;
+            this.btn_TraHang.LabelPosition = 30;
             this.btn_TraHang.LabelText = "Trả hàng";
-            this.btn_TraHang.Location = new System.Drawing.Point(-50, 398);
+            this.btn_TraHang.Location = new System.Drawing.Point(9, 395);
             this.btn_TraHang.Margin = new System.Windows.Forms.Padding(6);
             this.btn_TraHang.Name = "btn_TraHang";
-            this.btn_TraHang.Size = new System.Drawing.Size(305, 46);
+            this.btn_TraHang.Size = new System.Drawing.Size(246, 40);
             this.btn_TraHang.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DarkGray;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(537, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2, 450);
-            this.panel4.TabIndex = 20;
-            // 
-            // pnl_searchItemReturn
-            // 
-            this.pnl_searchItemReturn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_searchItemReturn.BackColor = System.Drawing.Color.DarkGray;
-            this.pnl_searchItemReturn.Location = new System.Drawing.Point(30, 39);
-            this.pnl_searchItemReturn.Name = "pnl_searchItemReturn";
-            this.pnl_searchItemReturn.Size = new System.Drawing.Size(469, 1);
-            this.pnl_searchItemReturn.TabIndex = 22;
-            // 
-            // txt_searchDiskReturn
-            // 
-            this.txt_searchDiskReturn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_searchDiskReturn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_searchDiskReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchDiskReturn.Location = new System.Drawing.Point(30, 18);
-            this.txt_searchDiskReturn.Multiline = true;
-            this.txt_searchDiskReturn.Name = "txt_searchDiskReturn";
-            this.txt_searchDiskReturn.Size = new System.Drawing.Size(469, 22);
-            this.txt_searchDiskReturn.TabIndex = 21;
-            this.txt_searchDiskReturn.Click += new System.EventHandler(this.txt_searchDiskReturn_Click);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(196, 333);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 20);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Phí trễ";
             // 
             // ReturnDVDForm
             // 

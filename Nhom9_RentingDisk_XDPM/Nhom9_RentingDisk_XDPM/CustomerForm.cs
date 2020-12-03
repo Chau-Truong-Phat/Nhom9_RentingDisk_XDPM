@@ -21,6 +21,5 @@ namespace Nhom9_RentingDisk_XDPM
         {
             this.Close();
         }
-
     }
 }
