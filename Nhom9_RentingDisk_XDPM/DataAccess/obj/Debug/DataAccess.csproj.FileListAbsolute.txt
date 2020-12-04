@@ -15,3 +15,19 @@ C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDu
 C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
 C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.deleteprototype.resources
 C:\Users\chaut\OneDrive - Minh Duc Junior High School\TaiLieu-HK-2020-2021\XayDungPhanMem\git-code\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.updateprototype.resources
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\DataAccess.dll.config
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\DataAccess.dll
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\DataAccess.pdb
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\EntityFramework.dll
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\System.ComponentModel.Annotations.dll
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\EntityFramework.xml
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.Init.resources
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.deleteprototype.resources
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.updateprototype.resources
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.dll
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.pdb
