@@ -66,7 +66,6 @@
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
             this.btn_back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_back.Location = new System.Drawing.Point(3, 3);
             this.btn_back.Name = "btn_back";

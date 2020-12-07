@@ -31,3 +31,4 @@ D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Da
 D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.dll
 D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.pdb
+D:\study\HK7\XDPM\code\RentDisk\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache

@@ -63,9 +63,9 @@ namespace Nhom9_RentingDisk_XDPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Back {
+        internal static System.Drawing.Bitmap backgroundlogin {
             get {
-                object obj = ResourceManager.GetObject("Back", resourceCulture);
+                object obj = ResourceManager.GetObject("backgroundlogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,16 +76,6 @@ namespace Nhom9_RentingDisk_XDPM.Properties {
         internal static System.Drawing.Bitmap business_documentation_filled_50px {
             get {
                 object obj = ResourceManager.GetObject("business_documentation_filled_50px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cd_collection {
-            get {
-                object obj = ResourceManager.GetObject("cd-collection", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +143,9 @@ namespace Nhom9_RentingDisk_XDPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_delete_24px {
+        internal static System.Drawing.Bitmap hide_24px {
             get {
-                object obj = ResourceManager.GetObject("icons8_delete_24px", resourceCulture);
+                object obj = ResourceManager.GetObject("hide_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +186,16 @@ namespace Nhom9_RentingDisk_XDPM.Properties {
         internal static System.Drawing.Bitmap movies_folder_filled_50px {
             get {
                 object obj = ResourceManager.GetObject("movies_folder_filled_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap password_24px {
+            get {
+                object obj = ResourceManager.GetObject("password_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,29 @@ namespace Nhom9_RentingDisk_XDPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_24px3 {
+            get {
+                object obj = ResourceManager.GetObject("user_24px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_group_man_woman_30px {
             get {
                 object obj = ResourceManager.GetObject("user_group_man_woman_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visible_24px {
+            get {
+                object obj = ResourceManager.GetObject("visible_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
