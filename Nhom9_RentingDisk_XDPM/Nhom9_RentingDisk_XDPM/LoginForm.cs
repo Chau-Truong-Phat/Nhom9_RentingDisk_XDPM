@@ -16,5 +16,10 @@ namespace Nhom9_RentingDisk_XDPM
         {
             InitializeComponent();
         }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

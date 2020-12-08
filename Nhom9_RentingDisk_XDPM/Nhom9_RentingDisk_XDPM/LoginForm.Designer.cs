@@ -88,6 +88,7 @@
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(250, 36);
             this.btn_login.TabIndex = 6;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // pictureBox2
             // 
