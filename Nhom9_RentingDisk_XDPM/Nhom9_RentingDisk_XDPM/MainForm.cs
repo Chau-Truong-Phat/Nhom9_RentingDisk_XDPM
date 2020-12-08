@@ -207,6 +207,13 @@ namespace Nhom9_RentingDisk_XDPM
             btn_customer.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_title.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_reportTitle.Normalcolor = Color.FromArgb(244, 246, 248);
+            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+              .ToList().ForEach(x => x.Close());
+            ReportCustomerForm CF = new ReportCustomerForm();
+            CF.TopLevel = false;
+            CF.Parent = pnl_FormConnect;
+            CF.Show();
+
         }
 
         private void btn_reportTitle_Click(object sender, EventArgs e)
@@ -220,6 +227,12 @@ namespace Nhom9_RentingDisk_XDPM
             btn_customer.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_title.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_reportCustomer.Normalcolor = Color.FromArgb(244, 246, 248);
+            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+              .ToList().ForEach(x => x.Close());
+            ReportTitleForm CF = new ReportTitleForm();
+            CF.TopLevel = false;
+            CF.Parent = pnl_FormConnect;
+            CF.Show();
         }
     }
 
