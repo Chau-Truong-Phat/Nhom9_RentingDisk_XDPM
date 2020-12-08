@@ -275,6 +275,7 @@
             this.dataGridView_customer.Name = "dataGridView_customer";
             this.dataGridView_customer.Size = new System.Drawing.Size(580, 572);
             this.dataGridView_customer.TabIndex = 20;
+            this.dataGridView_customer.SelectionChanged += new System.EventHandler(this.dataGridView_customer_SelectionChanged);
             // 
             // pictureBox1
             // 

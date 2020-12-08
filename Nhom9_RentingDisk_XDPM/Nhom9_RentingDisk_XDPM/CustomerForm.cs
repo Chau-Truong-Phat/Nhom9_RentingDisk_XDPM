@@ -30,6 +30,7 @@ namespace Nhom9_RentingDisk_XDPM
             DataBindings.Clear();
             
             CreateDataGridView();
+            TextBox_ReadOnly_True();
             
         }
 
@@ -72,13 +73,37 @@ namespace Nhom9_RentingDisk_XDPM
             txt_numberPhone.DataBindings.Clear();
             dateTimePicker_BirthDate.DataBindings.Clear();
 
-            txt_address.DataBindings.Add("Text", bindingSource, "Name");
-            txt_customerName.DataBindings.Add("Text", bindingSource, "Email");
-            txt_email.DataBindings.Add("Text", bindingSource, "IdentifyNumber");
-            txt_numberPhone.DataBindings.Add("Text", bindingSource, "NumberPhone");
-            dateTimePicker_BirthDate.DataBindings.Add("Value", bindingSource, "BirthDate");
+            txt_address.DataBindings.Add("Text", bindingSource, "address");
+            txt_customerName.DataBindings.Add("Text", bindingSource, "name");
+            txt_email.DataBindings.Add("Text", bindingSource, "email");
+            txt_numberPhone.DataBindings.Add("Text", bindingSource, "phoneNumber");
+            dateTimePicker_BirthDate.DataBindings.Add("Value", bindingSource, "birthDate");
+        }
+        private void TextBox_ReadOnly_True()
+        {
+            txt_customerName.ReadOnly = true;
+            txt_address.ReadOnly = true;
+            txt_email.ReadOnly = true;
+            txt_numberPhone.ReadOnly = true;
+            this.dateTimePicker_BirthDate.Enabled = false;
+        }
+        private void TextBox_ReadOnly_False()
+        {
+            txt_customerName.ReadOnly = false;
+            txt_address.ReadOnly = false;
+            txt_email.ReadOnly = false;
+            txt_numberPhone.ReadOnly = false;
+            this.dateTimePicker_BirthDate.Enabled = true;
         }
 
+        private void Clear_TextBox()
+        {
+            txt_customerName.Clear();
+            txt_address.Clear();
+            txt_email.Clear();
+            txt_numberPhone.Clear();
+            dateTimePicker_BirthDate.Value = DateTime.Now;
+        }
         private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -89,11 +114,13 @@ namespace Nhom9_RentingDisk_XDPM
             if (btn_update_customer.LabelText == "Sửa")
             {
                 btn_update_customer.LabelText = "Lưu";
-
+                
+                TextBox_ReadOnly_False();
             }
             else
             {
                 btn_update_customer.LabelText = "Sửa";
+                TextBox_ReadOnly_True();
             }
         }
 
@@ -102,15 +129,13 @@ namespace Nhom9_RentingDisk_XDPM
             if (btn_add_customer.LabelText == "Thêm")
             {
                 btn_add_customer.LabelText = "Lưu";
-                txt_customerName.Text = "";
-                txt_address.Text = "";
-                txt_email.Text = "";
-                txt_numberPhone.Text = "";
-
+                Clear_TextBox();
+                TextBox_ReadOnly_False();
             }
             else
             {
                 btn_add_customer.LabelText = "Thêm";
+                TextBox_ReadOnly_True();
             }
         }
 
@@ -121,7 +146,8 @@ namespace Nhom9_RentingDisk_XDPM
             if (dr == DialogResult.Yes)
             {
                 dataGridView_customer.Rows.RemoveAt(dataGridView_customer.CurrentRow.Index);
-                customerBLL.delete(dataGridView_customer.CurrentRow.Index);
+                //Đéo hiểu sao không xóa được
+                customerBLL.delete(Convert.ToInt32(dataGridView_customer.CurrentRow.Cells["idCustomer"].Value)); 
             }
             else
             {
@@ -153,6 +179,19 @@ namespace Nhom9_RentingDisk_XDPM
             //    s = s.Replace("  ", "");             
             Regex regex = new Regex(@"^[0-9]{1}$");
             return regex.IsMatch(a);
+        }
+
+        private void dataGridView_customer_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_customer.SelectedRows.Count > 0)
+            {
+                // Chưa xử lý STT
+                FillTextBox();
+                //if (Convert.ToInt32(dataGridView_customer.SelectedRows[0].Cells["STT"].Value) != bunifuCustomDataGrid1.Rows.Count)
+                //{
+                //    FillTextBox();
+                //}
+            }
         }
     }   
 }

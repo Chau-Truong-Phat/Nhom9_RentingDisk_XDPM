@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerDAL.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
     <Compile Include="DTO\Result.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Customer.cs" />
