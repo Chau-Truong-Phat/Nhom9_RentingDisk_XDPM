@@ -133,6 +133,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,57 +173,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Content Include="imgs\icons8_cd_40px_4.png" />
-    <Content Include="imgs\icons8_cinema_40px.png" />
-    <Content Include="imgs\icons8_customer_48px.png" />
-    <Content Include="imgs\icons8_delete_24px.png" />
-    <Content Include="imgs\icons8_menu_50px.png" />
-    <Content Include="imgs\icons8_ratings_40px_8.png" />
-    <Content Include="imgs\icons8_rotate_40px_1.png" />
-    <None Include="Resources\delete.png" />
-    <None Include="Resources\Menu.png" />
-=======
-    <None Include="Resources\search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user_group_man_woman_30px.png" />
-    <None Include="Resources\double_left_26px.png" />
-    <None Include="Resources\movies_folder_filled_50px.png" />
-    <None Include="Resources\cd_filled_50px.png" />
-    <None Include="Resources\edit_graph_report_filled_50px.png" />
-    <None Include="Resources\statistics_report_filled_50px.png" />
-    <None Include="Resources\business_documentation_filled_50px.png" />
-    <None Include="Resources\reservation_24px.png" />
-    <None Include="Resources\left2_24px.png" />
-    <None Include="Resources\left2_filled_50px.png" />
-    <None Include="Resources\cd_collection_filled_50px.png" />
-    <None Include="Resources\sort_up_26px.png" />
-    <None Include="Resources\sort_down_26px.png" />
-    <None Include="Resources\list_24px.png" />
-    <None Include="Resources\delete_sign_26px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="imgs\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\password_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backgroundlogin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hide_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\visible_24px.png" />
->>>>>>> remotes/origin/LInh_20201207
+    <Content Include="Resources\backgroundlogin.png" />
+    <Content Include="Resources\business_documentation_filled_50px.png" />
+    <Content Include="Resources\cd_collection_filled_50px.png" />
+    <Content Include="Resources\cd_filled_50px.png" />
+    <Content Include="Resources\delete_sign_26px.png" />
+    <Content Include="Resources\double_left_26px.png" />
+    <Content Include="Resources\edit_graph_report_filled_50px.png" />
+    <Content Include="Resources\left2_24px.png" />
+    <Content Include="Resources\list_24px.png" />
+    <Content Include="Resources\movies_folder_filled_50px.png" />
+    <Content Include="Resources\password_24px.png" />
+    <Content Include="Resources\reservation_24px.png" />
+    <Content Include="Resources\search.png" />
+    <None Include="Resources\search_24px.png" />
+    <Content Include="Resources\sort_down_26px.png" />
+    <Content Include="Resources\sort_up_26px.png" />
+    <Content Include="Resources\statistics_report_filled_50px.png" />
+    <Content Include="Resources\user_24px.png" />
+    <Content Include="Resources\user_group_man_woman_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

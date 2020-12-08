@@ -38,9 +38,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_userName = new System.Windows.Forms.TextBox();
+            this.pbo_closeForm = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbo_closeForm)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,7 +94,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::Nhom9_RentingDisk_XDPM.Properties.Resources.password_24px;
+            this.pictureBox2.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.password_24px;
             this.pictureBox2.Location = new System.Drawing.Point(26, 277);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
@@ -101,7 +103,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Nhom9_RentingDisk_XDPM.Properties.Resources.user_24px3;
+            this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.user_24px;
             this.pictureBox1.Location = new System.Drawing.Point(26, 223);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
@@ -142,7 +144,7 @@
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(220, 23);
             this.txt_password.TabIndex = 0;
-            this.txt_password.Text = "ưe";
+            this.txt_password.Text = "a";
             // 
             // txt_userName
             // 
@@ -157,7 +159,19 @@
             this.txt_userName.Name = "txt_userName";
             this.txt_userName.Size = new System.Drawing.Size(220, 23);
             this.txt_userName.TabIndex = 0;
-            this.txt_userName.Text = "ưe";
+            this.txt_userName.Text = "a";
+            // 
+            // pbo_closeForm
+            // 
+            this.pbo_closeForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbo_closeForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pbo_closeForm.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.delete_sign_26px;
+            this.pbo_closeForm.Location = new System.Drawing.Point(794, 0);
+            this.pbo_closeForm.Name = "pbo_closeForm";
+            this.pbo_closeForm.Size = new System.Drawing.Size(48, 50);
+            this.pbo_closeForm.TabIndex = 9;
+            this.pbo_closeForm.TabStop = false;
+            this.pbo_closeForm.Click += new System.EventHandler(this.pbo_closeForm_Click);
             // 
             // LoginForm
             // 
@@ -165,6 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(843, 629);
+            this.Controls.Add(this.pbo_closeForm);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
@@ -174,6 +189,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbo_closeForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,5 +205,6 @@
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuTileButton btn_login;
+        private System.Windows.Forms.PictureBox pbo_closeForm;
     }
 }

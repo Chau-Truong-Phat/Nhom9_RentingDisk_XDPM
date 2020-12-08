@@ -19,7 +19,13 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            //MainForm mainForm = new MainForm();
+            //mainForm.Show();
+        }
 
+        private void pbo_closeForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -41,9 +41,9 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Location = new System.Drawing.Point(12, 43);
+            this.panel1.Location = new System.Drawing.Point(12, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 361);
+            this.panel1.Size = new System.Drawing.Size(776, 331);
             this.panel1.TabIndex = 15;
             // 
             // btn_DatHang
@@ -58,12 +58,12 @@
             this.btn_DatHang.Image = null;
             this.btn_DatHang.ImagePosition = 17;
             this.btn_DatHang.ImageZoom = 50;
-            this.btn_DatHang.LabelPosition = 25;
+            this.btn_DatHang.LabelPosition = 27;
             this.btn_DatHang.LabelText = "Đặt hàng";
-            this.btn_DatHang.Location = new System.Drawing.Point(639, 3);
+            this.btn_DatHang.Location = new System.Drawing.Point(639, 11);
             this.btn_DatHang.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DatHang.Name = "btn_DatHang";
-            this.btn_DatHang.Size = new System.Drawing.Size(150, 30);
+            this.btn_DatHang.Size = new System.Drawing.Size(150, 35);
             this.btn_DatHang.TabIndex = 18;
             // 
             // pictureBox1
@@ -71,7 +71,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(21, 21);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +101,7 @@
             this.pnl_searchItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_searchItem.BackColor = System.Drawing.Color.DarkGray;
-            this.pnl_searchItem.Location = new System.Drawing.Point(39, 31);
+            this.pnl_searchItem.Location = new System.Drawing.Point(38, 44);
             this.pnl_searchItem.Name = "pnl_searchItem";
             this.pnl_searchItem.Size = new System.Drawing.Size(565, 1);
             this.pnl_searchItem.TabIndex = 25;
@@ -112,7 +112,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_searchItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_searchItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchItem.Location = new System.Drawing.Point(39, 11);
+            this.txt_searchItem.Location = new System.Drawing.Point(38, 24);
             this.txt_searchItem.Multiline = true;
             this.txt_searchItem.Name = "txt_searchItem";
             this.txt_searchItem.Size = new System.Drawing.Size(565, 22);

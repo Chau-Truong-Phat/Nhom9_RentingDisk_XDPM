@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.pnl_customerInfo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_searchItem = new System.Windows.Forms.Panel();
             this.txt_searchItem = new System.Windows.Forms.TextBox();
             this.btn_Back = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_address = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pnl_numberPhone = new System.Windows.Forms.Panel();
             this.txt_numberPhone = new System.Windows.Forms.TextBox();
+            this.pnl_numberPhone = new System.Windows.Forms.Panel();
+            this.txt_userName = new System.Windows.Forms.TextBox();
             this.btn_updateCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_deleteCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_addCustomer = new Bunifu.Framework.UI.BunifuTileButton();
@@ -49,7 +49,7 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnl_customerInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,15 +58,25 @@
             this.pnl_customerInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_customerInfo.Controls.Add(this.pictureBox1);
             this.pnl_customerInfo.Controls.Add(this.pnl_searchItem);
             this.pnl_customerInfo.Controls.Add(this.txt_searchItem);
             this.pnl_customerInfo.Controls.Add(this.btn_Back);
             this.pnl_customerInfo.Controls.Add(this.listView1);
-            this.pnl_customerInfo.Controls.Add(this.pictureBox2);
             this.pnl_customerInfo.Location = new System.Drawing.Point(0, 0);
             this.pnl_customerInfo.Name = "pnl_customerInfo";
             this.pnl_customerInfo.Size = new System.Drawing.Size(615, 660);
             this.pnl_customerInfo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // pnl_searchItem
             // 
@@ -121,26 +131,14 @@
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pictureBox2.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txt_address);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.pnl_numberPhone);
             this.panel2.Controls.Add(this.txt_numberPhone);
+            this.panel2.Controls.Add(this.pnl_numberPhone);
+            this.panel2.Controls.Add(this.txt_userName);
             this.panel2.Controls.Add(this.btn_updateCustomer);
             this.panel2.Controls.Add(this.btn_deleteCustomer);
             this.panel2.Controls.Add(this.btn_addCustomer);
@@ -163,17 +161,17 @@
             this.panel3.Size = new System.Drawing.Size(236, 1);
             this.panel3.TabIndex = 27;
             // 
-            // textBox2
+            // txt_address
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(12, 190);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 22);
-            this.textBox2.TabIndex = 26;
+            this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_address.Location = new System.Drawing.Point(12, 190);
+            this.txt_address.Multiline = true;
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(236, 22);
+            this.txt_address.TabIndex = 26;
             // 
             // panel1
             // 
@@ -185,17 +183,17 @@
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 25;
             // 
-            // textBox1
+            // txt_numberPhone
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 120);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 22);
-            this.textBox1.TabIndex = 24;
+            this.txt_numberPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_numberPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numberPhone.Location = new System.Drawing.Point(12, 120);
+            this.txt_numberPhone.Multiline = true;
+            this.txt_numberPhone.Name = "txt_numberPhone";
+            this.txt_numberPhone.Size = new System.Drawing.Size(236, 22);
+            this.txt_numberPhone.TabIndex = 24;
             // 
             // pnl_numberPhone
             // 
@@ -207,17 +205,17 @@
             this.pnl_numberPhone.Size = new System.Drawing.Size(236, 1);
             this.pnl_numberPhone.TabIndex = 23;
             // 
-            // txt_numberPhone
+            // txt_userName
             // 
-            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_userName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_numberPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_numberPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_numberPhone.Location = new System.Drawing.Point(12, 50);
-            this.txt_numberPhone.Multiline = true;
-            this.txt_numberPhone.Name = "txt_numberPhone";
-            this.txt_numberPhone.Size = new System.Drawing.Size(236, 22);
-            this.txt_numberPhone.TabIndex = 22;
+            this.txt_userName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_userName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_userName.Location = new System.Drawing.Point(12, 50);
+            this.txt_userName.Multiline = true;
+            this.txt_userName.Name = "txt_userName";
+            this.txt_userName.Size = new System.Drawing.Size(236, 22);
+            this.txt_userName.TabIndex = 22;
             // 
             // btn_updateCustomer
             // 
@@ -345,7 +343,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnl_customerInfo.ResumeLayout(false);
             this.pnl_customerInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -357,7 +355,6 @@
         private System.Windows.Forms.Panel pnl_customerInfo;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btn_Back;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
@@ -368,11 +365,12 @@
         private System.Windows.Forms.Panel pnl_searchItem;
         private System.Windows.Forms.TextBox txt_searchItem;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_address;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel pnl_numberPhone;
         private System.Windows.Forms.TextBox txt_numberPhone;
+        private System.Windows.Forms.Panel pnl_numberPhone;
+        private System.Windows.Forms.TextBox txt_userName;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
