@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
+=======
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+>>>>>>> remotes/origin/LInh_20201207
             this.pnl_MenuOption = new System.Windows.Forms.Panel();
             this.pnl_reportDetail = new System.Windows.Forms.Panel();
             this.btn_reportTitle = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -545,6 +549,10 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+<<<<<<< HEAD
+=======
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+>>>>>>> remotes/origin/LInh_20201207
             this.pictureBox4.Location = new System.Drawing.Point(12, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 31);

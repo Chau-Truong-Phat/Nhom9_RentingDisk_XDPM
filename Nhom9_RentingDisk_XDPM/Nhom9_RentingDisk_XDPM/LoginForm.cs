@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Nhom9_RentingDisk_XDPM
 {
-    public partial class CustomerForm : Form
+    public partial class LoginForm : Form
     {
-        public CustomerForm()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void btn_Back_Click(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }

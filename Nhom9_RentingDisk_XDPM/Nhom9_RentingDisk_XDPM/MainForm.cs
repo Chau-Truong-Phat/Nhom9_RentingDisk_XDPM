@@ -32,7 +32,11 @@ namespace Nhom9_RentingDisk_XDPM
             CF.TopLevel = false;
             CF.Parent = pnl_FormConnect;
             CF.Show();
+<<<<<<< HEAD
             btn_customer.Normalcolor = Color.FromArgb(224, 224, 224);
+=======
+            btn_customer.Normalcolor = Color.FromArgb(224,224,224);
+>>>>>>> remotes/origin/LInh_20201207
             btn_reservationDisk.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_managementDisk.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_RentDisk.Normalcolor = Color.FromArgb(244, 246, 248);
@@ -146,11 +150,82 @@ namespace Nhom9_RentingDisk_XDPM
             btn_report.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_reportCustomer.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_reportTitle.Normalcolor = Color.FromArgb(244, 246, 248);
+<<<<<<< HEAD
         }
 
         private void btn_title_Click(object sender, EventArgs e)
         {
             Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+           .ToList().ForEach(x => x.Close());
+            TitleForm titleForm = new TitleForm();
+            titleForm.TopLevel = false;
+            titleForm.Parent = pnl_FormConnect;
+            titleForm.Show();
+
+            btn_title.Normalcolor = Color.FromArgb(224, 224, 224);
+            btn_managementDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_RentDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_returnDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_reservationDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_customer.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_report.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_reportCustomer.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_reportTitle.Normalcolor = Color.FromArgb(244, 246, 248);
+        }
+
+        private void btn_report_Click(object sender, EventArgs e)
+        {
+            btn_report.Normalcolor = Color.FromArgb(224, 224, 224);
+            btn_managementDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_RentDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_returnDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_reservationDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_customer.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_title.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_reportCustomer.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_reportTitle.Normalcolor = Color.FromArgb(244, 246, 248);
+        }
+
+        private void pbo_dropdownReport_Click(object sender, EventArgs e)
+        {
+            if (pnl_reportDetail.Visible == true)
+            {
+                pnl_reportDetail.Visible = false;
+                pbo_dropdownReport.Image = Properties.Resources.sort_up_26px;
+
+            }
+            else
+            {
+                pnl_reportDetail.Visible = true;
+                pbo_dropdownReport.Image = Properties.Resources.sort_down_26px;
+            }
+        }
+
+        private void btn_reportCustomer_Click(object sender, EventArgs e)
+=======
+        }
+
+        private void btn_title_Click(object sender, EventArgs e)
+>>>>>>> remotes/origin/LInh_20201207
+        {
+            btn_reportCustomer.Normalcolor = Color.FromArgb(224, 224, 224);
+            btn_report.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_managementDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_RentDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_returnDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_reservationDisk.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_customer.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_title.Normalcolor = Color.FromArgb(244, 246, 248);
+            btn_reportTitle.Normalcolor = Color.FromArgb(244, 246, 248);
+            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+<<<<<<< HEAD
+              .ToList().ForEach(x => x.Close());
+            ReportCustomerForm CF = new ReportCustomerForm();
+            CF.TopLevel = false;
+            CF.Parent = pnl_FormConnect;
+            CF.Show();
+
+=======
            .ToList().ForEach(x => x.Close());
             TitleForm titleForm = new TitleForm();
             titleForm.TopLevel = false;
@@ -207,13 +282,7 @@ namespace Nhom9_RentingDisk_XDPM
             btn_customer.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_title.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_reportTitle.Normalcolor = Color.FromArgb(244, 246, 248);
-            Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
-              .ToList().ForEach(x => x.Close());
-            ReportCustomerForm CF = new ReportCustomerForm();
-            CF.TopLevel = false;
-            CF.Parent = pnl_FormConnect;
-            CF.Show();
-
+>>>>>>> remotes/origin/LInh_20201207
         }
 
         private void btn_reportTitle_Click(object sender, EventArgs e)
@@ -227,12 +296,15 @@ namespace Nhom9_RentingDisk_XDPM
             btn_customer.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_title.Normalcolor = Color.FromArgb(244, 246, 248);
             btn_reportCustomer.Normalcolor = Color.FromArgb(244, 246, 248);
+<<<<<<< HEAD
             Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
               .ToList().ForEach(x => x.Close());
             ReportTitleForm CF = new ReportTitleForm();
             CF.TopLevel = false;
             CF.Parent = pnl_FormConnect;
             CF.Show();
+=======
+>>>>>>> remotes/origin/LInh_20201207
         }
     }
 

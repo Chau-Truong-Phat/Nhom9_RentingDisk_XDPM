@@ -31,8 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+<<<<<<< HEAD
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+=======
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+>>>>>>> remotes/origin/LInh_20201207
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +60,6 @@
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
             this.btn_back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_back.Location = new System.Drawing.Point(3, 3);
             this.btn_back.Name = "btn_back";
@@ -79,6 +82,7 @@
             this.materialLabel1.TabIndex = 17;
             this.materialLabel1.Text = "Báo cáo khách hàng";
             // 
+<<<<<<< HEAD
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -91,6 +95,9 @@
             this.dataGridView1.TabIndex = 24;
             // 
             // comboBox1
+=======
+            // bunifuGradientPanel1
+>>>>>>> remotes/origin/LInh_20201207
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {

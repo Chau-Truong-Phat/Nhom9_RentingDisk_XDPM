@@ -28,96 +28,259 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_search_title = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txt_numberPhone = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.txt_total = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.txt_customerName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RentingForm));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_searchItem = new System.Windows.Forms.Panel();
+            this.txt_searchItem = new System.Windows.Forms.TextBox();
+            this.btn_Back = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pnl_nameCustomer = new System.Windows.Forms.Panel();
+            this.pnl_numberPhone = new System.Windows.Forms.Panel();
+            this.txt_nameCustomer = new System.Windows.Forms.TextBox();
+            this.txt_numberPhone = new System.Windows.Forms.TextBox();
+            this.btn_IMG_delete_PhiMoi = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_IMG_Delete_PhiTre = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_IMG_menu_PhiMoi = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_IMG_menu_PhiTre = new Bunifu.Framework.UI.BunifuImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_pay = new Bunifu.Framework.UI.BunifuTileButton();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_rentDisk = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView_title = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btn_back = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btn_img_delete_newFee = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_ig_menu_newFee = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_img_delete_lateFee = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_img_menu_lateFee = new Bunifu.Framework.UI.BunifuImageButton();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_title)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_img_delete_newFee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_ig_menu_newFee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_img_delete_lateFee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_img_menu_lateFee)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_delete_PhiMoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_Delete_PhiTre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiMoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiTre)).BeginInit();
             this.SuspendLayout();
             // 
-            // txt_search_title
+            // panel1
             // 
-            this.txt_search_title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_search_title.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_search_title.Depth = 0;
-            this.txt_search_title.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search_title.Hint = "Search Title";
-            this.txt_search_title.Location = new System.Drawing.Point(30, 6);
-            this.txt_search_title.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt_search_title.Name = "txt_search_title";
-            this.txt_search_title.PasswordChar = '\0';
-            this.txt_search_title.SelectedText = "";
-            this.txt_search_title.SelectionLength = 0;
-            this.txt_search_title.SelectionStart = 0;
-            this.txt_search_title.Size = new System.Drawing.Size(479, 23);
-            this.txt_search_title.TabIndex = 16;
-            this.txt_search_title.UseSystemPasswordChar = false;
+            this.panel1.Controls.Add(this.pnl_searchItem);
+            this.panel1.Controls.Add(this.txt_searchItem);
+            this.panel1.Controls.Add(this.btn_Back);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(539, 450);
+            this.panel1.TabIndex = 2;
+            // 
+            // pnl_searchItem
+            // 
+            this.pnl_searchItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_searchItem.BackColor = System.Drawing.Color.DarkGray;
+            this.pnl_searchItem.Location = new System.Drawing.Point(30, 39);
+            this.pnl_searchItem.Name = "pnl_searchItem";
+            this.pnl_searchItem.Size = new System.Drawing.Size(468, 1);
+            this.pnl_searchItem.TabIndex = 21;
+            // 
+            // txt_searchItem
+            // 
+            this.txt_searchItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_searchItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_searchItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_searchItem.Location = new System.Drawing.Point(30, 18);
+            this.txt_searchItem.Multiline = true;
+            this.txt_searchItem.Name = "txt_searchItem";
+            this.txt_searchItem.Size = new System.Drawing.Size(468, 22);
+            this.txt_searchItem.TabIndex = 20;
+            this.txt_searchItem.Click += new System.EventHandler(this.txt_searchItem_Click);
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Back.FlatAppearance.BorderSize = 0;
+            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.double_left_26px;
+            this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Back.Location = new System.Drawing.Point(3, 415);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(131, 32);
+            this.btn_Back.TabIndex = 19;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(30, 60);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(451, 322);
+            this.listView1.TabIndex = 18;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pictureBox2.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.pnl_nameCustomer);
+            this.panel2.Controls.Add(this.pnl_numberPhone);
+            this.panel2.Controls.Add(this.txt_nameCustomer);
+            this.panel2.Controls.Add(this.txt_numberPhone);
+            this.panel2.Controls.Add(this.btn_IMG_delete_PhiMoi);
+            this.panel2.Controls.Add(this.btn_IMG_Delete_PhiTre);
+            this.panel2.Controls.Add(this.btn_IMG_menu_PhiMoi);
+            this.panel2.Controls.Add(this.btn_IMG_menu_PhiTre);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btn_rentDisk);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(539, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(261, 450);
+            this.panel2.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(204, 309);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "label6";
+            // 
+            // pnl_nameCustomer
+            // 
+            this.pnl_nameCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_nameCustomer.BackColor = System.Drawing.Color.DarkGray;
+            this.pnl_nameCustomer.Location = new System.Drawing.Point(7, 131);
+            this.pnl_nameCustomer.Name = "pnl_nameCustomer";
+            this.pnl_nameCustomer.Size = new System.Drawing.Size(246, 1);
+            this.pnl_nameCustomer.TabIndex = 15;
+            // 
+            // pnl_numberPhone
+            // 
+            this.pnl_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_numberPhone.BackColor = System.Drawing.Color.DarkGray;
+            this.pnl_numberPhone.Location = new System.Drawing.Point(7, 60);
+            this.pnl_numberPhone.Name = "pnl_numberPhone";
+            this.pnl_numberPhone.Size = new System.Drawing.Size(246, 1);
+            this.pnl_numberPhone.TabIndex = 15;
+            // 
+            // txt_nameCustomer
+            // 
+            this.txt_nameCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_nameCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_nameCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nameCustomer.Location = new System.Drawing.Point(7, 110);
+            this.txt_nameCustomer.Multiline = true;
+            this.txt_nameCustomer.Name = "txt_nameCustomer";
+            this.txt_nameCustomer.Size = new System.Drawing.Size(246, 22);
+            this.txt_nameCustomer.TabIndex = 1;
+            this.txt_nameCustomer.Click += new System.EventHandler(this.txt_nameCustomer_Click);
             // 
             // txt_numberPhone
             // 
-            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_numberPhone.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txt_numberPhone.Location = new System.Drawing.Point(7, 104);
+            this.txt_numberPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_numberPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numberPhone.Location = new System.Drawing.Point(7, 39);
+            this.txt_numberPhone.Multiline = true;
             this.txt_numberPhone.Name = "txt_numberPhone";
-            this.txt_numberPhone.Size = new System.Drawing.Size(272, 20);
-            this.txt_numberPhone.TabIndex = 14;
+            this.txt_numberPhone.Size = new System.Drawing.Size(246, 22);
+            this.txt_numberPhone.TabIndex = 1;
+            this.txt_numberPhone.Click += new System.EventHandler(this.txt_numberPhone_Click);
             // 
-            // txt_total
+            // btn_IMG_delete_PhiMoi
             // 
-            this.txt_total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total.BackColor = System.Drawing.Color.Silver;
-            this.txt_total.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txt_total.Location = new System.Drawing.Point(7, 331);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.ReadOnly = true;
-            this.txt_total.Size = new System.Drawing.Size(271, 20);
-            this.txt_total.TabIndex = 10;
+            this.btn_IMG_delete_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_IMG_delete_PhiMoi.BackColor = System.Drawing.Color.White;
+            this.btn_IMG_delete_PhiMoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_IMG_delete_PhiMoi.Image")));
+            this.btn_IMG_delete_PhiMoi.ImageActive = null;
+            this.btn_IMG_delete_PhiMoi.Location = new System.Drawing.Point(225, 257);
+            this.btn_IMG_delete_PhiMoi.Name = "btn_IMG_delete_PhiMoi";
+            this.btn_IMG_delete_PhiMoi.Size = new System.Drawing.Size(30, 30);
+            this.btn_IMG_delete_PhiMoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_IMG_delete_PhiMoi.TabIndex = 12;
+            this.btn_IMG_delete_PhiMoi.TabStop = false;
+            this.btn_IMG_delete_PhiMoi.Zoom = 10;
             // 
-            // txt_customerName
+            // btn_IMG_Delete_PhiTre
             // 
-            this.txt_customerName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_customerName.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txt_customerName.Location = new System.Drawing.Point(6, 58);
-            this.txt_customerName.Name = "txt_customerName";
-            this.txt_customerName.Size = new System.Drawing.Size(272, 20);
-            this.txt_customerName.TabIndex = 11;
+            this.btn_IMG_Delete_PhiTre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_IMG_Delete_PhiTre.BackColor = System.Drawing.Color.White;
+            this.btn_IMG_Delete_PhiTre.Image = ((System.Drawing.Image)(resources.GetObject("btn_IMG_Delete_PhiTre.Image")));
+            this.btn_IMG_Delete_PhiTre.ImageActive = null;
+            this.btn_IMG_Delete_PhiTre.Location = new System.Drawing.Point(225, 213);
+            this.btn_IMG_Delete_PhiTre.Name = "btn_IMG_Delete_PhiTre";
+            this.btn_IMG_Delete_PhiTre.Size = new System.Drawing.Size(30, 30);
+            this.btn_IMG_Delete_PhiTre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_IMG_Delete_PhiTre.TabIndex = 12;
+            this.btn_IMG_Delete_PhiTre.TabStop = false;
+            this.btn_IMG_Delete_PhiTre.Zoom = 10;
+            // 
+            // btn_IMG_menu_PhiMoi
+            // 
+            this.btn_IMG_menu_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_IMG_menu_PhiMoi.BackColor = System.Drawing.Color.White;
+            this.btn_IMG_menu_PhiMoi.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.list_24px;
+            this.btn_IMG_menu_PhiMoi.ImageActive = null;
+            this.btn_IMG_menu_PhiMoi.Location = new System.Drawing.Point(189, 257);
+            this.btn_IMG_menu_PhiMoi.Name = "btn_IMG_menu_PhiMoi";
+            this.btn_IMG_menu_PhiMoi.Size = new System.Drawing.Size(30, 30);
+            this.btn_IMG_menu_PhiMoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_IMG_menu_PhiMoi.TabIndex = 13;
+            this.btn_IMG_menu_PhiMoi.TabStop = false;
+            this.btn_IMG_menu_PhiMoi.Zoom = 10;
+            // 
+            // btn_IMG_menu_PhiTre
+            // 
+            this.btn_IMG_menu_PhiTre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_IMG_menu_PhiTre.BackColor = System.Drawing.Color.White;
+            this.btn_IMG_menu_PhiTre.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.list_24px;
+            this.btn_IMG_menu_PhiTre.ImageActive = null;
+            this.btn_IMG_menu_PhiTre.Location = new System.Drawing.Point(189, 213);
+            this.btn_IMG_menu_PhiTre.Name = "btn_IMG_menu_PhiTre";
+            this.btn_IMG_menu_PhiTre.Size = new System.Drawing.Size(30, 30);
+            this.btn_IMG_menu_PhiTre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_IMG_menu_PhiTre.TabIndex = 13;
+            this.btn_IMG_menu_PhiTre.TabStop = false;
+            this.btn_IMG_menu_PhiTre.Zoom = 10;
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 35);
+            this.label2.Location = new System.Drawing.Point(9, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 20);
             this.label2.TabIndex = 6;
@@ -125,21 +288,22 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 304);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 309);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 24);
+            this.label4.Size = new System.Drawing.Size(84, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Tổng";
+            this.label4.Text = "Tổng tiền";
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 240);
+            this.label5.Location = new System.Drawing.Point(9, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 20);
             this.label5.TabIndex = 8;
@@ -150,7 +314,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 277);
+            this.label3.Location = new System.Drawing.Point(9, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 8;
@@ -158,204 +322,43 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 81);
+            this.label1.Location = new System.Drawing.Point(9, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Số điện thoại";
             // 
-            // btn_pay
+            // btn_rentDisk
             // 
-            this.btn_pay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_pay.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_pay.colorActive = System.Drawing.Color.Blue;
-            this.btn_pay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_pay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pay.ForeColor = System.Drawing.Color.White;
-            this.btn_pay.Image = null;
-            this.btn_pay.ImagePosition = 20;
-            this.btn_pay.ImageZoom = 50;
-            this.btn_pay.LabelPosition = 35;
-            this.btn_pay.LabelText = "Thanh toán";
-            this.btn_pay.Location = new System.Drawing.Point(6, 360);
-            this.btn_pay.Margin = new System.Windows.Forms.Padding(6);
-            this.btn_pay.Name = "btn_pay";
-            this.btn_pay.Size = new System.Drawing.Size(273, 46);
-            this.btn_pay.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.btn_pay);
-            this.panel2.Controls.Add(this.btn_img_delete_newFee);
-            this.panel2.Controls.Add(this.btn_ig_menu_newFee);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txt_customerName);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.txt_numberPhone);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btn_img_delete_lateFee);
-            this.panel2.Controls.Add(this.btn_img_menu_lateFee);
-            this.panel2.Controls.Add(this.txt_total);
-            this.panel2.Location = new System.Drawing.Point(515, 38);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(285, 412);
-            this.panel2.TabIndex = 20;
+            this.btn_rentDisk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_rentDisk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_rentDisk.color = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.btn_rentDisk.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(135)))), ((int)(((byte)(205)))));
+            this.btn_rentDisk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_rentDisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rentDisk.ForeColor = System.Drawing.Color.White;
+            this.btn_rentDisk.Image = null;
+            this.btn_rentDisk.ImagePosition = 20;
+            this.btn_rentDisk.ImageZoom = 50;
+            this.btn_rentDisk.LabelPosition = 32;
+            this.btn_rentDisk.LabelText = "Thanh toán";
+            this.btn_rentDisk.Location = new System.Drawing.Point(13, 396);
+            this.btn_rentDisk.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_rentDisk.Name = "btn_rentDisk";
+            this.btn_rentDisk.Size = new System.Drawing.Size(242, 40);
+            this.btn_rentDisk.TabIndex = 5;
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.dataGridView_title);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.txt_search_title);
-            this.panel3.Location = new System.Drawing.Point(0, 38);
+            this.panel3.BackColor = System.Drawing.Color.DarkGray;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(537, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(515, 412);
-            this.panel3.TabIndex = 21;
-            // 
-            // dataGridView_title
-            // 
-            this.dataGridView_title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_title.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_title.Location = new System.Drawing.Point(3, 35);
-            this.dataGridView_title.Name = "dataGridView_title";
-            this.dataGridView_title.Size = new System.Drawing.Size(506, 371);
-            this.dataGridView_title.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(56, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(162, 20);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Thông tin khách hàng";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.btn_back);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(800, 38);
-            this.panel4.TabIndex = 20;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(370, 7);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 20);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Thuê đĩa";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btn_back
-            // 
-            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_back.FlatAppearance.BorderSize = 0;
-            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
-            this.btn_back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_back.Location = new System.Drawing.Point(1, 2);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(150, 32);
-            this.btn_back.TabIndex = 19;
-            this.btn_back.Text = "          Back";
-            this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pictureBox2.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btn_img_delete_newFee
-            // 
-            this.btn_img_delete_newFee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_img_delete_newFee.BackColor = System.Drawing.Color.White;
-            this.btn_img_delete_newFee.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.delete;
-            this.btn_img_delete_newFee.ImageActive = null;
-            this.btn_img_delete_newFee.Location = new System.Drawing.Point(248, 230);
-            this.btn_img_delete_newFee.Name = "btn_img_delete_newFee";
-            this.btn_img_delete_newFee.Size = new System.Drawing.Size(30, 30);
-            this.btn_img_delete_newFee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_img_delete_newFee.TabIndex = 12;
-            this.btn_img_delete_newFee.TabStop = false;
-            this.btn_img_delete_newFee.Zoom = 10;
-            // 
-            // btn_ig_menu_newFee
-            // 
-            this.btn_ig_menu_newFee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ig_menu_newFee.BackColor = System.Drawing.Color.White;
-            this.btn_ig_menu_newFee.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Menu;
-            this.btn_ig_menu_newFee.ImageActive = null;
-            this.btn_ig_menu_newFee.Location = new System.Drawing.Point(207, 230);
-            this.btn_ig_menu_newFee.Name = "btn_ig_menu_newFee";
-            this.btn_ig_menu_newFee.Size = new System.Drawing.Size(30, 30);
-            this.btn_ig_menu_newFee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_ig_menu_newFee.TabIndex = 13;
-            this.btn_ig_menu_newFee.TabStop = false;
-            this.btn_ig_menu_newFee.Zoom = 10;
-            // 
-            // btn_img_delete_lateFee
-            // 
-            this.btn_img_delete_lateFee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_img_delete_lateFee.BackColor = System.Drawing.Color.White;
-            this.btn_img_delete_lateFee.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.delete;
-            this.btn_img_delete_lateFee.ImageActive = null;
-            this.btn_img_delete_lateFee.Location = new System.Drawing.Point(248, 267);
-            this.btn_img_delete_lateFee.Name = "btn_img_delete_lateFee";
-            this.btn_img_delete_lateFee.Size = new System.Drawing.Size(30, 30);
-            this.btn_img_delete_lateFee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_img_delete_lateFee.TabIndex = 12;
-            this.btn_img_delete_lateFee.TabStop = false;
-            this.btn_img_delete_lateFee.Zoom = 10;
-            // 
-            // btn_img_menu_lateFee
-            // 
-            this.btn_img_menu_lateFee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_img_menu_lateFee.BackColor = System.Drawing.Color.White;
-            this.btn_img_menu_lateFee.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Menu;
-            this.btn_img_menu_lateFee.ImageActive = null;
-            this.btn_img_menu_lateFee.Location = new System.Drawing.Point(207, 267);
-            this.btn_img_menu_lateFee.Name = "btn_img_menu_lateFee";
-            this.btn_img_menu_lateFee.Size = new System.Drawing.Size(30, 30);
-            this.btn_img_menu_lateFee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_img_menu_lateFee.TabIndex = 13;
-            this.btn_img_menu_lateFee.TabStop = false;
-            this.btn_img_menu_lateFee.Zoom = 10;
+            this.panel3.Size = new System.Drawing.Size(2, 450);
+            this.panel3.TabIndex = 4;
             // 
             // RentingForm
             // 
@@ -363,50 +366,50 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RentingForm";
             this.Text = "RentingForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_title)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_img_delete_newFee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_ig_menu_newFee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_img_delete_lateFee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_img_menu_lateFee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_delete_PhiMoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_Delete_PhiTre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiMoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiTre)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txt_search_title;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txt_numberPhone;
-        private Bunifu.Framework.UI.BunifuImageButton btn_img_delete_lateFee;
-        private Bunifu.Framework.UI.BunifuImageButton btn_img_menu_lateFee;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txt_total;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txt_customerName;
+        private Bunifu.Framework.UI.BunifuImageButton btn_IMG_Delete_PhiTre;
+        private Bunifu.Framework.UI.BunifuImageButton btn_IMG_menu_PhiTre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuTileButton btn_pay;
-        private Bunifu.Framework.UI.BunifuImageButton btn_img_delete_newFee;
-        private Bunifu.Framework.UI.BunifuImageButton btn_ig_menu_newFee;
+        private Bunifu.Framework.UI.BunifuTileButton btn_rentDisk;
+        private Bunifu.Framework.UI.BunifuImageButton btn_IMG_delete_PhiMoi;
+        private Bunifu.Framework.UI.BunifuImageButton btn_IMG_menu_PhiMoi;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_Back;
+        private System.Windows.Forms.TextBox txt_numberPhone;
+        private System.Windows.Forms.Panel pnl_numberPhone;
+        private System.Windows.Forms.Panel pnl_nameCustomer;
+        private System.Windows.Forms.TextBox txt_nameCustomer;
+        private System.Windows.Forms.Panel pnl_searchItem;
+        private System.Windows.Forms.TextBox txt_searchItem;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView_title;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btn_back;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
     }
 }
