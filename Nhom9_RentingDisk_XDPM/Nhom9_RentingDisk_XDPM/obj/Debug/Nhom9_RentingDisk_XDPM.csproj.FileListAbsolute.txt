@@ -39,3 +39,9 @@ D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_R
 D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReportTitleForm.resources
 D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.MainForm.resources
 D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.csprojAssemblyReference.cache
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\Business.dll
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\DataAccess.dll
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\Business.pdb
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\Business.dll.config
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\DataAccess.pdb
+D:\XayDungPhanMem\25112020\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\DataAccess.dll.config

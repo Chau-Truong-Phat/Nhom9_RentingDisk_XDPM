@@ -126,9 +126,16 @@ namespace DataAccess
                 };
             }
         }
-
+        public List<Customer> GetAllCustomer()
+        {
+            return db.Customers.ToList();
+        }
         public Customer searchCustomerbyId(string idCustomer) {
             return db.Customers.FirstOrDefault(x => x.idCustomer.Equals(idCustomer));
+        }
+        public List<Customer> GetListCustomerFromPhone(string sdt)
+        {
+            return db.Customers.Where(x => x.phoneNumber.Contains(sdt)).ToList();
         }
     }
 }

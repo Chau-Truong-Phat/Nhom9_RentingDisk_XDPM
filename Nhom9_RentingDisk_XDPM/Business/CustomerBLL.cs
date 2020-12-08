@@ -16,6 +16,10 @@ namespace Business
         {
             dal = new CustomerDAL();
         }
+        public List<Customer> GetAllCustomer()
+        {
+            return dal.GetAllCustomer();
+        }
         public Result add(Customer customer)
         {
             return dal.add(customer);
@@ -34,6 +38,11 @@ namespace Business
         public Customer searchCustomerbyId(string idCustomer)
         {
             return dal.searchCustomerbyId(idCustomer);
+        }
+
+        public List<Customer> GetListCustomerFromPhone(string txt)
+        {
+            return dal.GetListCustomerFromPhone(txt);
         }
     }
 }
