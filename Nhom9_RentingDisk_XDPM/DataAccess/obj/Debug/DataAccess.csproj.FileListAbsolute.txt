@@ -35,3 +35,4 @@ C:\Users\chaut\Downloads\temp\XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM
 C:\Users\chaut\Downloads\temp\XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.addNameDisk.resources
 C:\Users\chaut\Downloads\temp\XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.fixDiskEntity.resources
 C:\Users\chaut\Downloads\temp\XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.updateDatabase.resources
+C:\Users\chaut\Downloads\temp\XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.updateRecord.resources

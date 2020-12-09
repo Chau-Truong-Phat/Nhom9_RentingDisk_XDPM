@@ -11,18 +11,18 @@ namespace DataAccess.Entities
     public class Record
     {
         [Key]
-        [Column(Order = 1)]
+        //[Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idRecord { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
+        //[Key]
+        //[Column(Order = 2)]
         public int idCustomer { get; set; }
-        [Key]
-        [Column(Order = 3)]
+        //[Key]
+        //[Column(Order = 3)]
         public string? idDisk { get; set; }
-        [Key]
-        [Column(Order = 4)]
+        //[Key]
+        //[Column(Order = 4)]
         public string idTitle { get; set; }
 
         public DateTime? rentDate { get; set; }
