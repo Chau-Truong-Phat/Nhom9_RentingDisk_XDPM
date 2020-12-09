@@ -24,10 +24,9 @@ namespace DataAccess.Entities
         //[Key]
         //[Column(Order = 4)]
         public string idTitle { get; set; }
-
-        public DateTime rentDate { get; set; }
-        public DateTime dueDate { get; set; }
-        public DateTime actualReturnDate { get; set; }
+        public DateTime? rentDate { get; set; }
+        public DateTime? dueDate { get; set; }
+        public DateTime? actualReturnDate { get; set; }
         public float? lateFee { get; set; }
         public bool isPaid { get; set; }
 

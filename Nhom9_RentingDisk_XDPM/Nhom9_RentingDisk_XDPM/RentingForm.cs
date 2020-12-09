@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business;
+using DataAccess.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,26 @@ namespace Nhom9_RentingDisk_XDPM
 {
     public partial class RentingForm : Form
     {
+        private DiskBLL diskBLL;
+        private List<Disk> disks;
+        BindingSource bindingSource;
+
         public RentingForm()
         {
             InitializeComponent();
+            diskBLL = new DiskBLL();
+            bindingSource = new BindingSource();
+
+        }
+        public void CreateDataGridView()
+        {
+            bindingSource.DataSource = diskBLL.getDisks();
+            dgv_Disk.DataSource = bindingSource;
+            dgv_Disk.MultiSelect = false;
+            dgv_Disk.ReadOnly = true;
+            dgv_Disk.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_Disk.ClearSelection();
+            dgv_Disk.Rows[0].Selected = false;
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -35,8 +54,17 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void txt_searchItem_Click(object sender, EventArgs e)
         {
-            pnl_searchItem.BackColor = Color.FromArgb(20, 173, 196);
 
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RentingForm_Load(object sender, EventArgs e)
+        {
+            CreateDataGridView();
         }
     }
 }
