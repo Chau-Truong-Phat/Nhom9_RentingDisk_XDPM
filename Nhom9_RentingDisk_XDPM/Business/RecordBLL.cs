@@ -16,17 +16,21 @@ namespace Business
         {
             dal = new RecordDAL();
         }
-        public List<Record> GetAllRecordIsPaid(int id)
+        public List<Record> GetAllRecordUnPaid(int id)
         {
-           return dal.GetAllRecordIsPaid(id);
+           return dal.GetAllRecordUnPaid(id);
         }
-        public List<Record> GetAllRecordIsReturn(int id)
+        public List<Record> GetAllRecordUnReturn(int id)
         {
-            return dal.GetAllRecordIsReturn(id);
+            return dal.GetAllRecordUnReturn(id);
         }
         public Result UpdateDateReturnAndLateFee(Record record)
         {
             return dal.UpdateDateReturnAndLateFee(record);
+        }
+        public Result UpdateIsPaid(Record record)
+        {
+            return dal.UpdateIsPaid(record);
         }
     }
 }

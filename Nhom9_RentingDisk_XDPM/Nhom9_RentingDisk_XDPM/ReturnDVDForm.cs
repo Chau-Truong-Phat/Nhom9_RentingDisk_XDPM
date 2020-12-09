@@ -56,8 +56,41 @@ namespace Nhom9_RentingDisk_XDPM
             chk.HeaderText = "Hủy trả";
             chk.Name = "Cancel";
             dgv_listItem.Columns["Cancel"].Width = (int)(dgv_listItem.Width * 0.15);
-
         }
+        public void OpenFormLateCharge()
+        {
+            CheckLateChargeForm lateCharge;
+            if (txt_numberPhone.Text != null)
+            {
+                lateCharge = new CheckLateChargeForm(txt_numberPhone.Text);
+            }
+            else
+                lateCharge = new CheckLateChargeForm();
+
+            this.Controls.Clear();
+            Panel panel = new Panel();
+            this.Controls.Add(panel);
+            panel.Dock = DockStyle.Fill;
+            lateCharge.TopLevel = false;
+            lateCharge.Parent = panel;
+            lateCharge.Show();
+        }
+        public void OpenCheckLateCharge(int idCustomer)
+        {
+            List<Record> listPaid = new List<Record>();
+            listPaid = _recordBLL.GetAllRecordUnPaid(idCustomer);
+            if (listPaid.Count > 0)
+            {
+                DialogResult result1 = MessageBox.Show("Khách hàng có khoản trễ hạn. Có muốn thực hiện thanh toán không?", "Phí trễ hạn", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result1 == DialogResult.Yes)
+                {
+                    OpenFormLateCharge();
+                }
+            }
+            
+        }
+    //    string ToString(this DateTime? dt, string format)
+    //=> dt == null ? "n/a" : ((DateTime)dt).ToString(format);
         private void txt_numberPhone_Click(object sender, EventArgs e)
         {
             pnl_numberPhone.BackColor = Color.FromArgb(20, 173, 196);
@@ -81,7 +114,7 @@ namespace Nhom9_RentingDisk_XDPM
                 if (customer != null)
                 {
                     txt_nameCustomer.Text = customer.name;
-                    records = _recordBLL.GetAllRecordIsReturn(customer.idCustomer);
+                    records = _recordBLL.GetAllRecordUnReturn(customer.idCustomer);
                     int i = 1;
                     CreateDataGridView();
                     if (records.Count > 0)
@@ -89,13 +122,17 @@ namespace Nhom9_RentingDisk_XDPM
                         foreach (var item in records)
                         {
                             title = _titleBLL.GetItemTitleById(item.idTitle);
-                            _ = dgv_listItem.Rows.Add(i.ToString(), item.idDisk, title.name, item.rentDate.ToString(DATE_FORMAT), item.dueDate.ToString(DATE_FORMAT));
+                            if (item.idDisk != null && item.dueDate != null && item.rentDate != null)
+                            {
+                                dgv_listItem.Rows.Add(i.ToString(), item.idDisk.ToString(), title.name,                 item.rentDate.ToString(), item.dueDate.ToString());
+                            }
                             i++;
                         }
                     }
                     else
                     {
                         MessageBox.Show("Khách hàng không có đĩa trả");
+                        OpenCheckLateCharge(customer.idCustomer);
                     }
 
                 }
@@ -114,10 +151,6 @@ namespace Nhom9_RentingDisk_XDPM
                 temp.idCustomer = record.idCustomer;
                 idCustomer = record.idCustomer;
                 temp.isPaid = false;
-                temp.idRecord = record.idRecord;
-                temp.rentDate = record.rentDate;
-                temp.dueDate = record.dueDate;
-                temp.lateFee = 2;
                 temp.actualReturnDate = DateTime.Now;
                 resutls.Add(_recordBLL.UpdateDateReturnAndLateFee(temp));
             }
@@ -131,30 +164,11 @@ namespace Nhom9_RentingDisk_XDPM
             {
                 dgv_listItem.Rows.Clear();
             }
-            List<Record> listPaid = new List<Record>();
-            listPaid = _recordBLL.GetAllRecordIsPaid(idCustomer);
-            if (listPaid.Count > 0)
-            {
-                DialogResult result1 = MessageBox.Show("Khách hàng có khoản trễ hạn. Có muốn thực hiện thanh toán không?", "Phí trễ hạn", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result1 == DialogResult.Yes)
-                {
-                    Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
-                    .ToList().ForEach(x => x.Close());
-                    CheckLateChargeForm lateCharge = new CheckLateChargeForm();
-                    lateCharge.TopLevel = false;
-                    lateCharge.Parent = panel1;
-                    lateCharge.Show();
-                }
-            }
-            
-
+            OpenCheckLateCharge(idCustomer);
         }
         private void btn_openListLateCharge_Click(object sender, EventArgs e)
         {
-            CheckLateChargeForm lateCharge = new CheckLateChargeForm();
-            lateCharge.TopLevel = false;
-            lateCharge.Parent = panel1;
-            lateCharge.Show();
+            OpenFormLateCharge();
         }
     }
 }

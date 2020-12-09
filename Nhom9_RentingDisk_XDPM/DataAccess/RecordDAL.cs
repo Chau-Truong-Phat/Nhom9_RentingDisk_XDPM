@@ -20,13 +20,13 @@ namespace DataAccess
         {
             return db.Records.ToList();
         }
-        public List<Record> GetAllRecordIsPaid(int id)
+        public List<Record> GetAllRecordUnPaid(int id)
         {
             return db.Records.Where(x=>x.isPaid == false && x.idCustomer==id).ToList();
         }
-        public List<Record> GetAllRecordIsReturn(int id)
+        public List<Record> GetAllRecordUnReturn(int id)
         {
-            return db.Records.Where(x =>x.idCustomer == id).ToList();
+            return db.Records.Where(x =>x.actualReturnDate==null&&x.idCustomer == id).ToList();
         }
         public Result UpdateDateReturnAndLateFee(Record record)
         {
@@ -36,8 +36,8 @@ namespace DataAccess
                                                     );
             if (item != null)
             {
-                item.actualReturnDate = DateTime.Now;
-                if(record.actualReturnDate > item.dueDate)
+                item.actualReturnDate = record.actualReturnDate;
+                if(item.actualReturnDate > item.dueDate)
                 {
                     item.lateFee = 2;
                 }
@@ -45,6 +45,47 @@ namespace DataAccess
                 {
                     item.lateFee = 0;
                 }
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (DbEntityValidationException e)
+                {
+                    return new Result
+                    {
+                        message = e
+                            .EntityValidationErrors
+                            .LastOrDefault()
+                            .ValidationErrors
+                            .LastOrDefault()
+                            .ErrorMessage,
+                        isSuccess = false
+                    };
+                }
+                return new Result
+                {
+                    message = "Cập nhật thành công",
+                    isSuccess = true
+                };
+            }
+            else
+            {
+                return new Result
+                {
+                    message = "Đơn hàng không tồn tại",
+                    isSuccess = false
+                };
+            }
+        }
+        public Result UpdateIsPaid(Record record)
+        {
+            var item = db.Records.FirstOrDefault(x => x.idCustomer.Equals(record.idCustomer)
+                                                   && x.idDisk.Equals(record.idDisk)
+                                                   && x.idTitle.Equals(record.idTitle)
+                                                    );
+            if (item != null)
+            {
+                item.isPaid = true;
                 try
                 {
                     db.SaveChanges();

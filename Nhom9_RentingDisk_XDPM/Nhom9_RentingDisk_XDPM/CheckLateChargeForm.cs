@@ -1,4 +1,5 @@
 ﻿using Business;
+using DataAccess.DTO;
 using DataAccess.Entities;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,11 @@ namespace Nhom9_RentingDisk_XDPM
         private TitleBLL _titleBLL;
 
         private Customer customer;
-        private List<Record> records;
+        private List<Record> recordUnPaid, recordPaid;
         private Title title;
+        int tong = 0;
+
+        private string _sendReturn;
         public CheckLateChargeForm()
         {
             InitializeComponent();
@@ -30,12 +34,32 @@ namespace Nhom9_RentingDisk_XDPM
             _titleBLL = new TitleBLL();
 
             customer = new Customer();
-            records = new List<Record>();
+            recordUnPaid = new List<Record>();
+            recordPaid = new List<Record>();
             title = new Title();
+            lbl_lateFee.Text = tong.ToString() + "$";
+
+        }
+        public CheckLateChargeForm(string idCustomer)
+        {
+            InitializeComponent();
+            _customerBLL = new CustomerBLL();
+            _recordBLL = new RecordBLL();
+            _titleBLL = new TitleBLL();
+
+            customer = new Customer();
+            recordUnPaid = new List<Record>();
+            title = new Title();
+            recordPaid = new List<Record>();
+
+            _sendReturn = idCustomer;
+            txt_numberPhone.Text = _sendReturn;
+            lbl_lateFee.Text = tong.ToString() + "$";
+
         }
         private void CreateDataGridView()
         {
-            dgv_listItem.ColumnCount = 5;
+            dgv_listItem.ColumnCount = 6;
             dgv_listItem.MultiSelect = false;
             dgv_listItem.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_listItem.Columns[0].Name = "STT";
@@ -48,58 +72,123 @@ namespace Nhom9_RentingDisk_XDPM
             dgv_listItem.Columns[3].Width = (int)(dgv_listItem.Width * 0.16);
             dgv_listItem.Columns[4].Name = "Ngày cần trả";
             dgv_listItem.Columns[4].Width = (int)(dgv_listItem.Width * 0.16);
-            var deleteButton = new DataGridViewButtonColumn();
-            deleteButton.Name = "dataGridViewDeleteButton";
-            deleteButton.HeaderText = "Delete";
-            deleteButton.Text = "Delete";
-            deleteButton.UseColumnTextForButtonValue = true;
-            this.dgv_listItem.Columns.Add(deleteButton);
+            dgv_listItem.Columns[5].Name = "Ngày trả thực";
+            dgv_listItem.Columns[5].Width = (int)(dgv_listItem.Width * 0.16);
+            DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+            dgv_listItem.Columns.Add(chk);
+            chk.HeaderText = "Hủy trả";
+            chk.Name = "Cancel";
+            dgv_listItem.Columns["Cancel"].Width = (int)(dgv_listItem.Width * 0.15);
 
         }
-
+        public void LoadDataGridView(List<Record> records)
+        {
+            int i = 1;
+            foreach (var item in records)
+            {
+                title = _titleBLL.GetItemTitleById(item.idTitle);
+                if (item.idDisk != null && item.dueDate != null && item.rentDate != null && item.actualReturnDate != null)
+                {
+                    dgv_listItem.Rows.Add(i.ToString(), item.idDisk.ToString(), title.name,
+                        item.rentDate.ToString(), item.dueDate.ToString(), item.actualReturnDate);
+                }
+                i++;
+            }
+            tong = (i - 1) * 1;
+            lbl_lateFee.Text = tong.ToString() + "$";
+        }
+    //    string FormatDate(this DateTime? dt, string format)
+    //=> dt == null ? "n/a" : ((DateTime)dt).ToString(format);
         private void txt_numberPhone_TextChanged(object sender, EventArgs e)
         {
             if (txt_numberPhone.Text != null)
             {
                 customer = _customerBLL.searchCustomerbyPhone(txt_numberPhone.Text.Trim());
-                if (customer != null)
+            }
+            if (customer != null)
+            {
+                txt_numberPhone.Text = customer.phoneNumber;
+                txt_nameCustomer.Text = customer.name;
+                recordUnPaid = _recordBLL.GetAllRecordUnPaid(customer.idCustomer);
+                recordPaid = recordUnPaid;
+                if (recordUnPaid.Count > 0)
                 {
-                    txt_nameCustomer.Text = customer.name;
-                    records = _recordBLL.GetAllRecordIsReturn(customer.idCustomer);
-                    int i = 1;
-                    if (records.Count > 0)
-                    {
-                        foreach (var item in records)
-                        {
-                            title = _titleBLL.GetItemTitleById(item.idTitle);
-                            _ = dgv_listItem.Rows.Add(i.ToString(), item.idDisk, title.name, item.rentDate.ToString(DATE_FORMAT), item.dueDate.ToString(DATE_FORMAT));
-                            i++;
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Khách hàng không nợ phí trả trễ");
-                    }
+                    CreateDataGridView();
+                    LoadDataGridView(recordUnPaid);
+                }
+                else
+                {
+                    MessageBox.Show("Khách hàng không nợ phí trả trễ");
+                }
 
+            }
+        }
+        private void dgv_listItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Record record = new Record();
+            if (e.RowIndex >= 0 && e.ColumnIndex == 6)
+            {
+                //Reference the GridView Row.
+                DataGridViewRow row = dgv_listItem.Rows[e.RowIndex];
+
+                //Set the CheckBox selection.
+                row.Cells["Cancel"].Value = !Convert.ToBoolean(row.Cells["Cancel"].EditedFormattedValue);
+
+                //If CheckBox is checked, display Message Box.
+                if (Convert.ToBoolean(row.Cells["Cancel"].Value))
+                {
+                    tong += 1;
+                    lbl_lateFee.Text = tong.ToString() + "$";
+                    record.idDisk = row.Cells[1].Value.ToString();
+                    record.idCustomer = 0;
+                    record.idTitle = "000";
+                    record.isPaid = false;
+                    record.rentDate = DateTime.Parse(row.Cells[3].Value.ToString());
+                    record.dueDate = DateTime.Parse(row.Cells[4].Value.ToString());
+                    record.actualReturnDate = DateTime.Parse(row.Cells[5].Value.ToString());
+                    recordPaid.Add(record);
+                }
+                else
+                {
+                    tong -= 1;
+                    lbl_lateFee.Text = tong.ToString() + "$";
+                    for (int item=0; item< recordPaid.Count;item++)
+                    {
+                        if (row.Cells[1].Value.ToString() == recordPaid[item].idDisk)
+                            recordPaid.RemoveAt(item);
+                    }
                 }
             }
         }
 
-        private void dgv_listItem_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        private void btn_thanhToan_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex == dgv_listItem.NewRowIndex || e.RowIndex < 0)
-                return;
-
-            if (e.ColumnIndex == dgv_listItem.Columns["dataGridViewDeleteButton"].Index)
+            List<Result> results = new List<Result>();
+            foreach (var item in recordUnPaid)
             {
-                var image = Properties.Resources.delete_sign_16px; //An image
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                var x = e.CellBounds.Left + (e.CellBounds.Width - image.Width) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - image.Height) / 2;
-                e.Graphics.DrawImage(image, new Point(x, y));
-
-                e.Handled = true;
+                foreach (var update in recordPaid)
+                {
+                    Record temp = new Record();
+                    if(item.idDisk==update.idDisk && item.rentDate==update.rentDate && item.dueDate== update.dueDate && item.actualReturnDate==update.actualReturnDate)
+                    {
+                        temp = item;
+                        results.Add(_recordBLL.UpdateIsPaid(temp));
+                    }
+                }
             }
+            int count = 0;
+            foreach (var item in results)
+            {
+                if (item.message.Equals("Cập nhật thành công"))
+                    count++;
+            }
+            if (count == results.Count)
+            {
+                dgv_listItem.Rows.Clear();
+                LoadDataGridView(recordPaid);
+                MessageBox.Show("Thanh toán thành công");
+            }
+            
         }
     }
 }
