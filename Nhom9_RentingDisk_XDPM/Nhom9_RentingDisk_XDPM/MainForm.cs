@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,11 @@ namespace Nhom9_RentingDisk_XDPM
 {
     public partial class MainForm : Form
     {
+        //private List<Disk> disks;
         public MainForm()
         {
             InitializeComponent();
-
+            //disks = new List<Disk>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
