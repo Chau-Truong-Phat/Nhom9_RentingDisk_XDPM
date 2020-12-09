@@ -26,7 +26,7 @@ namespace DataAccess
         }
         public List<Record> GetAllRecordIsReturn(int id)
         {
-            return db.Records.Where(x => x.isRecord == false && x.idCustomer == id).ToList();
+            return db.Records.Where(x =>x.idCustomer == id).ToList();
         }
         public Result UpdateDateReturnAndLateFee(Record record)
         {
@@ -37,7 +37,6 @@ namespace DataAccess
             if (item != null)
             {
                 item.actualReturnDate = DateTime.Now;
-                item.isRecord = true;
                 if(record.actualReturnDate > item.dueDate)
                 {
                     item.lateFee = 2;

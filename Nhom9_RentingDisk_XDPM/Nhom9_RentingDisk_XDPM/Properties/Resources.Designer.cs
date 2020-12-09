@@ -103,6 +103,16 @@ namespace Nhom9_RentingDisk_XDPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_sign_16px {
+            get {
+                object obj = ResourceManager.GetObject("delete_sign_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_sign_26px {
             get {
                 object obj = ResourceManager.GetObject("delete_sign_26px", resourceCulture);

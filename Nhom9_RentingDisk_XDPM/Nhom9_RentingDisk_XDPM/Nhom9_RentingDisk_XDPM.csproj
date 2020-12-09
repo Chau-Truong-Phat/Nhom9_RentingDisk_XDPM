@@ -186,6 +186,7 @@
     <Content Include="Resources\business_documentation_filled_50px.png" />
     <Content Include="Resources\cd_collection_filled_50px.png" />
     <Content Include="Resources\cd_filled_50px.png" />
+    <None Include="Resources\delete_sign_16px.png" />
     <Content Include="Resources\delete_sign_26px.png" />
     <Content Include="Resources\double_left_26px.png" />
     <Content Include="Resources\edit_graph_report_filled_50px.png" />

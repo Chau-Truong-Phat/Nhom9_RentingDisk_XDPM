@@ -89,7 +89,7 @@ namespace Nhom9_RentingDisk_XDPM
                         foreach (var item in records)
                         {
                             title = _titleBLL.GetItemTitleById(item.idTitle);
-                            dgv_listItem.Rows.Add(i.ToString(), item.idDisk, title.name,item.rentDate.ToString(DATE_FORMAT),item.dueDate.ToString(DATE_FORMAT));
+                            _ = dgv_listItem.Rows.Add(i.ToString(), item.idDisk, title.name, item.rentDate.ToString(DATE_FORMAT), item.dueDate.ToString(DATE_FORMAT));
                             i++;
                         }
                     }
@@ -114,7 +114,7 @@ namespace Nhom9_RentingDisk_XDPM
                 temp.idCustomer = record.idCustomer;
                 idCustomer = record.idCustomer;
                 temp.isPaid = false;
-                temp.isRecord = false;
+                temp.idRecord = record.idRecord;
                 temp.rentDate = record.rentDate;
                 temp.dueDate = record.dueDate;
                 temp.lateFee = 2;
@@ -138,9 +138,12 @@ namespace Nhom9_RentingDisk_XDPM
                 DialogResult result1 = MessageBox.Show("Khách hàng có khoản trễ hạn. Có muốn thực hiện thanh toán không?", "Phí trễ hạn", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result1 == DialogResult.Yes)
                 {
-                    //FormThanhToan frm = new FormThanhToan(customer, lstLate, this.auth);
-                    //frm.Show();
-                    //frm.FormClosing += Frm_FormClosing;
+                    Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
+                    .ToList().ForEach(x => x.Close());
+                    CheckLateChargeForm lateCharge = new CheckLateChargeForm();
+                    lateCharge.TopLevel = false;
+                    lateCharge.Parent = panel1;
+                    lateCharge.Show();
                 }
             }
             
@@ -148,7 +151,10 @@ namespace Nhom9_RentingDisk_XDPM
         }
         private void btn_openListLateCharge_Click(object sender, EventArgs e)
         {
-
+            CheckLateChargeForm lateCharge = new CheckLateChargeForm();
+            lateCharge.TopLevel = false;
+            lateCharge.Parent = panel1;
+            lateCharge.Show();
         }
     }
 }
