@@ -16,6 +16,10 @@ namespace DataAccess
         {
             db = new RentingDiskDBContext();
         }
+        public List<Customer> GetAllCustomer()
+        {
+            return db.Customers.ToList();
+        }
         public Result add(Customer customer)
         {
             db.Customers.Add(customer);
@@ -129,6 +133,10 @@ namespace DataAccess
 
         public Customer searchCustomerbyId(string idCustomer) {
             return db.Customers.FirstOrDefault(x => x.idCustomer.Equals(idCustomer));
+        }
+        public Customer searchCustomerbyPhone(string phoneCustomer)
+        {
+            return db.Customers.FirstOrDefault(x => x.phoneNumber.Equals(phoneCustomer));
         }
     }
 }

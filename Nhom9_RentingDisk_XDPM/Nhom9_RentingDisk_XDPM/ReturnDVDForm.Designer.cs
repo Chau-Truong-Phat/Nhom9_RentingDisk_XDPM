@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnDVDForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_searchItemReturn = new System.Windows.Forms.Panel();
             this.txt_searchDiskReturn = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_Back = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnl_nameCustomer = new System.Windows.Forms.Panel();
             this.txt_nameCustomer = new System.Windows.Forms.TextBox();
@@ -43,20 +44,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnIMG_Delete = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnIMG_menu = new Bunifu.Framework.UI.BunifuImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_TraHang = new Bunifu.Framework.UI.BunifuTileButton();
+            this.dgv_listItem = new System.Windows.Forms.DataGridView();
+            this.btn_Back = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnIMG_Delete = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_openListLateCharge = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIMG_Delete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIMG_menu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_openListLateCharge)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.dgv_listItem);
             this.panel1.Controls.Add(this.pnl_searchItemReturn);
             this.panel1.Controls.Add(this.txt_searchDiskReturn);
             this.panel1.Controls.Add(this.panel4);
@@ -101,35 +109,6 @@
             this.panel4.Size = new System.Drawing.Size(2, 450);
             this.panel4.TabIndex = 20;
             // 
-            // btn_Back
-            // 
-            this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Back.FlatAppearance.BorderSize = 0;
-            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.double_left_26px;
-            this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Back.Location = new System.Drawing.Point(3, 415);
-            this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(150, 32);
-            this.btn_Back.TabIndex = 19;
-            this.btn_Back.Text = "Back";
-            this.btn_Back.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pnl_nameCustomer);
@@ -140,7 +119,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnIMG_Delete);
-            this.panel2.Controls.Add(this.btnIMG_menu);
+            this.panel2.Controls.Add(this.btn_openListLateCharge);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btn_TraHang);
@@ -195,6 +174,7 @@
             this.txt_numberPhone.Size = new System.Drawing.Size(246, 22);
             this.txt_numberPhone.TabIndex = 16;
             this.txt_numberPhone.Click += new System.EventHandler(this.txt_numberPhone_Click);
+            this.txt_numberPhone.TextChanged += new System.EventHandler(this.txt_numberPhone_TextChanged);
             // 
             // label4
             // 
@@ -228,34 +208,6 @@
             this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Phí trễ";
-            // 
-            // btnIMG_Delete
-            // 
-            this.btnIMG_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIMG_Delete.BackColor = System.Drawing.Color.White;
-            this.btnIMG_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btnIMG_Delete.Image")));
-            this.btnIMG_Delete.ImageActive = null;
-            this.btnIMG_Delete.Location = new System.Drawing.Point(223, 274);
-            this.btnIMG_Delete.Name = "btnIMG_Delete";
-            this.btnIMG_Delete.Size = new System.Drawing.Size(30, 30);
-            this.btnIMG_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnIMG_Delete.TabIndex = 3;
-            this.btnIMG_Delete.TabStop = false;
-            this.btnIMG_Delete.Zoom = 10;
-            // 
-            // btnIMG_menu
-            // 
-            this.btnIMG_menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIMG_menu.BackColor = System.Drawing.Color.White;
-            this.btnIMG_menu.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.list_24px;
-            this.btnIMG_menu.ImageActive = null;
-            this.btnIMG_menu.Location = new System.Drawing.Point(187, 274);
-            this.btnIMG_menu.Name = "btnIMG_menu";
-            this.btnIMG_menu.Size = new System.Drawing.Size(30, 30);
-            this.btnIMG_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnIMG_menu.TabIndex = 3;
-            this.btnIMG_menu.TabStop = false;
-            this.btnIMG_menu.Zoom = 10;
             // 
             // label2
             // 
@@ -298,6 +250,114 @@
             this.btn_TraHang.Name = "btn_TraHang";
             this.btn_TraHang.Size = new System.Drawing.Size(246, 40);
             this.btn_TraHang.TabIndex = 0;
+            this.btn_TraHang.Click += new System.EventHandler(this.btn_TraHang_Click);
+            // 
+            // dgv_listItem
+            // 
+            this.dgv_listItem.AllowUserToAddRows = false;
+            this.dgv_listItem.AllowUserToDeleteRows = false;
+            this.dgv_listItem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_listItem.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_listItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_listItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_listItem.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_listItem.GridColor = System.Drawing.Color.LightGray;
+            this.dgv_listItem.Location = new System.Drawing.Point(9, 60);
+            this.dgv_listItem.Name = "dgv_listItem";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_listItem.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_listItem.RowHeadersVisible = false;
+            this.dgv_listItem.Size = new System.Drawing.Size(490, 349);
+            this.dgv_listItem.TabIndex = 23;
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Back.FlatAppearance.BorderSize = 0;
+            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.double_left_26px;
+            this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Back.Location = new System.Drawing.Point(9, 415);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(150, 32);
+            this.btn_Back.TabIndex = 19;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnIMG_Delete
+            // 
+            this.btnIMG_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIMG_Delete.BackColor = System.Drawing.Color.White;
+            this.btnIMG_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btnIMG_Delete.Image")));
+            this.btnIMG_Delete.ImageActive = null;
+            this.btnIMG_Delete.Location = new System.Drawing.Point(223, 274);
+            this.btnIMG_Delete.Name = "btnIMG_Delete";
+            this.btnIMG_Delete.Size = new System.Drawing.Size(30, 30);
+            this.btnIMG_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnIMG_Delete.TabIndex = 3;
+            this.btnIMG_Delete.TabStop = false;
+            this.btnIMG_Delete.Zoom = 10;
+            // 
+            // btn_openListLateCharge
+            // 
+            this.btn_openListLateCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_openListLateCharge.BackColor = System.Drawing.Color.White;
+            this.btn_openListLateCharge.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.list_24px;
+            this.btn_openListLateCharge.ImageActive = null;
+            this.btn_openListLateCharge.Location = new System.Drawing.Point(187, 274);
+            this.btn_openListLateCharge.Name = "btn_openListLateCharge";
+            this.btn_openListLateCharge.Size = new System.Drawing.Size(30, 30);
+            this.btn_openListLateCharge.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_openListLateCharge.TabIndex = 3;
+            this.btn_openListLateCharge.TabStop = false;
+            this.btn_openListLateCharge.Zoom = 10;
+            this.btn_openListLateCharge.Click += new System.EventHandler(this.btn_openListLateCharge_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkGray;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(2, 450);
+            this.panel3.TabIndex = 24;
             // 
             // ReturnDVDForm
             // 
@@ -312,11 +372,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIMG_Delete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIMG_menu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_openListLateCharge)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,7 +388,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuTileButton btn_TraHang;
-        private Bunifu.Framework.UI.BunifuImageButton btnIMG_menu;
+        private Bunifu.Framework.UI.BunifuImageButton btn_openListLateCharge;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -342,5 +403,7 @@
         private System.Windows.Forms.Panel pnl_searchItemReturn;
         private System.Windows.Forms.TextBox txt_searchDiskReturn;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dgv_listItem;
+        private System.Windows.Forms.Panel panel3;
     }
 }

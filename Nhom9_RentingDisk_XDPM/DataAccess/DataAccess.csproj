@@ -76,7 +76,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordDAL.cs" />
     <Compile Include="RentingDiskDBContext.cs" />
+    <Compile Include="TitleDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202011230918552_Init.resx">

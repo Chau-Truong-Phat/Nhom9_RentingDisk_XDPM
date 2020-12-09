@@ -22,3 +22,10 @@ D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XD
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.csproj.CopyComplete
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.exe
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.pdb
+D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\Business.dll
+D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\DataAccess.dll
+D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\Business.pdb
+D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\Business.dll.config
+D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\DataAccess.pdb
+D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\bin\Debug\DataAccess.dll.config
+D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.CheckLateChargeForm.resources

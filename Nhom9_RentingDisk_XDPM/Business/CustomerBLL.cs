@@ -31,9 +31,9 @@ namespace Business
             return dal.delete(idCustomer);
         }
 
-        public Customer searchCustomerbyId(string idCustomer)
+        public Customer searchCustomerbyPhone(string phoneCustomer)
         {
-            return dal.searchCustomerbyId(idCustomer);
+            return dal.searchCustomerbyPhone(phoneCustomer);
         }
     }
 }
