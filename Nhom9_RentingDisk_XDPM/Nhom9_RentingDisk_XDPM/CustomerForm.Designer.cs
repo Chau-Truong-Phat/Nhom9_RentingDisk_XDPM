@@ -28,19 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_customerInfo = new System.Windows.Forms.Panel();
+            this.dataGridView_customer = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txt_searchItem = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnl_searchItem = new System.Windows.Forms.Panel();
-            this.txt_searchItem = new System.Windows.Forms.TextBox();
             this.btn_Back = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txt_address = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_numberPhone = new System.Windows.Forms.TextBox();
-            this.pnl_numberPhone = new System.Windows.Forms.Panel();
-            this.txt_userName = new System.Windows.Forms.TextBox();
+            this.txt_customerName = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btn_updateCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_deleteCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_addCustomer = new Bunifu.Framework.UI.BunifuTileButton();
@@ -48,7 +44,14 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_numberPhone = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txt_addressName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_email = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.txt_dateBirth = new System.Windows.Forms.DateTimePicker();
             this.pnl_customerInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_customer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -58,47 +61,72 @@
             this.pnl_customerInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_customerInfo.Controls.Add(this.pictureBox1);
-            this.pnl_customerInfo.Controls.Add(this.pnl_searchItem);
+            this.pnl_customerInfo.Controls.Add(this.dataGridView_customer);
             this.pnl_customerInfo.Controls.Add(this.txt_searchItem);
+            this.pnl_customerInfo.Controls.Add(this.pictureBox1);
             this.pnl_customerInfo.Controls.Add(this.btn_Back);
-            this.pnl_customerInfo.Controls.Add(this.listView1);
             this.pnl_customerInfo.Location = new System.Drawing.Point(0, 0);
             this.pnl_customerInfo.Name = "pnl_customerInfo";
             this.pnl_customerInfo.Size = new System.Drawing.Size(615, 660);
             this.pnl_customerInfo.TabIndex = 0;
             // 
-            // pictureBox1
+            // dataGridView_customer
             // 
-            this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pnl_searchItem
-            // 
-            this.pnl_searchItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_searchItem.BackColor = System.Drawing.Color.DarkGray;
-            this.pnl_searchItem.Location = new System.Drawing.Point(30, 38);
-            this.pnl_searchItem.Name = "pnl_searchItem";
-            this.pnl_searchItem.Size = new System.Drawing.Size(565, 1);
-            this.pnl_searchItem.TabIndex = 23;
+            this.dataGridView_customer.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView_customer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_customer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_customer.DoubleBuffered = true;
+            this.dataGridView_customer.EnableHeadersVisualStyles = false;
+            this.dataGridView_customer.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.dataGridView_customer.HeaderForeColor = System.Drawing.Color.White;
+            this.dataGridView_customer.Location = new System.Drawing.Point(13, 40);
+            this.dataGridView_customer.Name = "dataGridView_customer";
+            this.dataGridView_customer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView_customer.Size = new System.Drawing.Size(594, 579);
+            this.dataGridView_customer.TabIndex = 26;
+            this.dataGridView_customer.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView_customer_RowStateChanged);
             // 
             // txt_searchItem
             // 
             this.txt_searchItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_searchItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_searchItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchItem.Location = new System.Drawing.Point(30, 18);
-            this.txt_searchItem.Multiline = true;
+            this.txt_searchItem.Depth = 0;
+            this.txt_searchItem.Hint = "Tìm kiếm mã khách hàng";
+            this.txt_searchItem.Location = new System.Drawing.Point(36, 12);
+            this.txt_searchItem.MouseState = MaterialSkin.MouseState.HOVER;
             this.txt_searchItem.Name = "txt_searchItem";
-            this.txt_searchItem.Size = new System.Drawing.Size(565, 22);
-            this.txt_searchItem.TabIndex = 22;
+            this.txt_searchItem.PasswordChar = '\0';
+            this.txt_searchItem.SelectedText = "";
+            this.txt_searchItem.SelectionLength = 0;
+            this.txt_searchItem.SelectionStart = 0;
+            this.txt_searchItem.Size = new System.Drawing.Size(571, 23);
+            this.txt_searchItem.TabIndex = 25;
+            this.txt_searchItem.UseSystemPasswordChar = false;
+            this.txt_searchItem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_searchItem_KeyUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_Back
             // 
@@ -118,31 +146,19 @@
             this.btn_Back.UseVisualStyleBackColor = true;
             this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(13, 90);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(582, 510);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.txt_address);
-            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.txt_dateBirth);
+            this.panel2.Controls.Add(this.txt_email);
+            this.panel2.Controls.Add(this.txt_addressName);
             this.panel2.Controls.Add(this.txt_numberPhone);
-            this.panel2.Controls.Add(this.pnl_numberPhone);
-            this.panel2.Controls.Add(this.txt_userName);
+            this.panel2.Controls.Add(this.txt_customerName);
             this.panel2.Controls.Add(this.btn_updateCustomer);
             this.panel2.Controls.Add(this.btn_deleteCustomer);
             this.panel2.Controls.Add(this.btn_addCustomer);
             this.panel2.Controls.Add(this.materialLabel2);
+            this.panel2.Controls.Add(this.materialLabel5);
+            this.panel2.Controls.Add(this.materialLabel4);
             this.panel2.Controls.Add(this.materialLabel3);
             this.panel2.Controls.Add(this.materialLabel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -151,71 +167,22 @@
             this.panel2.Size = new System.Drawing.Size(260, 660);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
+            // txt_customerName
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_customerName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.DarkGray;
-            this.panel3.Location = new System.Drawing.Point(12, 211);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(236, 1);
-            this.panel3.TabIndex = 27;
-            // 
-            // txt_address
-            // 
-            this.txt_address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_address.Location = new System.Drawing.Point(12, 190);
-            this.txt_address.Multiline = true;
-            this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(236, 22);
-            this.txt_address.TabIndex = 26;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Location = new System.Drawing.Point(12, 141);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 1);
-            this.panel1.TabIndex = 25;
-            // 
-            // txt_numberPhone
-            // 
-            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_numberPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_numberPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_numberPhone.Location = new System.Drawing.Point(12, 120);
-            this.txt_numberPhone.Multiline = true;
-            this.txt_numberPhone.Name = "txt_numberPhone";
-            this.txt_numberPhone.Size = new System.Drawing.Size(236, 22);
-            this.txt_numberPhone.TabIndex = 24;
-            // 
-            // pnl_numberPhone
-            // 
-            this.pnl_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_numberPhone.BackColor = System.Drawing.Color.DarkGray;
-            this.pnl_numberPhone.Location = new System.Drawing.Point(12, 71);
-            this.pnl_numberPhone.Name = "pnl_numberPhone";
-            this.pnl_numberPhone.Size = new System.Drawing.Size(236, 1);
-            this.pnl_numberPhone.TabIndex = 23;
-            // 
-            // txt_userName
-            // 
-            this.txt_userName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_userName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_userName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_userName.Location = new System.Drawing.Point(12, 50);
-            this.txt_userName.Multiline = true;
-            this.txt_userName.Name = "txt_userName";
-            this.txt_userName.Size = new System.Drawing.Size(236, 22);
-            this.txt_userName.TabIndex = 22;
+            this.txt_customerName.Depth = 0;
+            this.txt_customerName.Hint = "VD: Nguyễn Văn An";
+            this.txt_customerName.Location = new System.Drawing.Point(12, 42);
+            this.txt_customerName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_customerName.Name = "txt_customerName";
+            this.txt_customerName.PasswordChar = '\0';
+            this.txt_customerName.SelectedText = "";
+            this.txt_customerName.SelectionLength = 0;
+            this.txt_customerName.SelectionStart = 0;
+            this.txt_customerName.Size = new System.Drawing.Size(236, 23);
+            this.txt_customerName.TabIndex = 28;
+            this.txt_customerName.UseSystemPasswordChar = false;
             // 
             // btn_updateCustomer
             // 
@@ -236,6 +203,7 @@
             this.btn_updateCustomer.Name = "btn_updateCustomer";
             this.btn_updateCustomer.Size = new System.Drawing.Size(237, 40);
             this.btn_updateCustomer.TabIndex = 21;
+            this.btn_updateCustomer.Click += new System.EventHandler(this.btn_updateCustomer_Click);
             // 
             // btn_deleteCustomer
             // 
@@ -256,6 +224,7 @@
             this.btn_deleteCustomer.Name = "btn_deleteCustomer";
             this.btn_deleteCustomer.Size = new System.Drawing.Size(237, 40);
             this.btn_deleteCustomer.TabIndex = 21;
+            this.btn_deleteCustomer.Click += new System.EventHandler(this.btn_deleteCustomer_Click);
             // 
             // btn_addCustomer
             // 
@@ -271,11 +240,12 @@
             this.btn_addCustomer.ImageZoom = 50;
             this.btn_addCustomer.LabelPosition = 30;
             this.btn_addCustomer.LabelText = "Thêm";
-            this.btn_addCustomer.Location = new System.Drawing.Point(12, 601);
+            this.btn_addCustomer.Location = new System.Drawing.Point(12, 606);
             this.btn_addCustomer.Margin = new System.Windows.Forms.Padding(5);
             this.btn_addCustomer.Name = "btn_addCustomer";
             this.btn_addCustomer.Size = new System.Drawing.Size(237, 40);
             this.btn_addCustomer.TabIndex = 21;
+            this.btn_addCustomer.Click += new System.EventHandler(this.btn_addCustomer_Click);
             // 
             // materialLabel2
             // 
@@ -284,7 +254,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(8, 90);
+            this.materialLabel2.Location = new System.Drawing.Point(6, 68);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(98, 19);
@@ -298,7 +268,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(8, 160);
+            this.materialLabel3.Location = new System.Drawing.Point(8, 116);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(55, 19);
@@ -328,6 +298,94 @@
             this.panel4.Size = new System.Drawing.Size(2, 660);
             this.panel4.TabIndex = 24;
             // 
+            // txt_numberPhone
+            // 
+            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_numberPhone.Depth = 0;
+            this.txt_numberPhone.Hint = "VD : 0946841267";
+            this.txt_numberPhone.Location = new System.Drawing.Point(12, 90);
+            this.txt_numberPhone.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_numberPhone.Name = "txt_numberPhone";
+            this.txt_numberPhone.PasswordChar = '\0';
+            this.txt_numberPhone.SelectedText = "";
+            this.txt_numberPhone.SelectionLength = 0;
+            this.txt_numberPhone.SelectionStart = 0;
+            this.txt_numberPhone.Size = new System.Drawing.Size(236, 23);
+            this.txt_numberPhone.TabIndex = 28;
+            this.txt_numberPhone.UseSystemPasswordChar = false;
+            // 
+            // txt_addressName
+            // 
+            this.txt_addressName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_addressName.Depth = 0;
+            this.txt_addressName.Hint = "VD: 12 Nguyễn Văn Bảo , Quận gò vấp";
+            this.txt_addressName.Location = new System.Drawing.Point(12, 138);
+            this.txt_addressName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_addressName.Name = "txt_addressName";
+            this.txt_addressName.PasswordChar = '\0';
+            this.txt_addressName.SelectedText = "";
+            this.txt_addressName.SelectionLength = 0;
+            this.txt_addressName.SelectionStart = 0;
+            this.txt_addressName.Size = new System.Drawing.Size(236, 23);
+            this.txt_addressName.TabIndex = 28;
+            this.txt_addressName.UseSystemPasswordChar = false;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(8, 164);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(47, 19);
+            this.materialLabel4.TabIndex = 15;
+            this.materialLabel4.Text = "Email";
+            // 
+            // txt_email
+            // 
+            this.txt_email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_email.Depth = 0;
+            this.txt_email.Hint = "VD : NgAn4679@gmail.com";
+            this.txt_email.Location = new System.Drawing.Point(12, 186);
+            this.txt_email.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_email.Name = "txt_email";
+            this.txt_email.PasswordChar = '\0';
+            this.txt_email.SelectedText = "";
+            this.txt_email.SelectionLength = 0;
+            this.txt_email.SelectionStart = 0;
+            this.txt_email.Size = new System.Drawing.Size(236, 23);
+            this.txt_email.TabIndex = 28;
+            this.txt_email.UseSystemPasswordChar = false;
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(8, 212);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(75, 19);
+            this.materialLabel5.TabIndex = 15;
+            this.materialLabel5.Text = "Ngày sinh";
+            // 
+            // txt_dateBirth
+            // 
+            this.txt_dateBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_dateBirth.Location = new System.Drawing.Point(12, 234);
+            this.txt_dateBirth.Name = "txt_dateBirth";
+            this.txt_dateBirth.Size = new System.Drawing.Size(236, 20);
+            this.txt_dateBirth.TabIndex = 29;
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,7 +400,7 @@
             this.Text = "CustomerForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnl_customerInfo.ResumeLayout(false);
-            this.pnl_customerInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_customer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -353,7 +411,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnl_customerInfo;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Panel panel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
@@ -362,15 +419,16 @@
         private Bunifu.Framework.UI.BunifuTileButton btn_updateCustomer;
         private Bunifu.Framework.UI.BunifuTileButton btn_deleteCustomer;
         private Bunifu.Framework.UI.BunifuTileButton btn_addCustomer;
-        private System.Windows.Forms.Panel pnl_searchItem;
-        private System.Windows.Forms.TextBox txt_searchItem;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txt_address;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txt_numberPhone;
-        private System.Windows.Forms.Panel pnl_numberPhone;
-        private System.Windows.Forms.TextBox txt_userName;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridView_customer;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_searchItem;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_customerName;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_email;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_addressName;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_numberPhone;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private System.Windows.Forms.DateTimePicker txt_dateBirth;
     }
 }

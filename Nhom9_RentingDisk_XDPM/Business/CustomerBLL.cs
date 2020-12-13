@@ -35,5 +35,13 @@ namespace Business
         {
             return dal.searchCustomerbyPhone(phoneCustomer);
         }
+        public List<Customer> getListCustomerbyID(int idCustomer)
+        {
+            return dal.getListCustomerbyID(idCustomer);
+        }
+        public List<Customer> GetAllCustomer()
+        {
+            return dal.GetAllCustomer();
+        }
     }
 }

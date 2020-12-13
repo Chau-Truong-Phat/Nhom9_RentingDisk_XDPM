@@ -28,5 +28,9 @@ namespace Business
         {
             return dal.addTitle(title);
         }
+        public Title GetTitleByName(string namett)
+        {
+            return dal.GetItemTitleById(namett);
+        }
     }
 }

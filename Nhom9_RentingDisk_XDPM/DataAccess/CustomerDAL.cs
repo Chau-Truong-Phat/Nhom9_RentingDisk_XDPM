@@ -132,7 +132,12 @@ namespace DataAccess
         }
 
         public Customer searchCustomerbyId(string idCustomer) {
+
             return db.Customers.FirstOrDefault(x => x.idCustomer.Equals(idCustomer));
+        }
+        public List<Customer> getListCustomerbyID(int idCustomer)
+        {
+            return db.Customers.Where(x => x.idCustomer.Equals(idCustomer)).ToList();
         }
         public Customer searchCustomerbyPhone(string phoneCustomer)
         {

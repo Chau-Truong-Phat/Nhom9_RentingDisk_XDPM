@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_update_information_disk = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_back = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -44,8 +45,10 @@
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.cbx_titleType_addTitle = new System.Windows.Forms.ComboBox();
-            this.txt_titleName_addTitle = new System.Windows.Forms.TextBox();
+            this.txt_idTitle = new System.Windows.Forms.TextBox();
+            this.txt_titleName = new System.Windows.Forms.TextBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.btn_add_title = new Bunifu.Framework.UI.BunifuTileButton();
@@ -78,10 +81,10 @@
             this.btn_update_information_disk.ImageZoom = 50;
             this.btn_update_information_disk.LabelPosition = 30;
             this.btn_update_information_disk.LabelText = "Thay Đổi";
-            this.btn_update_information_disk.Location = new System.Drawing.Point(38, 297);
+            this.btn_update_information_disk.Location = new System.Drawing.Point(17, 297);
             this.btn_update_information_disk.Margin = new System.Windows.Forms.Padding(6);
             this.btn_update_information_disk.Name = "btn_update_information_disk";
-            this.btn_update_information_disk.Size = new System.Drawing.Size(227, 40);
+            this.btn_update_information_disk.Size = new System.Drawing.Size(248, 40);
             this.btn_update_information_disk.TabIndex = 20;
             this.btn_update_information_disk.Click += new System.EventHandler(this.btn_DatLaiGiaThue_Click);
             // 
@@ -108,8 +111,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.cbx_titleType_addTitle);
-            this.panel2.Controls.Add(this.txt_titleName_addTitle);
+            this.panel2.Controls.Add(this.txt_idTitle);
+            this.panel2.Controls.Add(this.txt_titleName);
             this.panel2.Controls.Add(this.materialLabel4);
+            this.panel2.Controls.Add(this.materialLabel1);
             this.panel2.Controls.Add(this.materialLabel3);
             this.panel2.Controls.Add(this.materialLabel2);
             this.panel2.Controls.Add(this.btn_add_title);
@@ -234,20 +239,29 @@
             this.cbx_titleType_addTitle.Items.AddRange(new object[] {
             "CD",
             "DVD"});
-            this.cbx_titleType_addTitle.Location = new System.Drawing.Point(13, 112);
+            this.cbx_titleType_addTitle.Location = new System.Drawing.Point(17, 158);
             this.cbx_titleType_addTitle.Name = "cbx_titleType_addTitle";
-            this.cbx_titleType_addTitle.Size = new System.Drawing.Size(251, 21);
+            this.cbx_titleType_addTitle.Size = new System.Drawing.Size(247, 21);
             this.cbx_titleType_addTitle.TabIndex = 22;
             this.cbx_titleType_addTitle.Text = "CD";
             // 
-            // txt_titleName_addTitle
+            // txt_idTitle
             // 
-            this.txt_titleName_addTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_idTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_titleName_addTitle.Location = new System.Drawing.Point(13, 67);
-            this.txt_titleName_addTitle.Name = "txt_titleName_addTitle";
-            this.txt_titleName_addTitle.Size = new System.Drawing.Size(251, 20);
-            this.txt_titleName_addTitle.TabIndex = 21;
+            this.txt_idTitle.Location = new System.Drawing.Point(17, 68);
+            this.txt_idTitle.Name = "txt_idTitle";
+            this.txt_idTitle.Size = new System.Drawing.Size(247, 20);
+            this.txt_idTitle.TabIndex = 21;
+            // 
+            // txt_titleName
+            // 
+            this.txt_titleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_titleName.Location = new System.Drawing.Point(17, 113);
+            this.txt_titleName.Name = "txt_titleName";
+            this.txt_titleName.Size = new System.Drawing.Size(247, 20);
+            this.txt_titleName.TabIndex = 21;
             // 
             // materialLabel4
             // 
@@ -257,12 +271,27 @@
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(9, 90);
+            this.materialLabel4.Location = new System.Drawing.Point(13, 136);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(38, 19);
             this.materialLabel4.TabIndex = 17;
             this.materialLabel4.Text = "Loại";
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(13, 46);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(56, 19);
+            this.materialLabel1.TabIndex = 17;
+            this.materialLabel1.Text = "Mã tựa";
             // 
             // materialLabel3
             // 
@@ -272,7 +301,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(9, 45);
+            this.materialLabel3.Location = new System.Drawing.Point(13, 91);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(60, 19);
@@ -309,12 +338,12 @@
             this.btn_add_title.ImageZoom = 50;
             this.btn_add_title.LabelPosition = 30;
             this.btn_add_title.LabelText = "Thêm tựa";
-            this.btn_add_title.Location = new System.Drawing.Point(13, 268);
+            this.btn_add_title.Location = new System.Drawing.Point(13, 302);
             this.btn_add_title.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add_title.Name = "btn_add_title";
             this.btn_add_title.Size = new System.Drawing.Size(251, 40);
             this.btn_add_title.TabIndex = 19;
-            this.btn_add_title.Click += new System.EventHandler(this.btn_DatHang_Click_1);
+            this.btn_add_title.Click += new System.EventHandler(this.btn_add_title_Click);
             // 
             // panel3
             // 
@@ -342,48 +371,55 @@
             this.dgv_title.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_title.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_title.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_title.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_title.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_title.DoubleBuffered = true;
             this.dgv_title.EnableHeadersVisualStyles = false;
-            this.dgv_title.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgv_title.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgv_title.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.dgv_title.HeaderForeColor = System.Drawing.Color.White;
             this.dgv_title.Location = new System.Drawing.Point(12, 45);
             this.dgv_title.Name = "dgv_title";
-            this.dgv_title.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_title.Size = new System.Drawing.Size(575, 308);
             this.dgv_title.TabIndex = 26;
             this.dgv_title.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgv_title_RowStateChanged);
             // 
             // dgv_disk
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_disk.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv_disk.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_disk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_disk.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgv_disk.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_disk.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_disk.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_disk.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_disk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_disk.DoubleBuffered = true;
             this.dgv_disk.EnableHeadersVisualStyles = false;
-            this.dgv_disk.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgv_disk.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgv_disk.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            this.dgv_disk.HeaderForeColor = System.Drawing.Color.White;
             this.dgv_disk.Location = new System.Drawing.Point(12, 377);
             this.dgv_disk.Name = "dgv_disk";
             this.dgv_disk.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -467,7 +503,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.ComboBox cbx_titleType_addTitle;
-        private System.Windows.Forms.TextBox txt_titleName_addTitle;
+        private System.Windows.Forms.TextBox txt_titleName;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
@@ -479,5 +515,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txt_searchTitle;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_disk;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_title;
+        private System.Windows.Forms.TextBox txt_idTitle;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }
