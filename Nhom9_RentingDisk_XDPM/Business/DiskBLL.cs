@@ -19,5 +19,9 @@ namespace Business
         {
             return dal.getDisks();
         }
+        public List<Disk> GetListDiskByIDtitle(string id)
+        {
+            return dal.GetListDiskByIDtitle(id);
+        }
     }
 }

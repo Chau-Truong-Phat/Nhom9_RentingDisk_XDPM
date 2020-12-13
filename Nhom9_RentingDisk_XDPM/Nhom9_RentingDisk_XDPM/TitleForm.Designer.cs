@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_update_information_disk = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_back = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,17 +50,17 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.btn_add_title = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pnl_searchItemReturn = new System.Windows.Forms.Panel();
-            this.txt_searchDiskReturn = new System.Windows.Forms.TextBox();
-            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.dgv_title = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgv_disk = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txt_searchTitle = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_title)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_disk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_update_information_disk
@@ -77,7 +81,7 @@
             this.btn_update_information_disk.Location = new System.Drawing.Point(38, 297);
             this.btn_update_information_disk.Margin = new System.Windows.Forms.Padding(6);
             this.btn_update_information_disk.Name = "btn_update_information_disk";
-            this.btn_update_information_disk.Size = new System.Drawing.Size(236, 40);
+            this.btn_update_information_disk.Size = new System.Drawing.Size(227, 40);
             this.btn_update_information_disk.TabIndex = 20;
             this.btn_update_information_disk.Click += new System.EventHandler(this.btn_DatLaiGiaThue_Click);
             // 
@@ -90,7 +94,7 @@
             this.btn_back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_back.Location = new System.Drawing.Point(0, 667);
+            this.btn_back.Location = new System.Drawing.Point(12, 664);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(125, 32);
             this.btn_back.TabIndex = 20;
@@ -100,6 +104,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.cbx_titleType_addTitle);
             this.panel2.Controls.Add(this.txt_titleName_addTitle);
@@ -107,10 +113,9 @@
             this.panel2.Controls.Add(this.materialLabel3);
             this.panel2.Controls.Add(this.materialLabel2);
             this.panel2.Controls.Add(this.btn_add_title);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(622, 0);
+            this.panel2.Location = new System.Drawing.Point(606, -1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(260, 699);
+            this.panel2.Size = new System.Drawing.Size(276, 699);
             this.panel2.TabIndex = 23;
             // 
             // panel4
@@ -124,18 +129,18 @@
             this.panel4.Controls.Add(this.btn_update_information_disk);
             this.panel4.Controls.Add(this.materialLabel8);
             this.panel4.Controls.Add(this.materialLabel5);
-            this.panel4.Location = new System.Drawing.Point(-25, 347);
+            this.panel4.Location = new System.Drawing.Point(0, 347);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(285, 352);
+            this.panel4.Size = new System.Drawing.Size(276, 352);
             this.panel4.TabIndex = 23;
             // 
             // txt_rent_date
             // 
             this.txt_rent_date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_rent_date.Location = new System.Drawing.Point(38, 143);
+            this.txt_rent_date.Location = new System.Drawing.Point(13, 143);
             this.txt_rent_date.Name = "txt_rent_date";
-            this.txt_rent_date.Size = new System.Drawing.Size(236, 20);
+            this.txt_rent_date.Size = new System.Drawing.Size(239, 20);
             this.txt_rent_date.TabIndex = 27;
             // 
             // materialLabel7
@@ -146,7 +151,7 @@
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(34, 121);
+            this.materialLabel7.Location = new System.Drawing.Point(9, 121);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
             this.materialLabel7.Size = new System.Drawing.Size(104, 19);
@@ -157,9 +162,9 @@
             // 
             this.txt_fee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_fee.Location = new System.Drawing.Point(38, 98);
+            this.txt_fee.Location = new System.Drawing.Point(13, 98);
             this.txt_fee.Name = "txt_fee";
-            this.txt_fee.Size = new System.Drawing.Size(236, 20);
+            this.txt_fee.Size = new System.Drawing.Size(239, 20);
             this.txt_fee.TabIndex = 25;
             // 
             // cbx_titleType_updateFee
@@ -170,9 +175,9 @@
             this.cbx_titleType_updateFee.Items.AddRange(new object[] {
             "CD",
             "DVD"});
-            this.cbx_titleType_updateFee.Location = new System.Drawing.Point(37, 52);
+            this.cbx_titleType_updateFee.Location = new System.Drawing.Point(13, 52);
             this.cbx_titleType_updateFee.Name = "cbx_titleType_updateFee";
-            this.cbx_titleType_updateFee.Size = new System.Drawing.Size(236, 21);
+            this.cbx_titleType_updateFee.Size = new System.Drawing.Size(239, 21);
             this.cbx_titleType_updateFee.TabIndex = 25;
             this.cbx_titleType_updateFee.Text = "CD";
             // 
@@ -184,7 +189,7 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(34, 76);
+            this.materialLabel6.Location = new System.Drawing.Point(9, 76);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(64, 19);
@@ -199,7 +204,7 @@
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(117, 10);
+            this.materialLabel8.Location = new System.Drawing.Point(92, 12);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(109, 19);
@@ -214,7 +219,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(34, 30);
+            this.materialLabel5.Location = new System.Drawing.Point(9, 30);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(38, 19);
@@ -231,7 +236,7 @@
             "DVD"});
             this.cbx_titleType_addTitle.Location = new System.Drawing.Point(13, 112);
             this.cbx_titleType_addTitle.Name = "cbx_titleType_addTitle";
-            this.cbx_titleType_addTitle.Size = new System.Drawing.Size(235, 21);
+            this.cbx_titleType_addTitle.Size = new System.Drawing.Size(251, 21);
             this.cbx_titleType_addTitle.TabIndex = 22;
             this.cbx_titleType_addTitle.Text = "CD";
             // 
@@ -241,7 +246,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_titleName_addTitle.Location = new System.Drawing.Point(13, 67);
             this.txt_titleName_addTitle.Name = "txt_titleName_addTitle";
-            this.txt_titleName_addTitle.Size = new System.Drawing.Size(235, 20);
+            this.txt_titleName_addTitle.Size = new System.Drawing.Size(251, 20);
             this.txt_titleName_addTitle.TabIndex = 21;
             // 
             // materialLabel4
@@ -307,7 +312,7 @@
             this.btn_add_title.Location = new System.Drawing.Point(13, 268);
             this.btn_add_title.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add_title.Name = "btn_add_title";
-            this.btn_add_title.Size = new System.Drawing.Size(235, 40);
+            this.btn_add_title.Size = new System.Drawing.Size(251, 40);
             this.btn_add_title.TabIndex = 19;
             this.btn_add_title.Click += new System.EventHandler(this.btn_DatHang_Click_1);
             // 
@@ -316,76 +321,110 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.dgv_title);
+            this.panel3.Controls.Add(this.dgv_disk);
+            this.panel3.Controls.Add(this.txt_searchTitle);
             this.panel3.Controls.Add(this.btn_back);
-            this.panel3.Controls.Add(this.pnl_searchItemReturn);
-            this.panel3.Controls.Add(this.txt_searchDiskReturn);
-            this.panel3.Controls.Add(this.bunifuCustomTextbox1);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(622, 699);
+            this.panel3.Size = new System.Drawing.Size(609, 699);
             this.panel3.TabIndex = 24;
             // 
-            // pnl_searchItemReturn
+            // dgv_title
             // 
-            this.pnl_searchItemReturn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv_title.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_searchItemReturn.BackColor = System.Drawing.Color.DarkGray;
-            this.pnl_searchItemReturn.Location = new System.Drawing.Point(33, 32);
-            this.pnl_searchItemReturn.Name = "pnl_searchItemReturn";
-            this.pnl_searchItemReturn.Size = new System.Drawing.Size(580, 1);
-            this.pnl_searchItemReturn.TabIndex = 25;
+            this.dgv_title.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_title.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_title.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_title.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_title.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_title.DoubleBuffered = true;
+            this.dgv_title.EnableHeadersVisualStyles = false;
+            this.dgv_title.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dgv_title.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgv_title.Location = new System.Drawing.Point(12, 45);
+            this.dgv_title.Name = "dgv_title";
+            this.dgv_title.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_title.Size = new System.Drawing.Size(575, 308);
+            this.dgv_title.TabIndex = 26;
+            this.dgv_title.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgv_title_RowStateChanged);
             // 
-            // txt_searchDiskReturn
+            // dgv_disk
             // 
-            this.txt_searchDiskReturn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv_disk.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_disk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_searchDiskReturn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_searchDiskReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_searchDiskReturn.Location = new System.Drawing.Point(33, 11);
-            this.txt_searchDiskReturn.Multiline = true;
-            this.txt_searchDiskReturn.Name = "txt_searchDiskReturn";
-            this.txt_searchDiskReturn.Size = new System.Drawing.Size(580, 22);
-            this.txt_searchDiskReturn.TabIndex = 24;
+            this.dgv_disk.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_disk.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_disk.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_disk.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_disk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_disk.DoubleBuffered = true;
+            this.dgv_disk.EnableHeadersVisualStyles = false;
+            this.dgv_disk.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dgv_disk.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgv_disk.Location = new System.Drawing.Point(12, 377);
+            this.dgv_disk.Name = "dgv_disk";
+            this.dgv_disk.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_disk.Size = new System.Drawing.Size(575, 281);
+            this.dgv_disk.TabIndex = 25;
             // 
-            // bunifuCustomTextbox1
+            // txt_searchTitle
             // 
-            this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(12, 46);
-            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(542, 20);
-            this.bunifuCustomTextbox1.TabIndex = 23;
-            this.bunifuCustomTextbox1.Text = "thông tin về tựa";
+            this.txt_searchTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_searchTitle.Depth = 0;
+            this.txt_searchTitle.Hint = "Nhập ID Tựa";
+            this.txt_searchTitle.Location = new System.Drawing.Point(39, 9);
+            this.txt_searchTitle.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_searchTitle.Name = "txt_searchTitle";
+            this.txt_searchTitle.PasswordChar = '\0';
+            this.txt_searchTitle.SelectedText = "";
+            this.txt_searchTitle.SelectionLength = 0;
+            this.txt_searchTitle.SelectionStart = 0;
+            this.txt_searchTitle.Size = new System.Drawing.Size(548, 23);
+            this.txt_searchTitle.TabIndex = 24;
+            this.txt_searchTitle.UseSystemPasswordChar = false;
+            this.txt_searchTitle.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_searchTitle_KeyUp);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(20, 19);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(588, 456);
-            this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(620, 0);
+            this.panel1.Location = new System.Drawing.Point(880, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2, 699);
             this.panel1.TabIndex = 25;
@@ -403,14 +442,15 @@
             this.Name = "TitleForm";
             this.Text = "TitleForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.TitleForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_title)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_disk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,12 +473,11 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private Bunifu.Framework.UI.BunifuTileButton btn_add_title;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
-        private System.Windows.Forms.Panel pnl_searchItemReturn;
-        private System.Windows.Forms.TextBox txt_searchDiskReturn;
         private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txt_searchTitle;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_disk;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_title;
     }
 }

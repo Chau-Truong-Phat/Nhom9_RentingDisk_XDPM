@@ -1,4 +1,5 @@
 ﻿using DataAccess;
+using DataAccess.DTO;
 using DataAccess.Entities;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,14 @@ namespace Business
         public Title GetItemTitleById(string id)
         {
             return dal.GetItemTitleById(id);
+        }
+        public List<Title> GetListTitleByID(string id)
+        {
+            return dal.GetListTitleByID(id);
+        }
+        public Result addTitle(Title title)
+        {
+            return dal.addTitle(title);
         }
     }
 }

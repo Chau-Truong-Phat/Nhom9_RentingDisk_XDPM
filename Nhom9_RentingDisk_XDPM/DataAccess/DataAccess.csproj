@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryDAL.cs" />
     <Compile Include="CustomerDAL.cs" />
     <Compile Include="DiskDAL.cs" />
     <Compile Include="DTO\Result.cs" />

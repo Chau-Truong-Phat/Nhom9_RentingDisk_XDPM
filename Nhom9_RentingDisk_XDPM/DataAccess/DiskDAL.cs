@@ -18,5 +18,10 @@ namespace DataAccess
         {
             return db.Disks.ToList();
         }
+
+        public List<Disk> GetListDiskByIDtitle(string id)
+        {
+            return db.Disks.Where(x => x.idTitle == id).ToList();
+        }
     }
 }
