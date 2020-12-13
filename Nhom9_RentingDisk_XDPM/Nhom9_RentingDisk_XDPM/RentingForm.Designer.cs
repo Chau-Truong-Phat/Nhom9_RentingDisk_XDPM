@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_TimKienTitle = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuCustomTextbox3 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_IMG_delete_PhiMoi = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_IMG_Delete_PhiTre = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_IMG_menu_PhiMoi = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_IMG_menu_PhiTre = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomTextbox2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_TraHang = new Bunifu.Framework.UI.BunifuTileButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btn_IMG_menu_PhiMoi = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_IMG_delete_PhiMoi = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_Back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_Delete_PhiTre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiTre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiMoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_delete_PhiMoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_Delete_PhiTre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiMoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiTre)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,6 +69,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(576, 450);
             this.panel1.TabIndex = 2;
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Back.FlatAppearance.BorderSize = 0;
+            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
+            this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Back.Location = new System.Drawing.Point(3, 415);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(150, 32);
+            this.btn_Back.TabIndex = 19;
+            this.btn_Back.Text = "          Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
             // 
             // listView1
             // 
@@ -142,6 +159,20 @@
             this.bunifuCustomTextbox3.Size = new System.Drawing.Size(245, 20);
             this.bunifuCustomTextbox3.TabIndex = 14;
             // 
+            // btn_IMG_delete_PhiMoi
+            // 
+            this.btn_IMG_delete_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_IMG_delete_PhiMoi.BackColor = System.Drawing.Color.White;
+            this.btn_IMG_delete_PhiMoi.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.delete;
+            this.btn_IMG_delete_PhiMoi.ImageActive = null;
+            this.btn_IMG_delete_PhiMoi.Location = new System.Drawing.Point(219, 298);
+            this.btn_IMG_delete_PhiMoi.Name = "btn_IMG_delete_PhiMoi";
+            this.btn_IMG_delete_PhiMoi.Size = new System.Drawing.Size(30, 30);
+            this.btn_IMG_delete_PhiMoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_IMG_delete_PhiMoi.TabIndex = 12;
+            this.btn_IMG_delete_PhiMoi.TabStop = false;
+            this.btn_IMG_delete_PhiMoi.Zoom = 10;
+            // 
             // btn_IMG_Delete_PhiTre
             // 
             this.btn_IMG_Delete_PhiTre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -155,6 +186,20 @@
             this.btn_IMG_Delete_PhiTre.TabIndex = 12;
             this.btn_IMG_Delete_PhiTre.TabStop = false;
             this.btn_IMG_Delete_PhiTre.Zoom = 10;
+            // 
+            // btn_IMG_menu_PhiMoi
+            // 
+            this.btn_IMG_menu_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_IMG_menu_PhiMoi.BackColor = System.Drawing.Color.White;
+            this.btn_IMG_menu_PhiMoi.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Menu;
+            this.btn_IMG_menu_PhiMoi.ImageActive = null;
+            this.btn_IMG_menu_PhiMoi.Location = new System.Drawing.Point(183, 298);
+            this.btn_IMG_menu_PhiMoi.Name = "btn_IMG_menu_PhiMoi";
+            this.btn_IMG_menu_PhiMoi.Size = new System.Drawing.Size(30, 30);
+            this.btn_IMG_menu_PhiMoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_IMG_menu_PhiMoi.TabIndex = 13;
+            this.btn_IMG_menu_PhiMoi.TabStop = false;
+            this.btn_IMG_menu_PhiMoi.Zoom = 10;
             // 
             // btn_IMG_menu_PhiTre
             // 
@@ -210,6 +255,17 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Tổng";
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Phí thuê mới";
+            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -252,62 +308,6 @@
             this.btn_TraHang.Size = new System.Drawing.Size(242, 46);
             this.btn_TraHang.TabIndex = 5;
             // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 308);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Phí thuê mới";
-            // 
-            // btn_IMG_menu_PhiMoi
-            // 
-            this.btn_IMG_menu_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_IMG_menu_PhiMoi.BackColor = System.Drawing.Color.White;
-            this.btn_IMG_menu_PhiMoi.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Menu;
-            this.btn_IMG_menu_PhiMoi.ImageActive = null;
-            this.btn_IMG_menu_PhiMoi.Location = new System.Drawing.Point(183, 298);
-            this.btn_IMG_menu_PhiMoi.Name = "btn_IMG_menu_PhiMoi";
-            this.btn_IMG_menu_PhiMoi.Size = new System.Drawing.Size(30, 30);
-            this.btn_IMG_menu_PhiMoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_IMG_menu_PhiMoi.TabIndex = 13;
-            this.btn_IMG_menu_PhiMoi.TabStop = false;
-            this.btn_IMG_menu_PhiMoi.Zoom = 10;
-            // 
-            // btn_IMG_delete_PhiMoi
-            // 
-            this.btn_IMG_delete_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_IMG_delete_PhiMoi.BackColor = System.Drawing.Color.White;
-            this.btn_IMG_delete_PhiMoi.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.delete;
-            this.btn_IMG_delete_PhiMoi.ImageActive = null;
-            this.btn_IMG_delete_PhiMoi.Location = new System.Drawing.Point(219, 298);
-            this.btn_IMG_delete_PhiMoi.Name = "btn_IMG_delete_PhiMoi";
-            this.btn_IMG_delete_PhiMoi.Size = new System.Drawing.Size(30, 30);
-            this.btn_IMG_delete_PhiMoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_IMG_delete_PhiMoi.TabIndex = 12;
-            this.btn_IMG_delete_PhiMoi.TabStop = false;
-            this.btn_IMG_delete_PhiMoi.Zoom = 10;
-            // 
-            // btn_Back
-            // 
-            this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Back.FlatAppearance.BorderSize = 0;
-            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
-            this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Back.Location = new System.Drawing.Point(3, 415);
-            this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(150, 32);
-            this.btn_Back.TabIndex = 19;
-            this.btn_Back.Text = "          Back";
-            this.btn_Back.UseVisualStyleBackColor = true;
-            // 
             // RentingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,10 +324,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_Delete_PhiTre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiTre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiMoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_delete_PhiMoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_Delete_PhiTre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiMoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_IMG_menu_PhiTre)).EndInit();
             this.ResumeLayout(false);
 
         }
