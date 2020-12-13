@@ -79,5 +79,10 @@ namespace Nhom9_RentingDisk_XDPM
             bindingSource2.DataSource = diskBLL.GetListDiskByIDtitle(id);
             dgv_disk.DataSource = bindingSource2;
         }
+
+        private void materialLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

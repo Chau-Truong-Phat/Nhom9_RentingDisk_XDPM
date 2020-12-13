@@ -78,7 +78,7 @@
             this.btn_update_information_disk.ImageZoom = 50;
             this.btn_update_information_disk.LabelPosition = 30;
             this.btn_update_information_disk.LabelText = "Thay Đổi";
-            this.btn_update_information_disk.Location = new System.Drawing.Point(38, 297);
+            this.btn_update_information_disk.Location = new System.Drawing.Point(25, 298);
             this.btn_update_information_disk.Margin = new System.Windows.Forms.Padding(6);
             this.btn_update_information_disk.Name = "btn_update_information_disk";
             this.btn_update_information_disk.Size = new System.Drawing.Size(227, 40);
@@ -138,9 +138,9 @@
             // 
             this.txt_rent_date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_rent_date.Location = new System.Drawing.Point(13, 143);
+            this.txt_rent_date.Location = new System.Drawing.Point(25, 176);
             this.txt_rent_date.Name = "txt_rent_date";
-            this.txt_rent_date.Size = new System.Drawing.Size(239, 20);
+            this.txt_rent_date.Size = new System.Drawing.Size(227, 20);
             this.txt_rent_date.TabIndex = 27;
             // 
             // materialLabel7
@@ -151,20 +151,21 @@
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(9, 121);
+            this.materialLabel7.Location = new System.Drawing.Point(21, 150);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
             this.materialLabel7.Size = new System.Drawing.Size(104, 19);
             this.materialLabel7.TabIndex = 26;
             this.materialLabel7.Text = "Thời gian thuê";
+            this.materialLabel7.Click += new System.EventHandler(this.materialLabel7_Click);
             // 
             // txt_fee
             // 
             this.txt_fee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_fee.Location = new System.Drawing.Point(13, 98);
+            this.txt_fee.Location = new System.Drawing.Point(25, 118);
             this.txt_fee.Name = "txt_fee";
-            this.txt_fee.Size = new System.Drawing.Size(239, 20);
+            this.txt_fee.Size = new System.Drawing.Size(227, 20);
             this.txt_fee.TabIndex = 25;
             // 
             // cbx_titleType_updateFee
@@ -175,9 +176,9 @@
             this.cbx_titleType_updateFee.Items.AddRange(new object[] {
             "CD",
             "DVD"});
-            this.cbx_titleType_updateFee.Location = new System.Drawing.Point(13, 52);
+            this.cbx_titleType_updateFee.Location = new System.Drawing.Point(25, 62);
             this.cbx_titleType_updateFee.Name = "cbx_titleType_updateFee";
-            this.cbx_titleType_updateFee.Size = new System.Drawing.Size(239, 21);
+            this.cbx_titleType_updateFee.Size = new System.Drawing.Size(227, 21);
             this.cbx_titleType_updateFee.TabIndex = 25;
             this.cbx_titleType_updateFee.Text = "CD";
             // 
@@ -189,7 +190,7 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(9, 76);
+            this.materialLabel6.Location = new System.Drawing.Point(25, 92);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(64, 19);
@@ -219,7 +220,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(9, 30);
+            this.materialLabel5.Location = new System.Drawing.Point(22, 34);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(38, 19);
@@ -234,7 +235,7 @@
             this.cbx_titleType_addTitle.Items.AddRange(new object[] {
             "CD",
             "DVD"});
-            this.cbx_titleType_addTitle.Location = new System.Drawing.Point(13, 112);
+            this.cbx_titleType_addTitle.Location = new System.Drawing.Point(13, 124);
             this.cbx_titleType_addTitle.Name = "cbx_titleType_addTitle";
             this.cbx_titleType_addTitle.Size = new System.Drawing.Size(251, 21);
             this.cbx_titleType_addTitle.TabIndex = 22;
@@ -244,7 +245,7 @@
             // 
             this.txt_titleName_addTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_titleName_addTitle.Location = new System.Drawing.Point(13, 67);
+            this.txt_titleName_addTitle.Location = new System.Drawing.Point(13, 69);
             this.txt_titleName_addTitle.Name = "txt_titleName_addTitle";
             this.txt_titleName_addTitle.Size = new System.Drawing.Size(251, 20);
             this.txt_titleName_addTitle.TabIndex = 21;
@@ -257,7 +258,7 @@
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(9, 90);
+            this.materialLabel4.Location = new System.Drawing.Point(9, 99);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(38, 19);
@@ -413,7 +414,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox1.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 19);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
