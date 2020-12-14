@@ -362,6 +362,7 @@
             // 
             // dgv_title
             // 
+            this.dgv_title.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgv_title.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -393,12 +394,14 @@
             this.dgv_title.HeaderForeColor = System.Drawing.Color.White;
             this.dgv_title.Location = new System.Drawing.Point(12, 45);
             this.dgv_title.Name = "dgv_title";
+            this.dgv_title.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_title.Size = new System.Drawing.Size(575, 308);
             this.dgv_title.TabIndex = 26;
             this.dgv_title.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgv_title_RowStateChanged);
             // 
             // dgv_disk
             // 
+            this.dgv_disk.AllowUserToAddRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgv_disk.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_disk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 

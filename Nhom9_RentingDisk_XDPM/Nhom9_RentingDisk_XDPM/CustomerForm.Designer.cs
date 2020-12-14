@@ -36,20 +36,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Back = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_dateBirth = new System.Windows.Forms.DateTimePicker();
+            this.txt_email = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txt_addressName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txt_numberPhone = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt_customerName = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btn_updateCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_deleteCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_addCustomer = new Bunifu.Framework.UI.BunifuTileButton();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txt_numberPhone = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txt_addressName = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.txt_email = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.txt_dateBirth = new System.Windows.Forms.DateTimePicker();
             this.pnl_customerInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_customer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +72,7 @@
             // 
             // dataGridView_customer
             // 
+            this.dataGridView_customer.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -167,6 +168,66 @@
             this.panel2.Size = new System.Drawing.Size(260, 660);
             this.panel2.TabIndex = 1;
             // 
+            // txt_dateBirth
+            // 
+            this.txt_dateBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_dateBirth.Location = new System.Drawing.Point(12, 234);
+            this.txt_dateBirth.Name = "txt_dateBirth";
+            this.txt_dateBirth.Size = new System.Drawing.Size(236, 20);
+            this.txt_dateBirth.TabIndex = 29;
+            // 
+            // txt_email
+            // 
+            this.txt_email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_email.Depth = 0;
+            this.txt_email.Hint = "VD : NgAn4679@gmail.com";
+            this.txt_email.Location = new System.Drawing.Point(12, 186);
+            this.txt_email.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_email.Name = "txt_email";
+            this.txt_email.PasswordChar = '\0';
+            this.txt_email.SelectedText = "";
+            this.txt_email.SelectionLength = 0;
+            this.txt_email.SelectionStart = 0;
+            this.txt_email.Size = new System.Drawing.Size(236, 23);
+            this.txt_email.TabIndex = 28;
+            this.txt_email.UseSystemPasswordChar = false;
+            // 
+            // txt_addressName
+            // 
+            this.txt_addressName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_addressName.Depth = 0;
+            this.txt_addressName.Hint = "VD: 12 Nguyễn Văn Bảo , Quận gò vấp";
+            this.txt_addressName.Location = new System.Drawing.Point(12, 138);
+            this.txt_addressName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_addressName.Name = "txt_addressName";
+            this.txt_addressName.PasswordChar = '\0';
+            this.txt_addressName.SelectedText = "";
+            this.txt_addressName.SelectionLength = 0;
+            this.txt_addressName.SelectionStart = 0;
+            this.txt_addressName.Size = new System.Drawing.Size(236, 23);
+            this.txt_addressName.TabIndex = 28;
+            this.txt_addressName.UseSystemPasswordChar = false;
+            // 
+            // txt_numberPhone
+            // 
+            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_numberPhone.Depth = 0;
+            this.txt_numberPhone.Hint = "VD : 0946841267";
+            this.txt_numberPhone.Location = new System.Drawing.Point(12, 90);
+            this.txt_numberPhone.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt_numberPhone.Name = "txt_numberPhone";
+            this.txt_numberPhone.PasswordChar = '\0';
+            this.txt_numberPhone.SelectedText = "";
+            this.txt_numberPhone.SelectionLength = 0;
+            this.txt_numberPhone.SelectionStart = 0;
+            this.txt_numberPhone.Size = new System.Drawing.Size(236, 23);
+            this.txt_numberPhone.TabIndex = 28;
+            this.txt_numberPhone.UseSystemPasswordChar = false;
+            // 
             // txt_customerName
             // 
             this.txt_customerName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -261,6 +322,34 @@
             this.materialLabel2.TabIndex = 16;
             this.materialLabel2.Text = "Số điện thoại";
             // 
+            // materialLabel5
+            // 
+            this.materialLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(8, 212);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(75, 19);
+            this.materialLabel5.TabIndex = 15;
+            this.materialLabel5.Text = "Ngày sinh";
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(8, 164);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(47, 19);
+            this.materialLabel4.TabIndex = 15;
+            this.materialLabel4.Text = "Email";
+            // 
             // materialLabel3
             // 
             this.materialLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -297,94 +386,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(2, 660);
             this.panel4.TabIndex = 24;
-            // 
-            // txt_numberPhone
-            // 
-            this.txt_numberPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_numberPhone.Depth = 0;
-            this.txt_numberPhone.Hint = "VD : 0946841267";
-            this.txt_numberPhone.Location = new System.Drawing.Point(12, 90);
-            this.txt_numberPhone.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt_numberPhone.Name = "txt_numberPhone";
-            this.txt_numberPhone.PasswordChar = '\0';
-            this.txt_numberPhone.SelectedText = "";
-            this.txt_numberPhone.SelectionLength = 0;
-            this.txt_numberPhone.SelectionStart = 0;
-            this.txt_numberPhone.Size = new System.Drawing.Size(236, 23);
-            this.txt_numberPhone.TabIndex = 28;
-            this.txt_numberPhone.UseSystemPasswordChar = false;
-            // 
-            // txt_addressName
-            // 
-            this.txt_addressName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_addressName.Depth = 0;
-            this.txt_addressName.Hint = "VD: 12 Nguyễn Văn Bảo , Quận gò vấp";
-            this.txt_addressName.Location = new System.Drawing.Point(12, 138);
-            this.txt_addressName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt_addressName.Name = "txt_addressName";
-            this.txt_addressName.PasswordChar = '\0';
-            this.txt_addressName.SelectedText = "";
-            this.txt_addressName.SelectionLength = 0;
-            this.txt_addressName.SelectionStart = 0;
-            this.txt_addressName.Size = new System.Drawing.Size(236, 23);
-            this.txt_addressName.TabIndex = 28;
-            this.txt_addressName.UseSystemPasswordChar = false;
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(8, 164);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(47, 19);
-            this.materialLabel4.TabIndex = 15;
-            this.materialLabel4.Text = "Email";
-            // 
-            // txt_email
-            // 
-            this.txt_email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_email.Depth = 0;
-            this.txt_email.Hint = "VD : NgAn4679@gmail.com";
-            this.txt_email.Location = new System.Drawing.Point(12, 186);
-            this.txt_email.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt_email.Name = "txt_email";
-            this.txt_email.PasswordChar = '\0';
-            this.txt_email.SelectedText = "";
-            this.txt_email.SelectionLength = 0;
-            this.txt_email.SelectionStart = 0;
-            this.txt_email.Size = new System.Drawing.Size(236, 23);
-            this.txt_email.TabIndex = 28;
-            this.txt_email.UseSystemPasswordChar = false;
-            // 
-            // materialLabel5
-            // 
-            this.materialLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(8, 212);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(75, 19);
-            this.materialLabel5.TabIndex = 15;
-            this.materialLabel5.Text = "Ngày sinh";
-            // 
-            // txt_dateBirth
-            // 
-            this.txt_dateBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_dateBirth.Location = new System.Drawing.Point(12, 234);
-            this.txt_dateBirth.Name = "txt_dateBirth";
-            this.txt_dateBirth.Size = new System.Drawing.Size(236, 20);
-            this.txt_dateBirth.TabIndex = 29;
             // 
             // CustomerForm
             // 

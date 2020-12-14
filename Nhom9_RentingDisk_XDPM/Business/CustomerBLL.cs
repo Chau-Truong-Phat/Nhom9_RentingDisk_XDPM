@@ -43,5 +43,9 @@ namespace Business
         {
             return dal.GetAllCustomer();
         }
+        public Customer searchCustomerbyId(int idCustomer)
+        {
+            return dal.searchCustomerbyId(idCustomer);
+        }
     }
 }

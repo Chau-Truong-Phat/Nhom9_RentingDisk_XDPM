@@ -1,4 +1,6 @@
 ﻿using Business;
+using DataAccess.DTO;
+using DataAccess.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,8 +24,26 @@ namespace Nhom9_RentingDisk_XDPM
             InitializeComponent();
             CreateDataGridView();
             Clear_TextBox();
+            CustomDataGridViewCustomer();
         }
-
+        private void CustomDataGridViewCustomer()
+        {
+            // Sửa tên header dgv
+            dataGridView_customer.Columns["idCustomer"].HeaderText = "Mã khách hàng";
+            dataGridView_customer.Columns["name"].HeaderText = "Tên Khách hàng";
+            dataGridView_customer.Columns["address"].HeaderText = "Địa chỉ";
+            dataGridView_customer.Columns["phoneNumber"].HeaderText = "Số điện thoại";
+            dataGridView_customer.Columns["birthDate"].HeaderText = "Ngày sinh";
+            // ẩn bảng phụ
+            dataGridView_customer.Columns["Records"].Visible = false;
+            // set chiều dài
+            dataGridView_customer.Columns["idCustomer"].Width = 120;
+            dataGridView_customer.Columns["name"].Width = 140;
+            dataGridView_customer.Columns["address"].Width = 160;
+            dataGridView_customer.Columns["phoneNumber"].Width = 110;
+            dataGridView_customer.Columns["birthDate"].Width = 150;
+            dataGridView_customer.Columns["email"].Width = 140;
+        }
         private void CreateDataGridView()
         {
             bindingSource.DataSource = customerBLL.GetAllCustomer();
@@ -34,21 +54,6 @@ namespace Nhom9_RentingDisk_XDPM
             dataGridView_customer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //dataGridView_customer.Columns["idCustomer"].Visible = false;
             ////dataGridView_customer.Columns["Orders"].Visible = false;
-
-            //dataGridView_customer.Columns["Name"].Width = 120;
-            //dataGridView_customer.Columns["Points"].Width = 70;
-            //dataGridView_customer.Columns["Email"].Width = 150;
-            //dataGridView_customer.Columns["STT"].Width = 30;
-            //dataGridView_customer.Columns["BirthDate"].Width = 110;
-            //dataGridView_customer.Columns["NumberPhone"].Width = 80;
-            //dataGridView_customer.Columns["IdentifyNumber"].Width = 80;
-
-            //dataGridView_customer.Columns["Name"].HeaderText = "Họ tên";
-            //dataGridView_customer.Columns["BirthDate"].HeaderText = "Ngày sinh";
-            //dataGridView_customer.Columns["NumberPhone"].HeaderText = "Số điện thoại";
-            //dataGridView_customer.Columns["IdentifyNumber"].HeaderText = "Số CMND";
-            //dataGridView_customer.Columns["Points"].HeaderText = "Điểm Thưởng";
-            //dataGridView_customer.Columns["Address"].Visible = false;
 
             dataGridView_customer.ClearSelection();
             dataGridView_customer.Rows[0].Selected = false;
@@ -70,9 +75,18 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void txt_searchItem_KeyUp(object sender, KeyEventArgs e)
         {
-            int txt = Convert.ToInt32(txt_searchItem.Text.ToString().Trim());
-            CreateDataGridView();
-            bindingSource.DataSource = customerBLL.getListCustomerbyID(txt);
+            // lỗi không đúng format
+            if(txt_searchItem.Text != "")
+            {
+                int txt = Convert.ToInt32(txt_searchItem.Text.ToString().Trim());
+                CreateDataGridView();
+                bindingSource.DataSource = customerBLL.searchCustomerbyId(txt);
+            }
+            else
+            {
+                return;
+            }
+            
         }
         private void FillTextBox()
         {
@@ -98,14 +112,37 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void btn_addCustomer_Click(object sender, EventArgs e)
         {
-            if (btn_addCustomer.LabelText == "Thêm")
+            DialogResult dr = MessageBox.Show("Xác nhận thêm Khách Hàng này.\nXác Nhận ?", "Không", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
             {
-                btn_addCustomer.LabelText = "Lưu";
-                Clear_TextBox();
+                Customer cus = new Customer()
+                {
+                    name = txt_customerName.Text.ToString().Trim(),
+                    phoneNumber = txt_numberPhone.Text.ToString().Trim(),
+                    address = txt_addressName.Text.ToString().Trim(),
+                    email = txt_email.Text.ToString().Trim(),
+                    birthDate = txt_dateBirth.Value
+                };
+                Result result = null;
+                var taskCreate = Task.Factory.StartNew(() => result = customerBLL.add(cus));
+                taskCreate.Wait();
+
+                if (result.isSuccess)
+                {
+                    MessageBox.Show(result.message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    bindingSource.DataSource = customerBLL.searchCustomerbyId(cus.idCustomer);
+                    dataGridView_customer.DataSource = bindingSource;
+                }
+                else
+                {
+                    MessageBox.Show(result.message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                
             }
             else
             {
-                btn_addCustomer.LabelText = "Thêm";
+                return;
             }
         }
 
@@ -117,6 +154,40 @@ namespace Nhom9_RentingDisk_XDPM
             }
             else
             {
+                DialogResult dr = MessageBox.Show("Xác nhận Sửa Khách Hàng này.\nXác Nhận ?", "Không", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes && dataGridView_customer.CurrentRow.Cells[1].Value != null)
+                {
+                    Customer cus = new Customer()
+                    {
+                        idCustomer = Convert.ToInt32(dataGridView_customer.CurrentRow.Cells[0].Value.ToString().Trim()),
+                        name = txt_customerName.Text.ToString().Trim(),
+                        phoneNumber = txt_numberPhone.Text.ToString().Trim(),
+                        address = txt_addressName.Text.ToString().Trim(),
+                        email = txt_email.Text.ToString().Trim(),
+                        birthDate = txt_dateBirth.Value
+                    };
+                    Result result = null;
+                    var taskCreate = Task.Factory.StartNew(() => result = customerBLL.update(cus));
+                    taskCreate.Wait();
+
+                    if (result.isSuccess)
+                    {
+                        MessageBox.Show(result.message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        bindingSource.DataSource = customerBLL.searchCustomerbyId(cus.idCustomer);
+                        dataGridView_customer.DataSource = bindingSource;
+                    }
+                    else
+                    {
+                        MessageBox.Show(result.message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    
+                    
+                }
+                else
+                {
+                    return;
+                }
                 btn_updateCustomer.LabelText = "Sửa";
             }
         }
@@ -124,12 +195,11 @@ namespace Nhom9_RentingDisk_XDPM
         private void btn_deleteCustomer_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Hãy Chắc Rằng Bạn Muốn Xóa Khách Hàng Này.\nXác Nhận Xóa Khách Hàng ?", "Xóa Khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (dr == DialogResult.Yes)
+            var csID = dataGridView_customer.CurrentRow.Cells[0].Value.ToString().Trim();
+            if (dr == DialogResult.Yes && csID != null)
             {
                 dataGridView_customer.Rows.RemoveAt(dataGridView_customer.CurrentRow.Index);
-                //Đéo hiểu sao không xóa được
-                customerBLL.delete(Convert.ToInt32(dataGridView_customer.CurrentRow.Cells["idCustomer"].Value));
+                customerBLL.delete(Convert.ToInt32(csID));
             }
             else
             {

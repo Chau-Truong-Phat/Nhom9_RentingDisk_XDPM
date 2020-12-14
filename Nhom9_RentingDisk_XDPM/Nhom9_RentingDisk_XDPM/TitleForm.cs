@@ -126,20 +126,11 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void dgv_title_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
-            try
+            if (dgv_title.SelectedRows.Count > 0 && dgv_title.SelectedRows[0].Cells[0].Value != null)
             {
-                if (dgv_title.SelectedRows.Count > 0)
-                {
-                    string id = dgv_title.SelectedRows[0].Cells[0].Value.ToString();
-                    DiskCreateDataGridView(id);
-                }    
-                
-            }
-            catch
-            {
-                return;
-            }
-            
+               string id = dgv_title.SelectedRows[0].Cells[0].Value.ToString();
+               DiskCreateDataGridView(id);
+            }    
         }
         private void ClearTXT()
         {
