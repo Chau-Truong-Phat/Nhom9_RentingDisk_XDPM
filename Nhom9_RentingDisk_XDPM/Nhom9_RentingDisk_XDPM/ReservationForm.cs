@@ -43,7 +43,7 @@ namespace Nhom9_RentingDisk_XDPM
             dgv_Reservation.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //dataGridView_customer.Columns["idCustomer"].Visible = false;
             ////dataGridView_customer.Columns["Orders"].Visible = false;
-
+            dgv_Reservation.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_Reservation.ClearSelection();
             dgv_Reservation.Rows[0].Selected = false;
         }
@@ -89,14 +89,14 @@ namespace Nhom9_RentingDisk_XDPM
             {
                 txt_customerName.Text = customerBLL.searchCustomerbyId(Convert.ToInt32(txt_customerID.Text)).name;
                 txt_numberPhone.Text = customerBLL.searchCustomerbyId(Convert.ToInt32(txt_customerID.Text)).phoneNumber;
-            }    
+            }
         }
 
         private void txt_titleID_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txt_titleName.Text = titleBLL.GetItemTitleById(txt_titleID.Text).name;
+                txt_titleName.Text = titleBLL.GetItemTitleById(txt_titleID.Text.Trim()).name;
             }
         }
 

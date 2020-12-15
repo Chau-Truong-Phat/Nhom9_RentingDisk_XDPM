@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_Reservation = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.txt_searchItem = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -37,24 +37,24 @@
             this.btn_DatHang = new Bunifu.Framework.UI.BunifuTileButton();
             this.btn_Back = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_titleID = new System.Windows.Forms.TextBox();
+            this.txt_customerID = new System.Windows.Forms.TextBox();
             this.txt_titleName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_numberPhone = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt_customerName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txt_customerID = new System.Windows.Forms.TextBox();
-            this.txt_titleID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Reservation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,22 +73,22 @@
             // dgv_Reservation
             // 
             this.dgv_Reservation.AllowUserToAddRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_Reservation.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv_Reservation.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Reservation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Reservation.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgv_Reservation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Reservation.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Reservation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(173)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Reservation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Reservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Reservation.DoubleBuffered = true;
             this.dgv_Reservation.EnableHeadersVisualStyles = false;
@@ -191,6 +191,26 @@
             this.panel2.Size = new System.Drawing.Size(260, 450);
             this.panel2.TabIndex = 21;
             // 
+            // txt_titleID
+            // 
+            this.txt_titleID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_titleID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_titleID.Location = new System.Drawing.Point(12, 196);
+            this.txt_titleID.Name = "txt_titleID";
+            this.txt_titleID.Size = new System.Drawing.Size(213, 20);
+            this.txt_titleID.TabIndex = 33;
+            this.txt_titleID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_titleID_KeyDown);
+            // 
+            // txt_customerID
+            // 
+            this.txt_customerID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_customerID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_customerID.Location = new System.Drawing.Point(12, 31);
+            this.txt_customerID.Name = "txt_customerID";
+            this.txt_customerID.Size = new System.Drawing.Size(213, 20);
+            this.txt_customerID.TabIndex = 33;
+            this.txt_customerID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_customerID_KeyDown);
+            // 
             // txt_titleName
             // 
             this.txt_titleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -209,6 +229,30 @@
             this.txt_titleName.Size = new System.Drawing.Size(236, 23);
             this.txt_titleName.TabIndex = 31;
             this.txt_titleName.UseSystemPasswordChar = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pictureBox3.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
+            this.pictureBox3.Location = new System.Drawing.Point(227, 196);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pictureBox2.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
+            this.pictureBox2.Location = new System.Drawing.Point(227, 30);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // txt_numberPhone
             // 
@@ -247,6 +291,20 @@
             this.txt_customerName.Size = new System.Drawing.Size(236, 23);
             this.txt_customerName.TabIndex = 32;
             this.txt_customerName.UseSystemPasswordChar = false;
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(6, 9);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(110, 19);
+            this.materialLabel5.TabIndex = 29;
+            this.materialLabel5.Text = "Mã khách hàng";
             // 
             // materialLabel4
             // 
@@ -304,64 +362,6 @@
             this.materialLabel1.TabIndex = 30;
             this.materialLabel1.Text = "Họ tên";
             // 
-            // materialLabel5
-            // 
-            this.materialLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(6, 9);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(110, 19);
-            this.materialLabel5.TabIndex = 29;
-            this.materialLabel5.Text = "Mã khách hàng";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pictureBox2.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox2.Location = new System.Drawing.Point(227, 30);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pictureBox3.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.search;
-            this.pictureBox3.Location = new System.Drawing.Point(227, 196);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
-            // txt_customerID
-            // 
-            this.txt_customerID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txt_customerID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_customerID.Location = new System.Drawing.Point(12, 31);
-            this.txt_customerID.Name = "txt_customerID";
-            this.txt_customerID.Size = new System.Drawing.Size(213, 20);
-            this.txt_customerID.TabIndex = 33;
-            this.txt_customerID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_customerID_KeyDown);
-            // 
-            // txt_titleID
-            // 
-            this.txt_titleID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txt_titleID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_titleID.Location = new System.Drawing.Point(12, 196);
-            this.txt_titleID.Name = "txt_titleID";
-            this.txt_titleID.Size = new System.Drawing.Size(213, 20);
-            this.txt_titleID.TabIndex = 33;
-            this.txt_titleID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_titleID_KeyDown);
-            // 
             // ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,8 +382,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
