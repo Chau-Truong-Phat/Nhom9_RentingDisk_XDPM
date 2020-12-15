@@ -32,6 +32,9 @@ namespace Nhom9_RentingDisk_XDPM
             CreateDataGridView();
             autoText = new AutoCompleteStringCollection();
             autoText2 = new AutoCompleteStringCollection();
+            //DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+            //dgv_Reservation.Columns.Add(chk);
+            //chk.HeaderText = "Hủy trả";
         }
         private void CreateDataGridView()
         {
@@ -46,6 +49,7 @@ namespace Nhom9_RentingDisk_XDPM
             dgv_Reservation.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_Reservation.ClearSelection();
             dgv_Reservation.Rows[0].Selected = false;
+            
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
@@ -56,6 +60,10 @@ namespace Nhom9_RentingDisk_XDPM
         {
             if (txt_searchItem.Text != "")
             {
+                if (!(int.TryParse(txt_searchItem.Text, out int i) && holdingBLL.getListReservationByCustomerID(Convert.ToInt32(txt_searchItem.Text)) != null))
+                {
+                    return;
+                }
                 int txt = Convert.ToInt32(txt_searchItem.Text.ToString().Trim());
                 CreateDataGridView();
                 bindingSource.DataSource = holdingBLL.getListReservationByCustomerID(txt);
@@ -87,6 +95,11 @@ namespace Nhom9_RentingDisk_XDPM
         {
             if(e.KeyCode == Keys.Enter)
             {
+                
+                if (!(int.TryParse(txt_customerID.Text, out int i) && customerBLL.searchCustomerbyId(Convert.ToInt32(txt_customerID.Text)) != null))
+                {
+                    return;
+                }
                 txt_customerName.Text = customerBLL.searchCustomerbyId(Convert.ToInt32(txt_customerID.Text)).name;
                 txt_numberPhone.Text = customerBLL.searchCustomerbyId(Convert.ToInt32(txt_customerID.Text)).phoneNumber;
             }
@@ -96,6 +109,10 @@ namespace Nhom9_RentingDisk_XDPM
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if(titleBLL.GetItemTitleById(txt_titleID.Text) == null)
+                {
+                    return;
+                }    
                 txt_titleName.Text = titleBLL.GetItemTitleById(txt_titleID.Text.Trim()).name;
             }
         }
