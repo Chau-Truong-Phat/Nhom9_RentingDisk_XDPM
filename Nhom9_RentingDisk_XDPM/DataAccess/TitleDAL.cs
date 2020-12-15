@@ -17,6 +17,10 @@ namespace DataAccess
         {
             db = new RentingDiskDBContext();
         }
+        public List<Title> GetAllTitle()
+        {
+            return db.Titles.ToList();
+        }
         public Title GetItemTitleById(string id)
         {
             return db.Titles.FirstOrDefault(x => x.idTitle == id);
@@ -26,7 +30,10 @@ namespace DataAccess
         {
             return db.Titles.Where(x => x.idTitle.Contains(id)).ToList();
         }
-
+        public Title GetTitleByName(string namett)
+        {
+            return db.Titles.FirstOrDefault(x => x.name ==  namett);
+        }
         public Result addTitle(Title title)
         {
             db.Titles.Add(title);

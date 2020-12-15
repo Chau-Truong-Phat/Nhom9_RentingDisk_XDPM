@@ -9,20 +9,21 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class CustomerDAL
+    public class HoldingDAL
     {
         private RentingDiskDBContext db;
-        public CustomerDAL()
+        public HoldingDAL()
         {
             db = new RentingDiskDBContext();
         }
-        public List<Customer> GetAllCustomer()
+        public List<Holding> GetAllHoding()
         {
-            return db.Customers.ToList();
+            return db.Holdings.ToList();
         }
-        public Result add(Customer customer)
+
+        public Result add(Holding holding)
         {
-            db.Customers.Add(customer);
+            db.Holdings.Add(holding);
             try
             {
                 db.SaveChanges();
@@ -47,17 +48,55 @@ namespace DataAccess
             };
         }
 
-        public Result update(Customer customer)
+        public Result delete(int idHolding)
         {
-            var item = db.Customers.FirstOrDefault(x => x.idCustomer.Equals(customer.idCustomer));
+            var item = db.Holdings.FirstOrDefault(x => x.idHolding == idHolding);
+
             if (item != null)
             {
-                item.name = customer.name;
-                item.address = customer.address;
-                item.birthDate = customer.birthDate;
-                item.email = customer.email;
-                item.phoneNumber = customer.phoneNumber;
+                db.Holdings.Remove(item);
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (DbEntityValidationException e)
+                {
+                    return new Result
+                    {
+                        message = e
+                            .EntityValidationErrors
+                            .LastOrDefault()
+                            .ValidationErrors
+                            .LastOrDefault()
+                            .ErrorMessage,
+                        isSuccess = false
+                    };
+                }
+                return new Result
+                {
+                    message = "Xóa đơn đặt hàng thành công",
+                    isSuccess = true
+                };
+            }
+            else
+            {
+                return new Result
+                {
+                    message = "Không tìm thấy đơn hàng",
+                    isSuccess = false
+                };
+            }
+        }
 
+        public Result update(Holding holding)
+        {
+            var item = db.Holdings.FirstOrDefault(x => x.idHolding == holding.idHolding);
+            if (item != null)
+            {
+                item.idCustomer = holding.idCustomer;
+                item.idTitle = holding.idTitle;
+                item.reservationTime = holding.reservationTime;
+                
                 try
                 {
                     db.SaveChanges();
@@ -85,63 +124,15 @@ namespace DataAccess
             {
                 return new Result
                 {
-                    message = "Khách hàng không tồn tại",
+                    message = "Đơn đặt hàng không tồn tại",
                     isSuccess = false
                 };
             }
         }
 
-        public Result delete(int idCustomer)
+        public List<Holding> getListReservationByCustomerID(int idCustomer)
         {
-            var item = db.Customers.FirstOrDefault(x => x.idCustomer == idCustomer);
-
-            if (item != null)
-            {
-                db.Customers.Remove(item);
-                try
-                {
-                    db.SaveChanges();
-                }
-                catch (DbEntityValidationException e)
-                {
-                    return new Result
-                    {
-                        message = e
-                            .EntityValidationErrors
-                            .LastOrDefault()
-                            .ValidationErrors
-                            .LastOrDefault()
-                            .ErrorMessage,
-                        isSuccess = false
-                    };
-                }
-                return new Result
-                {
-                    message = "Xóa khách hàng thành công",
-                    isSuccess = true
-                };
-            }
-            else
-            {
-                return new Result
-                {
-                    message = "Khách hàng không tìm thấy",
-                    isSuccess = false
-                };
-            }
-        }
-
-        public Customer searchCustomerbyId(int idCustomer) {
-
-            return db.Customers.FirstOrDefault(x => x.idCustomer == idCustomer);
-        }
-        public List<Customer> getListCustomerbyID(int idCustomer)
-        {
-            return db.Customers.Where(x => x.idCustomer == idCustomer).ToList();
-        }
-        public Customer searchCustomerbyPhone(string phoneCustomer)
-        {
-            return db.Customers.FirstOrDefault(x => x.phoneNumber.Equals(phoneCustomer));
+            return db.Holdings.Where(x => x.idCustomer == idCustomer).ToList();
         }
     }
 }

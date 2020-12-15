@@ -20,5 +20,6 @@ namespace DataAccess
         public DbSet<Title> Titles { get; set; }
         public DbSet<Disk> Disks { get; set; }
         public DbSet<Record> Records { get; set; }
+        public DbSet<Holding> Holdings { get; set; }
     }
 }

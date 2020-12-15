@@ -8,19 +8,18 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Entities
 {
-    public class Customer
+    public class Holding
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int idHolding { get; set; }
         public int idCustomer { get; set; }
-        public string name { get; set; }
-        public string email { get; set; }
-        public string address { get; set; }
-        public string phoneNumber { get; set; }
-        public DateTime birthDate { get; set; }
+        public string idTitle { get; set; }
+        public DateTime reservationTime { get; set; }
 
-        public virtual IEnumerable<Record> Records { get; set; }
-        public virtual IEnumerable<Holding> Holdings { get; set; }
+        public virtual Customer Customer { get; set; }
+        public virtual Title Title { get; set; }
+
 
     }
 }
