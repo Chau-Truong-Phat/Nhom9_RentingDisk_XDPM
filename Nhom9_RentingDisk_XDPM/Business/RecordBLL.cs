@@ -1,4 +1,5 @@
-﻿using DataAccess;
+﻿using Business.Models;
+using DataAccess;
 using DataAccess.DTO;
 using DataAccess.Entities;
 using System;
@@ -18,7 +19,7 @@ namespace Business
         }
         public List<Record> GetAllRecordUnPaid(int id)
         {
-           return dal.GetAllRecordUnPaid(id);
+            return dal.GetAllRecordUnPaid(id);
         }
         public List<Record> GetAllRecordUnReturn(int id)
         {
@@ -51,6 +52,34 @@ namespace Business
         public bool updateRentDate(Record record)
         {
             return dal.updateRentDate(record);
+        }
+        public Result add(Record record)
+        {
+            return dal.add(record);
+        }
+        public List<Record> GetAllRecords()
+        {
+            return dal.GetAllRecord();
+        }
+        public List<RecordModel> GetRecordsOfCustomer(int customerId)
+        {
+            var records = dal.GetAllRecord().Where(rec => rec.idCustomer == customerId).Select(rec => new RecordModel
+            {
+                TieuDe = rec.Disk.Title.name,
+                NgayDenHan = rec.dueDate.Value
+            });
+            return records.ToList();
+        }
+        public List<HasOverdueModel> GetOverdueRecords(int customerId)
+        {
+            var records = dal.GetAllRecord().Where(rec => rec.idCustomer == customerId).Select(rec => new HasOverdueModel
+            {
+                TieuDe = rec.Disk.Title.name,
+                NgayDenHan = rec.dueDate.Value,
+                NgayTra = rec.actualReturnDate.Value,
+                SoTien = rec.dueDate.Value >= DateTime.Now ? 0 : rec.lateFee.Value
+            });
+            return records.ToList();
         }
     }
 }

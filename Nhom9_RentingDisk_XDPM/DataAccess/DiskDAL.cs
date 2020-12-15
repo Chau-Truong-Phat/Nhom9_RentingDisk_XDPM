@@ -47,5 +47,9 @@ namespace DataAccess
         {
             return db.Disks.FirstOrDefault(x => x.idDisk == id);
         }
+        public Disk GetONEDiskByIDtitle(string id)
+        {
+            return db.Disks.FirstOrDefault(x => x.idTitle == id);
+        }
     }
 }

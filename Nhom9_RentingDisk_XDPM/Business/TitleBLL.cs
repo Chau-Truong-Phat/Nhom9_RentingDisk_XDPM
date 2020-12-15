@@ -36,5 +36,17 @@ namespace Business
         {
             return dal.getIdCategoryByIdTitle(idTitle);
         }
+        public List<Title> GetAlltt()
+        {
+            return dal.GetAllTitle();
+        }
+        //public Disk GetDiskById(string id)
+        //{
+        //    return dal.getDisks().FirstOrDefault(disk => disk.idDisk == id);
+        //}
+        //public Disk GetONEDiskByIDtitle(string id)
+        //{
+        //    return dal.GetONEDiskByIDtitle(id);
+        //}
     }
 }
