@@ -32,5 +32,10 @@ namespace Business
         {
             return dal.GetItemTitleById(namett);
         }
+
+        public List<Title> GetAlltt()
+        {
+            return dal.GetAllTitle();        
+        }
     }
 }

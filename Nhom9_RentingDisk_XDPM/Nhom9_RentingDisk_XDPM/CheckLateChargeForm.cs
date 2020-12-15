@@ -86,7 +86,7 @@ namespace Nhom9_RentingDisk_XDPM
             int i = 1;
             foreach (var item in records)
             {
-                title = _titleBLL.GetItemTitleById(item.idTitle);
+                //title = _titleBLL.GetItemTitleById(item.idTitle);
                 if (item.idDisk != null && item.dueDate != null && item.rentDate != null && item.actualReturnDate != null)
                 {
                     dgv_listItem.Rows.Add(i.ToString(), item.idDisk.ToString(), title.name,
@@ -141,7 +141,7 @@ namespace Nhom9_RentingDisk_XDPM
                     lbl_lateFee.Text = tong.ToString() + "$";
                     record.idDisk = row.Cells[1].Value.ToString();
                     record.idCustomer = 0;
-                    record.idTitle = "000";
+                    //record.idTitle = "000";
                     record.isPaid = false;
                     record.rentDate = DateTime.Parse(row.Cells[3].Value.ToString());
                     record.dueDate = DateTime.Parse(row.Cells[4].Value.ToString());

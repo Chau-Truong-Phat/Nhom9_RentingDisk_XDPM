@@ -48,7 +48,6 @@ namespace Nhom9_RentingDisk_XDPM
             dgv_title.Columns["numberOfCopies"].HeaderText = "Số bản sao";
             dgv_title.Columns["idCategory"].HeaderText = "Loại";
             dgv_title.Columns["Disks"].Visible = false;
-            dgv_title.Columns["Records"].Visible = false;
             dgv_title.Columns["Category"].Visible = false;
 
             dgv_title.Columns["idTitle"].Width = 140;
