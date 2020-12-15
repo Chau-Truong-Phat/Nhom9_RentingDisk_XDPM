@@ -23,5 +23,9 @@ namespace Business
         {
             return dal.GetListDiskByIDtitle(id);
         }
+        public Disk GetDiskById(string id)
+        {
+            return dal.getDisks().FirstOrDefault(disk => disk.idDisk == id);
+        }
     }
 }
