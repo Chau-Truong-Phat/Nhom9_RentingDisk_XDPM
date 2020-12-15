@@ -118,5 +118,32 @@ namespace DataAccess
                 };
             }
         }
+
+        public Result add(Record record)
+        {
+            db.Records.Add(record);
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                return new Result
+                {
+                    message = e
+                        .EntityValidationErrors
+                        .LastOrDefault()
+                        .ValidationErrors
+                        .LastOrDefault()
+                        .ErrorMessage,
+                    isSuccess = false
+                };
+            }
+            return new Result
+            {
+                message = "Thêm thành công",
+                isSuccess = true
+            };
+        }
     }
 }

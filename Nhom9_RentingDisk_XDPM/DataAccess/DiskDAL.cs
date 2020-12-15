@@ -23,5 +23,10 @@ namespace DataAccess
         {
             return db.Disks.Where(x => x.idTitle == id).ToList();
         }
+
+        public Disk GetONEDiskByIDtitle(string id)
+        {
+            return db.Disks.FirstOrDefault(x => x.idTitle == id);
+        }
     }
 }
