@@ -12,7 +12,7 @@ namespace DataAccess
     {
         public RentingDiskDBContext() : base("DBConnectionString")
         {
-
+            Configuration.LazyLoadingEnabled = true;
         }
 
         public DbSet<Customer> Customers { get; set; }

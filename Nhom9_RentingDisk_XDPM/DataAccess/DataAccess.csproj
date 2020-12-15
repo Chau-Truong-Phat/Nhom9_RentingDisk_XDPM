@@ -68,6 +68,7 @@
     <Compile Include="Entities\Holding.cs" />
     <Compile Include="Entities\Record.cs" />
     <Compile Include="Entities\Title.cs" />
+    <Compile Include="HoldingDAL.cs" />
     <Compile Include="Migrations\202011230918552_Init.cs" />
     <Compile Include="Migrations\202011230918552_Init.designer.cs">
       <DependentUpon>202011230918552_Init.cs</DependentUpon>

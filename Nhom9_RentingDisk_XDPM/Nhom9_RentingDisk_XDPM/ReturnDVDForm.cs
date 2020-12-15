@@ -124,7 +124,7 @@ namespace Nhom9_RentingDisk_XDPM
                             //title = _titleBLL.GetItemTitleById(item.idTitle);
                             if (item.idDisk != null && item.dueDate != null && item.rentDate != null)
                             {
-                                dgv_listItem.Rows.Add(i.ToString(), item.idDisk.ToString(), title.name,                 item.rentDate.ToString(), item.dueDate.ToString());
+                                dgv_listItem.Rows.Add(i.ToString(), item.idDisk.ToString(), title.name,item.rentDate.ToString(), item.dueDate.ToString());
                             }
                             i++;
                         }

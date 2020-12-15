@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nhom9_RentingDisk_XDPM
 {
-    public partial class ReportTitleForm : Form
+    public partial class ReportCustomerForm : Form
     {
-        public ReportTitleForm()
+        public ReportCustomerForm()
         {
             InitializeComponent();
         }

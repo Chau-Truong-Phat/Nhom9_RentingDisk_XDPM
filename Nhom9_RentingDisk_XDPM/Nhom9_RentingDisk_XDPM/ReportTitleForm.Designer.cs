@@ -1,6 +1,6 @@
 ﻿namespace Nhom9_RentingDisk_XDPM
 {
-    partial class ReportTitleForm
+    partial class ReportCustomerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,16 +31,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_InThongKe = new System.Windows.Forms.Label();
+            this.btn_InThongKe = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_TimKiem = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_InThongKe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,7 +53,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 38);
-            this.panel1.TabIndex = 23;
+            this.panel1.TabIndex = 22;
             // 
             // btn_back
             // 
@@ -84,83 +85,90 @@
             this.materialLabel1.TabIndex = 17;
             this.materialLabel1.Text = "Báo cáo tiêu đề";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 81);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(390, 357);
-            this.dataGridView1.TabIndex = 24;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Tất cả khách hàng",
-            "Khách hàng có sản phẩm quá hạn",
-            "Khách hàng nợ phí trễ"});
-            this.comboBox1.Location = new System.Drawing.Point(13, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(298, 21);
-            this.comboBox1.TabIndex = 25;
-            // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dataGridView3);
-            this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Location = new System.Drawing.Point(409, 81);
+            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Location = new System.Drawing.Point(0, 41);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(379, 357);
-            this.panel2.TabIndex = 26;
+            this.panel2.Size = new System.Drawing.Size(800, 408);
+            this.panel2.TabIndex = 23;
             // 
-            // dataGridView2
+            // groupBox1
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(372, 178);
-            this.dataGridView2.TabIndex = 0;
+            this.groupBox1.Controls.Add(this.lbl_InThongKe);
+            this.groupBox1.Controls.Add(this.btn_InThongKe);
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.btn_TimKiem);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(794, 402);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách tiêu đề";
             // 
-            // dataGridView3
+            // lbl_InThongKe
             // 
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(4, 184);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(372, 170);
-            this.dataGridView3.TabIndex = 0;
+            this.lbl_InThongKe.AutoSize = true;
+            this.lbl_InThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_InThongKe.Location = new System.Drawing.Point(519, 27);
+            this.lbl_InThongKe.Name = "lbl_InThongKe";
+            this.lbl_InThongKe.Size = new System.Drawing.Size(72, 16);
+            this.lbl_InThongKe.TabIndex = 3;
+            this.lbl_InThongKe.Text = "In thống kê";
             // 
-            // ReportTitleForm
+            // btn_InThongKe
+            // 
+            this.btn_InThongKe.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.print_filled_100px;
+            this.btn_InThongKe.Location = new System.Drawing.Point(483, 15);
+            this.btn_InThongKe.Name = "btn_InThongKe";
+            this.btn_InThongKe.Size = new System.Drawing.Size(30, 28);
+            this.btn_InThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_InThongKe.TabIndex = 2;
+            this.btn_InThongKe.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 49);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(784, 345);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.Depth = 0;
+            this.btn_TimKiem.Hint = "";
+            this.btn_TimKiem.Location = new System.Drawing.Point(10, 20);
+            this.btn_TimKiem.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.PasswordChar = '\0';
+            this.btn_TimKiem.SelectedText = "";
+            this.btn_TimKiem.SelectionLength = 0;
+            this.btn_TimKiem.SelectionStart = 0;
+            this.btn_TimKiem.Size = new System.Drawing.Size(456, 23);
+            this.btn_TimKiem.TabIndex = 0;
+            this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.UseSystemPasswordChar = false;
+            // 
+            // ReportCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ReportTitleForm";
-            this.Text = "ReportTitleForm";
+            this.Name = "ReportCustomerForm";
+            this.Text = "ReportForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_InThongKe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,10 +178,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_back;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbl_InThongKe;
+        private System.Windows.Forms.PictureBox btn_InThongKe;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField btn_TimKiem;
     }
 }
