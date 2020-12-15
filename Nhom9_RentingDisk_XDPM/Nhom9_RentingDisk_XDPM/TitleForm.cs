@@ -180,5 +180,10 @@ namespace Nhom9_RentingDisk_XDPM
             }
             
         }
+
+        private void materialLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

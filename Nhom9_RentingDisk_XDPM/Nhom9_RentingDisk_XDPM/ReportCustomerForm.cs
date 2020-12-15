@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nhom9_RentingDisk_XDPM
 {
-    public partial class ReportCustomerForm : Form
+    public partial class ReportTitleForm : Form
     {
-        public ReportCustomerForm()
+        public ReportTitleForm()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace Nhom9_RentingDisk_XDPM
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void materialSingleLineTextField1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
