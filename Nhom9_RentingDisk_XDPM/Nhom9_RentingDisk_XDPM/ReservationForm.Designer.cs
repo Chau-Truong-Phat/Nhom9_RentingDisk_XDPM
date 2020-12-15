@@ -99,6 +99,7 @@
             this.dgv_Reservation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_Reservation.Size = new System.Drawing.Size(521, 363);
             this.dgv_Reservation.TabIndex = 22;
+            this.dgv_Reservation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Reservation_CellClick);
             // 
             // txt_searchItem
             // 

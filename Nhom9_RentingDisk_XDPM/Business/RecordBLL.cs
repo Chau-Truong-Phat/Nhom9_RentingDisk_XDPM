@@ -37,6 +37,10 @@ namespace Business
         {
             return dal.UpdateIsPaid(record);
         }
+        public Result add(Record record)
+        {
+            return dal.add(record);
+        }
         public List<Record> GetAllRecords()
         {
             return dal.GetAllRecord();
