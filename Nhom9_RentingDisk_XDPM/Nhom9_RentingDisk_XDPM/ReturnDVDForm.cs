@@ -121,7 +121,7 @@ namespace Nhom9_RentingDisk_XDPM
                     {
                         foreach (var item in records)
                         {
-                            title = _titleBLL.GetItemTitleById(item.idTitle);
+                            //title = _titleBLL.GetItemTitleById(item.idTitle);
                             if (item.idDisk != null && item.dueDate != null && item.rentDate != null)
                             {
                                 dgv_listItem.Rows.Add(i.ToString(), item.idDisk.ToString(), title.name,                 item.rentDate.ToString(), item.dueDate.ToString());
@@ -147,7 +147,7 @@ namespace Nhom9_RentingDisk_XDPM
             {
                 Record temp = new Record();
                 temp.idDisk = record.idDisk;
-                temp.idTitle = record.idTitle;
+                //temp.idTitle = record.idTitle;
                 temp.idCustomer = record.idCustomer;
                 idCustomer = record.idCustomer;
                 temp.isPaid = false;

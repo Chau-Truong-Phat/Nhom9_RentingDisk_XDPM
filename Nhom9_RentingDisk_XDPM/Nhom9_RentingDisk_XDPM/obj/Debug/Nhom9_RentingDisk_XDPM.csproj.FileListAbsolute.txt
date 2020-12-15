@@ -92,3 +92,5 @@ C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\N
 C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.csproj.CopyComplete
 C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.exe
 C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.pdb
+C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.CheckLateFeeForm.resources
+C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.CheckTotalChargeForm.resources

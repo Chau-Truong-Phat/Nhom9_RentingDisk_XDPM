@@ -32,5 +32,9 @@ namespace Business
         {
             return dal.GetItemTitleById(namett);
         }
+        public int getIdCategoryByIdTitle(string idTitle)
+        {
+            return dal.getIdCategoryByIdTitle(idTitle);
+        }
     }
 }

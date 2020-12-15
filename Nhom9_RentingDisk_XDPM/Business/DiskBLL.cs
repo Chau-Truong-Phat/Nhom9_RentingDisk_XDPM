@@ -23,5 +23,17 @@ namespace Business
         {
             return dal.GetListDiskByIDtitle(id);
         }
+        public bool updateStatusDisk(Disk disk)
+        {
+            return dal.updateStatusDisk(disk);
+        }
+        public List<Disk> getDisksOnShelf()
+        {
+            return dal.getDisksOnShelf();
+        }
+        public Disk getDiskByID(string id)
+        {
+            return dal.getDiskByID(id);
+        }
     }
 }

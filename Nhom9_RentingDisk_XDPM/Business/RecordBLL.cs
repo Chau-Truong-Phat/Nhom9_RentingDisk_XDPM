@@ -32,5 +32,25 @@ namespace Business
         {
             return dal.UpdateIsPaid(record);
         }
+        public List<Record> checkLateFee(int idCustomer)
+        {
+            return dal.checkLateFee(idCustomer);
+        }
+        public Record getRecordByID(int id)
+        {
+            return dal.getRecordByID(id);
+        }
+        public bool addRecord(Record record)
+        {
+            return dal.addRecord(record);
+        }
+        public List<Record> getPendingDiskByIDCustomer(int idCustomer)
+        {
+            return dal.getPendingDiskByIDCustomer(idCustomer);
+        }
+        public bool updateRentDate(Record record)
+        {
+            return dal.updateRentDate(record);
+        }
     }
 }

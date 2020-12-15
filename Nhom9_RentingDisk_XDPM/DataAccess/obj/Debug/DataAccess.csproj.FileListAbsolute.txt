@@ -61,7 +61,6 @@ D:\XayDungPhanMem\BranchNew\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAc
 D:\XayDungPhanMem\BranchNew\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.dll
 D:\XayDungPhanMem\BranchNew\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.pdb
 D:\XayDungPhanMem\BranchNew\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
-C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
 C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.Init.resources
 C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.deleteprototype.resources
 C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\DataAccess\obj\Debug\DataAccess.Migrations.updateprototype.resources
