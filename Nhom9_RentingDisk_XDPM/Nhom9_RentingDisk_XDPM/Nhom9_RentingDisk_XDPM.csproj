@@ -64,11 +64,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckLateChargeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckLateChargeForm.Designer.cs">
+      <DependentUpon>CheckLateChargeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckLateFeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckLateFeeForm.Designer.cs">
+      <DependentUpon>CheckLateFeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckTotalChargeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckTotalChargeForm.Designer.cs">
+      <DependentUpon>CheckTotalChargeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -78,11 +102,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RentingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RentingForm.Designer.cs">
       <DependentUpon>RentingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportTitleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportTitleForm.Designer.cs">
+      <DependentUpon>ReportTitleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportCustomerForm.Designer.cs">
+      <DependentUpon>ReportCustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ReservationForm.cs">
       <SubType>Form</SubType>
@@ -102,36 +143,38 @@
     <Compile Include="TitleForm.Designer.cs">
       <DependentUpon>TitleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TitleForm_AddTitle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TitleForm_AddTitle.Designer.cs">
-      <DependentUpon>TitleForm_AddTitle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TitleForm_UpdatePrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TitleForm_UpdatePrice.Designer.cs">
-      <DependentUpon>TitleForm_UpdatePrice.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="CheckLateChargeForm.resx">
+      <DependentUpon>CheckLateChargeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckLateFeeForm.resx">
+      <DependentUpon>CheckLateFeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckTotalChargeForm.resx">
+      <DependentUpon>CheckTotalChargeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RentingForm.resx">
       <DependentUpon>RentingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportTitleForm.resx">
+      <DependentUpon>ReportTitleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCustomerForm.resx">
+      <DependentUpon>ReportCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
@@ -142,13 +185,11 @@
     <EmbeddedResource Include="TitleForm.resx">
       <DependentUpon>TitleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TitleForm_AddTitle.resx">
-      <DependentUpon>TitleForm_AddTitle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TitleForm_UpdatePrice.resx">
-      <DependentUpon>TitleForm_UpdatePrice.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Business.Models.CustomerFilterTypeObject.datasource" />
+    <None Include="Properties\DataSources\Business.Models.CustomerReportModel.datasource" />
+    <None Include="Properties\DataSources\Business.Models.HasOverdueModel.datasource" />
+    <None Include="Properties\DataSources\Business.Models.RecordModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -163,31 +204,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Back.png" />
+    <Content Include="Resources\backgroundlogin.png" />
+    <Content Include="Resources\business_documentation_filled_50px.png" />
+    <Content Include="Resources\cd_collection_filled_50px.png" />
+    <Content Include="Resources\cd_filled_50px.png" />
+    <None Include="Resources\delete_sign_16px.png" />
+    <Content Include="Resources\delete_sign_26px.png" />
+    <Content Include="Resources\double_left_26px.png" />
+    <Content Include="Resources\edit_graph_report_filled_50px.png" />
+    <Content Include="Resources\left2_24px.png" />
+    <Content Include="Resources\list_24px.png" />
+    <Content Include="Resources\movies_folder_filled_50px.png" />
+    <Content Include="Resources\password_24px.png" />
+    <None Include="Resources\print_filled_100px.png" />
+    <Content Include="Resources\reservation_24px.png" />
+    <Content Include="Resources\search.png" />
+    <None Include="Resources\search_24px.png" />
+    <Content Include="Resources\sort_down_26px.png" />
+    <Content Include="Resources\sort_up_26px.png" />
+    <Content Include="Resources\statistics_report_filled_50px.png" />
+    <Content Include="Resources\user_24px.png" />
+    <Content Include="Resources\user_group_man_woman_30px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cd-collection.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="imgs\icons8_cd_40px_4.png" />
-    <Content Include="imgs\icons8_cinema_40px.png" />
-    <Content Include="imgs\icons8_customer_48px.png" />
-    <Content Include="imgs\icons8_delete_24px.png" />
-    <Content Include="imgs\icons8_menu_50px.png" />
-    <Content Include="imgs\icons8_ratings_40px_8.png" />
-    <Content Include="imgs\icons8_rotate_40px_1.png" />
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{D2B3F296-442A-42CE-8820-90BD107451A2}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{459BCC4F-13ED-41AD-8122-5E2FC8E7CB95}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

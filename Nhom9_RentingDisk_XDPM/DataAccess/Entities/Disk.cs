@@ -13,6 +13,8 @@ namespace DataAccess.Entities
         [Key]
         [RegularExpression(@"^\d{6}$")]
         public string idDisk { get; set; }
+        public string name { get; set; }
+
         public Status status { get; set; }
 
         public string idTitle { get; set; }

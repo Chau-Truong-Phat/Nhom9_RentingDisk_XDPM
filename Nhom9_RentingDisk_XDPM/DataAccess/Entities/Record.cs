@@ -11,24 +11,24 @@ namespace DataAccess.Entities
     public class Record
     {
         [Key]
-        [Column(Order = 1)]
-        public int idCustomer { get; set; }
-        [Key]
-        [Column(Order = 2)]
-        public string idDisk { get; set; }
-        [Key]
-        [Column(Order = 3)]
-        public string idTitle { get; set; }
+        //[Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int idRecord { get; set; }
 
-        public DateTime rentDate { get; set; }
-        public DateTime dueDate { get; set; }
-        public DateTime actualReturnDate { get; set; }
-        public float lateFee { get; set; }
+        //[Key]
+        //[Column(Order = 2)]
+        public int idCustomer { get; set; }
+        //[Key]
+        //[Column(Order = 3)]
+        public string? idDisk { get; set; }
+
+        public DateTime? rentDate { get; set; }
+        public DateTime? dueDate { get; set; }
+        public DateTime? actualReturnDate { get; set; }
+        public float? lateFee { get; set; }
         public bool isPaid { get; set; }
-        public bool isRecord { get; set; }
 
         public virtual Customer Customer { get; set; }
-        public virtual Disk Disk{ get; set; }
-        public virtual Title Title { get; set; }
+        public virtual Disk Disk { get; set; }
     }
 }

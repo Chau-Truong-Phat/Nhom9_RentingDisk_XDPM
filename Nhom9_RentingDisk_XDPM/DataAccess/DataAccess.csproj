@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -54,14 +56,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryDAL.cs" />
     <Compile Include="CustomerDAL.cs" />
+    <Compile Include="DiskDAL.cs" />
+    <Compile Include="DTO\RecordDTO.cs" />
     <Compile Include="DTO\Result.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Disk.cs" />
     <Compile Include="Entities\Enum\Status.cs" />
+    <Compile Include="Entities\Holding.cs" />
     <Compile Include="Entities\Record.cs" />
     <Compile Include="Entities\Title.cs" />
+    <Compile Include="HoldingDAL.cs" />
     <Compile Include="Migrations\202011230918552_Init.cs" />
     <Compile Include="Migrations\202011230918552_Init.designer.cs">
       <DependentUpon>202011230918552_Init.cs</DependentUpon>
@@ -74,9 +81,35 @@
     <Compile Include="Migrations\202011230929316_update-prototype.designer.cs">
       <DependentUpon>202011230929316_update-prototype.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012090619071_addNameDisk.cs" />
+    <Compile Include="Migrations\202012090619071_addNameDisk.designer.cs">
+      <DependentUpon>202012090619071_addNameDisk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012091231041_fixDiskEntity.cs" />
+    <Compile Include="Migrations\202012091231041_fixDiskEntity.designer.cs">
+      <DependentUpon>202012091231041_fixDiskEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012091238243_updateDatabase.cs" />
+    <Compile Include="Migrations\202012091238243_updateDatabase.designer.cs">
+      <DependentUpon>202012091238243_updateDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012091310071_updateRecord.cs" />
+    <Compile Include="Migrations\202012091310071_updateRecord.designer.cs">
+      <DependentUpon>202012091310071_updateRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012141707104_addHoldingEntity.cs" />
+    <Compile Include="Migrations\202012141707104_addHoldingEntity.designer.cs">
+      <DependentUpon>202012141707104_addHoldingEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012141708377_addHoldingEntity_1.cs" />
+    <Compile Include="Migrations\202012141708377_addHoldingEntity_1.designer.cs">
+      <DependentUpon>202012141708377_addHoldingEntity_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordDAL.cs" />
     <Compile Include="RentingDiskDBContext.cs" />
+    <Compile Include="TitleDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202011230918552_Init.resx">
@@ -87,6 +120,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011230929316_update-prototype.resx">
       <DependentUpon>202011230929316_update-prototype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012090619071_addNameDisk.resx">
+      <DependentUpon>202012090619071_addNameDisk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012091231041_fixDiskEntity.resx">
+      <DependentUpon>202012091231041_fixDiskEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012091238243_updateDatabase.resx">
+      <DependentUpon>202012091238243_updateDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012091310071_updateRecord.resx">
+      <DependentUpon>202012091310071_updateRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012141707104_addHoldingEntity.resx">
+      <DependentUpon>202012141707104_addHoldingEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012141708377_addHoldingEntity_1.resx">
+      <DependentUpon>202012141708377_addHoldingEntity_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

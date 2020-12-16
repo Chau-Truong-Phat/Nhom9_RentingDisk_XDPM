@@ -16,6 +16,10 @@ namespace DataAccess
         {
             db = new RentingDiskDBContext();
         }
+        public List<Customer> GetAllCustomer()
+        {
+            return db.Customers.ToList();
+        }
         public Result add(Customer customer)
         {
             db.Customers.Add(customer);
@@ -89,7 +93,7 @@ namespace DataAccess
 
         public Result delete(int idCustomer)
         {
-            var item = db.Customers.FirstOrDefault(x => x.idCustomer.Equals(idCustomer));
+            var item = db.Customers.FirstOrDefault(x => x.idCustomer == idCustomer);
 
             if (item != null)
             {
@@ -127,8 +131,17 @@ namespace DataAccess
             }
         }
 
-        public Customer searchCustomerbyId(string idCustomer) {
-            return db.Customers.FirstOrDefault(x => x.idCustomer.Equals(idCustomer));
+        public Customer searchCustomerbyId(int idCustomer) {
+
+            return db.Customers.FirstOrDefault(x => x.idCustomer == idCustomer);
+        }
+        public List<Customer> getListCustomerbyID(int idCustomer)
+        {
+            return db.Customers.Where(x => x.idCustomer == idCustomer).ToList();
+        }
+        public Customer searchCustomerbyPhone(string phoneCustomer)
+        {
+            return db.Customers.FirstOrDefault(x => x.phoneNumber.Equals(phoneCustomer));
         }
     }
 }
