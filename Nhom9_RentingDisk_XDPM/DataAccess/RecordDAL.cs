@@ -86,11 +86,10 @@ namespace DataAccess
         {
             var item = db.Records.FirstOrDefault(x => x.idCustomer.Equals(record.idCustomer)
                                                    && x.idDisk.Equals(record.idDisk)
-                                                   //&& x.idTitle.Equals(record.idTitle)
                                                     );
             if (item != null)
             {
-                item.isPaid = record.isPaid;
+                item.isPaid = true;
                 try
                 {
                     db.SaveChanges();

@@ -120,6 +120,7 @@
             this.dgv_listItem.RowHeadersVisible = false;
             this.dgv_listItem.Size = new System.Drawing.Size(490, 329);
             this.dgv_listItem.TabIndex = 23;
+            this.dgv_listItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listItem_CellContentClick);
             // 
             // pnl_searchItemReturn
             // 

@@ -18,7 +18,6 @@ D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XD
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.MainForm.resources
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.Properties.Resources.resources
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.RentingForm.resources
-D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReportCustomerForm.resources
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReservationForm.resources
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReturnDVDForm.resources
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.TitleForm.resources
@@ -127,3 +126,4 @@ C:\Users\chaut\Downloads\temp\XDPM\branch_linh_20201209\Nhom9_RentingDisk_XDPM\N
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.CheckLateFeeForm.resources
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.CheckTotalChargeForm.resources
 D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReportCustomersForm.resources
+D:\study\HK7\XDPM\code\RentDisk\ver2\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\Nhom9_RentingDisk_XDPM\obj\Debug\Nhom9_RentingDisk_XDPM.ReportTitleForm.resources
