@@ -116,6 +116,11 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void btn_addCustomer_Click(object sender, EventArgs e)
         {
+            if(txt_customerName.Text == "" || txt_numberPhone.Text == "")
+            {
+                MessageBox.Show("Hãy nhập tên và số điện thoại");
+                return;
+            }    
             DialogResult dr = MessageBox.Show("Xác nhận thêm Khách Hàng này.\nXác Nhận ?", "Không", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dr == DialogResult.Yes)
