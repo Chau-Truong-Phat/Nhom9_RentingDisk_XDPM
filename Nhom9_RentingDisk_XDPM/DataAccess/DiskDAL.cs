@@ -1,6 +1,8 @@
-﻿using DataAccess.Entities;
+﻿using DataAccess.DTO;
+using DataAccess.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +20,71 @@ namespace DataAccess
         {
             return db.Disks.ToList();
         }
+        public Result delete(string id)
+        {
+            var item = db.Disks.FirstOrDefault(x => x.idDisk == id);
 
+            if (item != null)
+            {
+                db.Disks.Remove(item);
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (DbEntityValidationException e)
+                {
+                    return new Result
+                    {
+                        message = e
+                            .EntityValidationErrors
+                            .LastOrDefault()
+                            .ValidationErrors
+                            .LastOrDefault()
+                            .ErrorMessage,
+                        isSuccess = false
+                    };
+                }
+                return new Result
+                {
+                    message = "Xóa  thành công",
+                    isSuccess = true
+                };
+            }
+            else
+            {
+                return new Result
+                {
+                    message = "Không tìm thấy",
+                    isSuccess = false
+                };
+            }
+        }
+        public Result add(Disk disk)
+        {
+            db.Disks.Add(disk);
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                return new Result
+                {
+                    message = e
+                        .EntityValidationErrors
+                        .LastOrDefault()
+                        .ValidationErrors
+                        .LastOrDefault()
+                        .ErrorMessage,
+                    isSuccess = false
+                };
+            }
+            return new Result
+            {
+                message = "Thêm thành công",
+                isSuccess = true
+            };
+        }
         public List<Disk> GetListDiskByIDtitle(string id)
         {
             return db.Disks.Where(x => x.idTitle == id).ToList();
