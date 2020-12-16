@@ -18,11 +18,23 @@ namespace Nhom9_RentingDisk_XDPM
         public List<RecordDTO> listRecord;
         private BindingSource bindingSource;
         private RecordBLL recordBLL;
-        private int idCustomer;
+        public int idCustomer;
         private CustomerBLL customerBLL;
         private DiskBLL diskBLL;
+        private bool isAdmin;
 
-        public CheckLateFeeForm(int _idCustomer)
+        public CheckLateFeeForm(bool _isAdmin)
+        {
+            InitializeComponent();
+            bindingSource = new BindingSource();
+            recordBLL = new RecordBLL();
+            customerBLL = new CustomerBLL();
+            diskBLL = new DiskBLL();
+            idCustomer = 0;
+            isAdmin = _isAdmin;
+        }
+
+        public CheckLateFeeForm(int _idCustomer, bool _isAdmin)
         {
             InitializeComponent();
             bindingSource = new BindingSource();
@@ -30,6 +42,7 @@ namespace Nhom9_RentingDisk_XDPM
             customerBLL = new CustomerBLL();
             idCustomer = _idCustomer;
             diskBLL = new DiskBLL();
+            isAdmin = _isAdmin;
         }
         public void CreateButtonDataGridView()
         {
@@ -84,7 +97,10 @@ namespace Nhom9_RentingDisk_XDPM
                     item.isPaid = !item.isPaid;
                 }
                 CreateDataGridView("");
-                CreateButtonDataGridView();
+                if (isAdmin)
+                {
+                    CreateButtonDataGridView();
+                }
             }
             if (listRecord.Count > 0)
             {

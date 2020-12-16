@@ -25,11 +25,13 @@ namespace Nhom9_RentingDisk_XDPM
         private List<Disk> rentingList;
         private RecordBLL recordBLL;
         private float totalCharge = 0;
+        private float totalLateFee = 0;
         private List<Record> lateFeeList;
         private CheckLateFeeForm form;
         private List<Record> pendingRecords;
+        private bool isAdmin;
 
-        public RentingForm()
+        public RentingForm(bool _isAdmin)
         {
             InitializeComponent();
             diskBLL = new DiskBLL();
@@ -42,6 +44,7 @@ namespace Nhom9_RentingDisk_XDPM
             categoryBLL = new CategoryBLL();
             lateFeeList = new List<Record>();
             pendingRecords = new List<Record>();
+            isAdmin = _isAdmin;
         }
 
         public void CreateButtonDataGridView()
@@ -126,18 +129,21 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void btnSearchCustomer_Click_1(object sender, EventArgs e)
         {
+            totalCharge -= totalLateFee;
+            totalLateFee = 0;
+
             string txt = txt_CustomerID.Text.ToString().Trim();
-            if(customer == null)
+            if (!String.IsNullOrEmpty(txt))
             {
                 customer = new Customer();
                 customer = customerBLL.searchCustomerbyId(Int32.Parse(txt));
             }
-            if (customer != null)
+            if (customer != null && !String.IsNullOrEmpty(txt))
             {
                 txt_CustomerName.Text = customer.name;
                 lateFeeList = recordBLL.checkLateFee(Int32.Parse(txt));
                 pendingRecords = recordBLL.getPendingDiskByIDCustomer(Int32.Parse(txt));
-                if(pendingRecords != null && pendingRecords.Count > 0)
+                if (pendingRecords != null && pendingRecords.Count > 0)
                 {
                     foreach (var item in pendingRecords)
                     {
@@ -152,18 +158,25 @@ namespace Nhom9_RentingDisk_XDPM
                 {
                     foreach (var item in lateFeeList)
                     {
-                        totalCharge += (float)item.lateFee;
+                        totalLateFee += (float)item.lateFee;
                         item.isPaid = !item.isPaid;
                     }
                     btn_rentDisk.Enabled = true;
                     MessageBox.Show("Khách hàng có phí trễ, có muốn thanh toán không?");
                 }
+                if(totalLateFee > 0)
+                {
+                    btn_rentDisk.Enabled = true;
+                }
             }
             else
             {
+                lateFeeList = new List<Record>();
                 btn_rentDisk.Enabled = false;
+                totalLateFee = 0;
                 MessageBox.Show("Không tìm thấy khách hàng");
             }
+            totalCharge += totalLateFee;
             lb_TotalCharge.Text = totalCharge.ToString();
         }
 
@@ -193,7 +206,24 @@ namespace Nhom9_RentingDisk_XDPM
         {
             if(form == null)
             {
-                form = new CheckLateFeeForm(customer.idCustomer);
+                if(customer != null)
+                    form = new CheckLateFeeForm(customer.idCustomer, isAdmin);
+                else
+                    form = new CheckLateFeeForm(isAdmin);
+
+            }
+            else
+            {
+                if(customer == null)
+                {
+                    form.idCustomer = 0;
+                    form.listRecord = new List<DataAccess.DTO.RecordDTO>();
+                    form = new CheckLateFeeForm(isAdmin);
+                }
+                else
+                {
+                    form = new CheckLateFeeForm(customer.idCustomer, isAdmin);
+                }
             }
             form.ShowDialog();
 
@@ -281,12 +311,14 @@ namespace Nhom9_RentingDisk_XDPM
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
             (e.KeyChar != '.'))
             {
+                MessageBox.Show('1' + e.KeyChar.ToString());
                 e.Handled = true;
             }
 
             // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
+                MessageBox.Show('2' + e.KeyChar.ToString());
                 e.Handled = true;
             }
         }

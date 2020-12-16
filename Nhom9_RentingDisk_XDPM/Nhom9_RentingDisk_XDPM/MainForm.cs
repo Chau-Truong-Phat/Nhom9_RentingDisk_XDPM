@@ -13,7 +13,7 @@ namespace Nhom9_RentingDisk_XDPM
 {
     public partial class MainForm : Form
     {
-        //private List<Disk> disks;
+        public bool isAdmin = false;
         public MainForm()
         {
             InitializeComponent();
@@ -63,7 +63,7 @@ namespace Nhom9_RentingDisk_XDPM
         {
             Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
               .ToList().ForEach(x => x.Close());
-            RentingForm rentForm = new RentingForm();
+            RentingForm rentForm = new RentingForm(isAdmin);
             rentForm.TopLevel = false;
             rentForm.Parent = pnl_FormConnect;
             rentForm.Show();
@@ -235,6 +235,29 @@ namespace Nhom9_RentingDisk_XDPM
             CF.TopLevel = false;
             CF.Parent = pnl_FormConnect;
             CF.Show();
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            if(!isAdmin)
+            {
+                LoginForm form = new LoginForm();
+                form.ShowDialog();
+                if(form.DialogResult == DialogResult.Yes)
+                {
+                    isAdmin = !isAdmin;
+                    btn_login.Text = "ĐĂNG XUẤT";
+                }
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Xác nhận đăng xuất", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(dialogResult == DialogResult.Yes)
+                {
+                    isAdmin = !isAdmin;
+                    btn_login.Text = "ĐĂNG NHẬP";
+                }
+            }
         }
     }
 

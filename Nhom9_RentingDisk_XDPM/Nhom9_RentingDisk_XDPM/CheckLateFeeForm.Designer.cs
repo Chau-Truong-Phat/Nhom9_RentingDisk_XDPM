@@ -59,6 +59,7 @@
             // 
             // dgv_LateFee
             // 
+            this.dgv_LateFee.AllowUserToAddRows = false;
             this.dgv_LateFee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_LateFee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_LateFee.Location = new System.Drawing.Point(0, 0);

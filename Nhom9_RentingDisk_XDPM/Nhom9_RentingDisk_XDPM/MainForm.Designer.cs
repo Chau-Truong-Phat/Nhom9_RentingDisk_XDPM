@@ -53,6 +53,7 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnl_FormConnect = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_login = new MaterialSkin.Controls.MaterialFlatButton();
             this.pnl_MenuOption.SuspendLayout();
             this.pnl_reportDetail.SuspendLayout();
             this.pnl_report.SuspendLayout();
@@ -70,6 +71,7 @@
             // pnl_MenuOption
             // 
             this.pnl_MenuOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.pnl_MenuOption.Controls.Add(this.btn_login);
             this.pnl_MenuOption.Controls.Add(this.pnl_reportDetail);
             this.pnl_MenuOption.Controls.Add(this.pnl_report);
             this.pnl_MenuOption.Controls.Add(this.pbo_dropdownCD_DVD);
@@ -587,6 +589,26 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(2, 699);
             this.flowLayoutPanel1.TabIndex = 13;
             // 
+            // btn_login
+            // 
+            this.btn_login.AutoSize = true;
+            this.btn_login.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_login.Depth = 0;
+            this.btn_login.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_login.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_login.Location = new System.Drawing.Point(0, 663);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_login.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Primary = false;
+            this.btn_login.Size = new System.Drawing.Size(200, 36);
+            this.btn_login.TabIndex = 20;
+            this.btn_login.Text = "ĐĂNG NHẬP";
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,6 +625,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnl_MenuOption.ResumeLayout(false);
+            this.pnl_MenuOption.PerformLayout();
             this.pnl_reportDetail.ResumeLayout(false);
             this.pnl_report.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbo_dropdownReport)).EndInit();
@@ -648,6 +671,7 @@
         private System.Windows.Forms.PictureBox pbo_dropdownReport;
         private System.Windows.Forms.Panel pnl_reportDetail;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private MaterialSkin.Controls.MaterialFlatButton btn_login;
     }
 }
 

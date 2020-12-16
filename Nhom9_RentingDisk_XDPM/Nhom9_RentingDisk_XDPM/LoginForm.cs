@@ -15,17 +15,26 @@ namespace Nhom9_RentingDisk_XDPM
         public LoginForm()
         {
             InitializeComponent();
+            this.DialogResult = DialogResult.No;
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            //MainForm mainForm = new MainForm();
-            //mainForm.Show();
+            if (txt_userName.Text == "admin" && txt_password.Text == "admin")
+            {
+                this.DialogResult = DialogResult.Yes;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản mật khẩu không chính xác");
+                this.DialogResult = DialogResult.No;
+            }
         }
 
         private void pbo_closeForm_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }

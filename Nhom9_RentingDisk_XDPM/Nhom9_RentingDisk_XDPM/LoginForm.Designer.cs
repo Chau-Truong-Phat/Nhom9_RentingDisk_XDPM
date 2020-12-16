@@ -144,7 +144,6 @@
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(220, 23);
             this.txt_password.TabIndex = 0;
-            this.txt_password.Text = "a";
             // 
             // txt_userName
             // 
@@ -159,7 +158,6 @@
             this.txt_userName.Name = "txt_userName";
             this.txt_userName.Size = new System.Drawing.Size(220, 23);
             this.txt_userName.TabIndex = 0;
-            this.txt_userName.Text = "a";
             // 
             // pbo_closeForm
             // 
