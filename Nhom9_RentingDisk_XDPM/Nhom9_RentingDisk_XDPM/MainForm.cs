@@ -231,7 +231,7 @@ namespace Nhom9_RentingDisk_XDPM
             btn_reportCustomer.Normalcolor = Color.FromArgb(244, 246, 248);
             Application.OpenForms.Cast<Form>().Where(x => !(x is MainForm))
               .ToList().ForEach(x => x.Close());
-            ReportTitleForm CF = new ReportTitleForm();
+            ReportCustomersForm CF = new ReportCustomersForm();
             CF.TopLevel = false;
             CF.Parent = pnl_FormConnect;
             CF.Show();

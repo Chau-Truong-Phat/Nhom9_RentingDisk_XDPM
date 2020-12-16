@@ -70,6 +70,18 @@
     <Compile Include="CheckLateChargeForm.Designer.cs">
       <DependentUpon>CheckLateChargeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckLateFeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckLateFeeForm.Designer.cs">
+      <DependentUpon>CheckLateFeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckTotalChargeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckTotalChargeForm.Designer.cs">
+      <DependentUpon>CheckTotalChargeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     <EmbeddedResource Include="CheckLateChargeForm.resx">
       <DependentUpon>CheckLateChargeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckLateFeeForm.resx">
+      <DependentUpon>CheckLateFeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckTotalChargeForm.resx">
+      <DependentUpon>CheckTotalChargeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +186,10 @@
       <DependentUpon>TitleForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Business.Models.CustomerFilterTypeObject.datasource" />
+    <None Include="Properties\DataSources\Business.Models.CustomerReportModel.datasource" />
+    <None Include="Properties\DataSources\Business.Models.HasOverdueModel.datasource" />
+    <None Include="Properties\DataSources\Business.Models.RecordModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

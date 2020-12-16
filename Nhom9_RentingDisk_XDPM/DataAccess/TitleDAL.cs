@@ -60,5 +60,9 @@ namespace DataAccess
                 isSuccess = true
             };
         }
+        public int getIdCategoryByIdTitle(string idTitle)
+        {
+            return db.Titles.FirstOrDefault(x => x.idTitle == idTitle).idCategory;
+        }
     }
 }

@@ -32,10 +32,21 @@ namespace Business
         {
             return dal.GetItemTitleById(namett);
         }
-
+        public int getIdCategoryByIdTitle(string idTitle)
+        {
+            return dal.getIdCategoryByIdTitle(idTitle);
+        }
         public List<Title> GetAlltt()
         {
-            return dal.GetAllTitle();        
+            return dal.GetAllTitle();
         }
+        //public Disk GetDiskById(string id)
+        //{
+        //    return dal.getDisks().FirstOrDefault(disk => disk.idDisk == id);
+        //}
+        //public Disk GetONEDiskByIDtitle(string id)
+        //{
+        //    return dal.GetONEDiskByIDtitle(id);
+        //}
     }
 }

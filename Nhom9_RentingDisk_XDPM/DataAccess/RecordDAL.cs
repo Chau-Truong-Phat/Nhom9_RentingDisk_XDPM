@@ -85,7 +85,7 @@ namespace DataAccess
                                                     );
             if (item != null)
             {
-                item.isPaid = true;
+                item.isPaid = record.isPaid;
                 try
                 {
                     db.SaveChanges();
@@ -117,6 +117,36 @@ namespace DataAccess
                     isSuccess = false
                 };
             }
+        }
+        public List<Record> checkLateFee(int idCustomer)
+        {
+            return db.Records.Where(x => x.idCustomer == idCustomer && x.actualReturnDate > x.dueDate && !x.isPaid).ToList();
+        }
+        public Record getRecordByID(int id)
+        {
+            return db.Records.FirstOrDefault(x => x.idRecord == id);
+        }
+        public bool addRecord(Record record)
+        {
+            db.Records.Add(record);
+            return true;
+        }
+        public List<Record> getPendingDiskByIDCustomer(int idCustomer)
+        {
+            return db.Records.Where(x => x.idCustomer == idCustomer && x.rentDate == null).ToList();
+        }
+    
+        public bool updateRentDate(Record record)
+        {
+            var check = db.Records.Find(record.idRecord);
+            if(check != null)
+            {
+                check.rentDate = record.rentDate;
+                check.isPaid = record.isPaid;
+                check.dueDate = record.dueDate;
+            }
+            db.SaveChanges();
+            return true;
         }
 
         public Result add(Record record)

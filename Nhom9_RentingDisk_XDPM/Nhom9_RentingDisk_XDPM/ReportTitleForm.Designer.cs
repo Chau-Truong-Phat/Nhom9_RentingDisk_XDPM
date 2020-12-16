@@ -33,15 +33,15 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_TimKiem = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_InThongKe = new System.Windows.Forms.PictureBox();
             this.lbl_InThongKe = new System.Windows.Forms.Label();
+            this.btn_InThongKe = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_TimKiem = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_InThongKe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -106,6 +106,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách tiêu đề";
             // 
+            // lbl_InThongKe
+            // 
+            this.lbl_InThongKe.AutoSize = true;
+            this.lbl_InThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_InThongKe.Location = new System.Drawing.Point(519, 27);
+            this.lbl_InThongKe.Name = "lbl_InThongKe";
+            this.lbl_InThongKe.Size = new System.Drawing.Size(72, 16);
+            this.lbl_InThongKe.TabIndex = 3;
+            this.lbl_InThongKe.Text = "In thống kê";
+            // 
+            // btn_InThongKe
+            // 
+            this.btn_InThongKe.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.print_filled_100px;
+            this.btn_InThongKe.Location = new System.Drawing.Point(483, 15);
+            this.btn_InThongKe.Name = "btn_InThongKe";
+            this.btn_InThongKe.Size = new System.Drawing.Size(30, 28);
+            this.btn_InThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_InThongKe.TabIndex = 2;
+            this.btn_InThongKe.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 49);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(784, 345);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // btn_TimKiem
             // 
             this.btn_TimKiem.Depth = 0;
@@ -121,34 +149,6 @@
             this.btn_TimKiem.TabIndex = 0;
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.UseSystemPasswordChar = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(784, 345);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // btn_InThongKe
-            // 
-            this.btn_InThongKe.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.print_filled_100px;
-            this.btn_InThongKe.Location = new System.Drawing.Point(483, 15);
-            this.btn_InThongKe.Name = "btn_InThongKe";
-            this.btn_InThongKe.Size = new System.Drawing.Size(30, 28);
-            this.btn_InThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_InThongKe.TabIndex = 2;
-            this.btn_InThongKe.TabStop = false;
-            // 
-            // lbl_InThongKe
-            // 
-            this.lbl_InThongKe.AutoSize = true;
-            this.lbl_InThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_InThongKe.Location = new System.Drawing.Point(519, 27);
-            this.lbl_InThongKe.Name = "lbl_InThongKe";
-            this.lbl_InThongKe.Size = new System.Drawing.Size(72, 16);
-            this.lbl_InThongKe.TabIndex = 3;
-            this.lbl_InThongKe.Text = "In thống kê";
             // 
             // ReportCustomerForm
             // 
@@ -167,8 +167,8 @@
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_InThongKe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
