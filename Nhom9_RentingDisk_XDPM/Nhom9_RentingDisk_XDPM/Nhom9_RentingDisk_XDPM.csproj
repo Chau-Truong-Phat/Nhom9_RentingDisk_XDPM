@@ -228,10 +228,6 @@
     <Content Include="Resources\user_group_man_woman_30px.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{D2B3F296-442A-42CE-8820-90BD107451A2}</Project>
-      <Name>Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{459BCC4F-13ED-41AD-8122-5E2FC8E7CB95}</Project>
       <Name>DataAccess</Name>
