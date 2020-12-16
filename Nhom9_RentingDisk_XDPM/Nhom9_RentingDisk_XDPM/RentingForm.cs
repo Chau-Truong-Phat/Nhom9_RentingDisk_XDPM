@@ -322,5 +322,10 @@ namespace Nhom9_RentingDisk_XDPM
                 e.Handled = true;
             }
         }
+
+        private void btn_IMG_menu_PhiTre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

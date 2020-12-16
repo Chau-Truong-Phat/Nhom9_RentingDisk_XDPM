@@ -20,9 +20,14 @@ namespace DataAccess
         {
             return db.Records.ToList();
         }
+
+        public Record GetDiskById(string id)
+        {
+            return db.Records.FirstOrDefault(x => x.idDisk == id && x.actualReturnDate == null) ;
+        }
         public List<Record> GetAllRecordUnPaid(int id)
         {
-            return db.Records.Where(x=>x.isPaid == false && x.idCustomer==id).ToList();
+            return db.Records.Where(x=>x.isPaid == false && x.idCustomer==id && x.actualReturnDate != null).ToList();
         }
         public List<Record> GetAllRecordUnReturn(int id)
         {
@@ -39,7 +44,7 @@ namespace DataAccess
                 item.actualReturnDate = record.actualReturnDate;
                 if(item.actualReturnDate > item.dueDate)
                 {
-                    item.lateFee = 2;
+                    item.lateFee = 1;
                 }
                 else
                 {
@@ -81,11 +86,10 @@ namespace DataAccess
         {
             var item = db.Records.FirstOrDefault(x => x.idCustomer.Equals(record.idCustomer)
                                                    && x.idDisk.Equals(record.idDisk)
-                                                   //&& x.idTitle.Equals(record.idTitle)
                                                     );
             if (item != null)
             {
-                item.isPaid = record.isPaid;
+                item.isPaid = true;
                 try
                 {
                     db.SaveChanges();

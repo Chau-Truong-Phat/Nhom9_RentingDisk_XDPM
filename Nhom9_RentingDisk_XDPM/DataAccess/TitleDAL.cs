@@ -17,9 +17,9 @@ namespace DataAccess
         {
             db = new RentingDiskDBContext();
         }
-        public List<Title> GetAllTitle()
+        public IEnumerable<Title> GetAllTitle()
         {
-            return db.Titles.ToList();
+            return db.Titles;
         }
         public Title GetItemTitleById(string id)
         {

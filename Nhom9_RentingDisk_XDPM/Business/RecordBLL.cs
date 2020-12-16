@@ -17,6 +17,10 @@ namespace Business
         {
             dal = new RecordDAL();
         }
+        public Record GetDiskById(string id)
+        {
+            return dal.GetDiskById(id);
+        }
         public List<Record> GetAllRecordUnPaid(int id)
         {
             return dal.GetAllRecordUnPaid(id);

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RentingForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.dgv_Disk = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txt_searchDisk = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -77,6 +78,23 @@
             this.panel1.Size = new System.Drawing.Size(539, 450);
             this.panel1.TabIndex = 2;
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Back.FlatAppearance.BorderSize = 0;
+            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Back.Location = new System.Drawing.Point(3, 415);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(150, 32);
+            this.btn_Back.TabIndex = 19;
+            this.btn_Back.Text = "          Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            // 
+            // listView1
             // dgv_Disk
             // 
             this.dgv_Disk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -256,6 +274,19 @@
             this.btn_IMG_delete_PhiMoi.TabStop = false;
             this.btn_IMG_delete_PhiMoi.Zoom = 10;
             // 
+            // btn_IMG_delete_PhiMoi
+            // 
+            this.btn_IMG_delete_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_IMG_delete_PhiMoi.BackColor = System.Drawing.Color.White;
+            this.btn_IMG_delete_PhiMoi.ImageActive = null;
+            this.btn_IMG_delete_PhiMoi.Location = new System.Drawing.Point(219, 298);
+            this.btn_IMG_delete_PhiMoi.Name = "btn_IMG_delete_PhiMoi";
+            this.btn_IMG_delete_PhiMoi.Size = new System.Drawing.Size(30, 30);
+            this.btn_IMG_delete_PhiMoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_IMG_delete_PhiMoi.TabIndex = 12;
+            this.btn_IMG_delete_PhiMoi.TabStop = false;
+            this.btn_IMG_delete_PhiMoi.Zoom = 10;
+            // 
             // btn_IMG_Delete_PhiTre
             // 
             this.btn_IMG_Delete_PhiTre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -274,6 +305,8 @@
             // 
             this.btn_IMG_menu_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_IMG_menu_PhiMoi.BackColor = System.Drawing.Color.White;
+            this.btn_IMG_menu_PhiMoi.ImageActive = null;
+            this.btn_IMG_menu_PhiMoi.Location = new System.Drawing.Point(183, 298);
             this.btn_IMG_menu_PhiMoi.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.list_24px;
             this.btn_IMG_menu_PhiMoi.ImageActive = null;
             this.btn_IMG_menu_PhiMoi.Location = new System.Drawing.Point(190, 257);
@@ -298,6 +331,7 @@
             this.btn_IMG_menu_PhiTre.TabIndex = 13;
             this.btn_IMG_menu_PhiTre.TabStop = false;
             this.btn_IMG_menu_PhiTre.Zoom = 10;
+            this.btn_IMG_menu_PhiTre.Click += new System.EventHandler(this.btn_IMG_menu_PhiTre_Click);
             this.btn_IMG_menu_PhiTre.Click += new System.EventHandler(this.btn_IMG_menu_PhiTre_Click_1);
             // 
             // lb_CustomerName
@@ -321,6 +355,30 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 20);
             this.label4.TabIndex = 7;
+            this.label4.Text = "Tổng";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Phí thuê mới";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 272);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Phí trễ";
+            
             this.label4.Text = "Tổng tiền";
             // 
             // label5
