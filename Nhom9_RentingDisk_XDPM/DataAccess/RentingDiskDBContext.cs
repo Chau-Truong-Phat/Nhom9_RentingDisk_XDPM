@@ -13,6 +13,7 @@ namespace DataAccess
         public RentingDiskDBContext() : base("DBConnectionString")
         {
             Configuration.LazyLoadingEnabled = true;
+            Configuration.ProxyCreationEnabled = true;
         }
 
         public DbSet<Customer> Customers { get; set; }

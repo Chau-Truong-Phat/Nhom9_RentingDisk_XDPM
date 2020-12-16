@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business;
+using Business.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +12,43 @@ using System.Windows.Forms;
 
 namespace Nhom9_RentingDisk_XDPM
 {
-    public partial class ReportCustomerForm : Form
+    public partial class ReportTitleForm : Form
     {
-        public ReportCustomerForm()
+        private readonly TitleBLL titleBLL;
+
+        private List<TitleReportModel> currentTitleList;
+        public ReportTitleForm()
         {
+            titleBLL = new TitleBLL();
             InitializeComponent();
+            Dock = DockStyle.Fill;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ReportTitleForm_Load(object sender, EventArgs e)
+        {
+            var titles = titleBLL.GetTitleReport();
+            currentTitleList = titles;
+            titleReportModelBindingSource.DataSource = titles;
+        }
+
+        private void btn_TimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            var searchText = txt_TimKiem.Text.ToLower();
+            if (currentTitleList != null)
+            {
+                if (string.IsNullOrEmpty(searchText.Trim()))
+                {
+                    titleReportModelBindingSource.DataSource = currentTitleList;
+                    return;
+                }
+                var searchResult = currentTitleList.Where(cus => cus.TieuDe.ToLower().Contains(searchText)).ToList();
+                titleReportModelBindingSource.DataSource = searchResult;
+            }
         }
     }
 }

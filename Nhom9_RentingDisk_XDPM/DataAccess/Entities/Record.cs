@@ -20,7 +20,7 @@ namespace DataAccess.Entities
         public int idCustomer { get; set; }
         //[Key]
         //[Column(Order = 3)]
-        public string? idDisk { get; set; }
+        public string idDisk { get; set; }
 
         public DateTime? rentDate { get; set; }
         public DateTime? dueDate { get; set; }
