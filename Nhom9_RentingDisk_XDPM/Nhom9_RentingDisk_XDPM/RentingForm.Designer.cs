@@ -30,27 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RentingForm));
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
             this.btn_Back = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-=======
             this.dgv_Disk = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txt_searchDisk = new MaterialSkin.Controls.MaterialSingleLineTextField();
->>>>>>> remotes/origin/linh_20201209
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_Back = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-            this.bunifuCustomTextbox3 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-=======
             this.btnSearchCustomer = new System.Windows.Forms.Button();
             this.lb_TotalCharge = new System.Windows.Forms.Label();
             this.pnl_nameCustomer = new System.Windows.Forms.Panel();
             this.pnl_numberPhone = new System.Windows.Forms.Panel();
             this.txt_CustomerName = new System.Windows.Forms.TextBox();
             this.txt_CustomerID = new System.Windows.Forms.TextBox();
->>>>>>> remotes/origin/linh_20201209
             this.btn_IMG_delete_PhiMoi = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_IMG_Delete_PhiTre = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_IMG_menu_PhiMoi = new Bunifu.Framework.UI.BunifuImageButton();
@@ -59,14 +51,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_TraHang = new Bunifu.Framework.UI.BunifuTileButton();
-=======
             this.lb_CustomerID = new System.Windows.Forms.Label();
             this.btn_rentDisk = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel3 = new System.Windows.Forms.Panel();
->>>>>>> remotes/origin/linh_20201209
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Disk)).BeginInit();
             this.panel4.SuspendLayout();
@@ -91,7 +78,6 @@
             this.panel1.Size = new System.Drawing.Size(539, 450);
             this.panel1.TabIndex = 2;
             // 
-<<<<<<< HEAD
             // btn_Back
             // 
             this.btn_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -100,7 +86,6 @@
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Back.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Back;
             this.btn_Back.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Back.Location = new System.Drawing.Point(3, 415);
             this.btn_Back.Name = "btn_Back";
@@ -110,7 +95,6 @@
             this.btn_Back.UseVisualStyleBackColor = true;
             // 
             // listView1
-=======
             // dgv_Disk
             // 
             this.dgv_Disk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -120,7 +104,6 @@
             this.dgv_Disk.Size = new System.Drawing.Size(539, 412);
             this.dgv_Disk.TabIndex = 23;
             this.dgv_Disk.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Disk_CellClick);
->>>>>>> remotes/origin/linh_20201209
             // 
             // panel4
             // 
@@ -295,7 +278,6 @@
             // 
             this.btn_IMG_delete_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_IMG_delete_PhiMoi.BackColor = System.Drawing.Color.White;
-            this.btn_IMG_delete_PhiMoi.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.delete;
             this.btn_IMG_delete_PhiMoi.ImageActive = null;
             this.btn_IMG_delete_PhiMoi.Location = new System.Drawing.Point(219, 298);
             this.btn_IMG_delete_PhiMoi.Name = "btn_IMG_delete_PhiMoi";
@@ -323,25 +305,18 @@
             // 
             this.btn_IMG_menu_PhiMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_IMG_menu_PhiMoi.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.btn_IMG_menu_PhiMoi.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.Menu;
             this.btn_IMG_menu_PhiMoi.ImageActive = null;
             this.btn_IMG_menu_PhiMoi.Location = new System.Drawing.Point(183, 298);
-=======
             this.btn_IMG_menu_PhiMoi.Image = global::Nhom9_RentingDisk_XDPM.Properties.Resources.list_24px;
             this.btn_IMG_menu_PhiMoi.ImageActive = null;
             this.btn_IMG_menu_PhiMoi.Location = new System.Drawing.Point(190, 257);
->>>>>>> remotes/origin/linh_20201209
             this.btn_IMG_menu_PhiMoi.Name = "btn_IMG_menu_PhiMoi";
             this.btn_IMG_menu_PhiMoi.Size = new System.Drawing.Size(30, 30);
             this.btn_IMG_menu_PhiMoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_IMG_menu_PhiMoi.TabIndex = 13;
             this.btn_IMG_menu_PhiMoi.TabStop = false;
             this.btn_IMG_menu_PhiMoi.Zoom = 10;
-<<<<<<< HEAD
-=======
             this.btn_IMG_menu_PhiMoi.Click += new System.EventHandler(this.btn_IMG_menu_PhiMoi_Click_1);
->>>>>>> remotes/origin/linh_20201209
             // 
             // btn_IMG_menu_PhiTre
             // 
@@ -356,11 +331,8 @@
             this.btn_IMG_menu_PhiTre.TabIndex = 13;
             this.btn_IMG_menu_PhiTre.TabStop = false;
             this.btn_IMG_menu_PhiTre.Zoom = 10;
-<<<<<<< HEAD
             this.btn_IMG_menu_PhiTre.Click += new System.EventHandler(this.btn_IMG_menu_PhiTre_Click);
-=======
             this.btn_IMG_menu_PhiTre.Click += new System.EventHandler(this.btn_IMG_menu_PhiTre_Click_1);
->>>>>>> remotes/origin/linh_20201209
             // 
             // lb_CustomerName
             // 
@@ -383,7 +355,6 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 20);
             this.label4.TabIndex = 7;
-<<<<<<< HEAD
             this.label4.Text = "Tổng";
             // 
             // label5
@@ -407,39 +378,7 @@
             this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Phí trễ";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Số điện thoại";
-            // 
-            // btn_TraHang
-            // 
-            this.btn_TraHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_TraHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_TraHang.color = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_TraHang.colorActive = System.Drawing.Color.Blue;
-            this.btn_TraHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TraHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TraHang.ForeColor = System.Drawing.Color.White;
-            this.btn_TraHang.Image = null;
-            this.btn_TraHang.ImagePosition = 20;
-            this.btn_TraHang.ImageZoom = 50;
-            this.btn_TraHang.LabelPosition = 35;
-            this.btn_TraHang.LabelText = "Trả hàng";
-            this.btn_TraHang.Location = new System.Drawing.Point(7, 393);
-            this.btn_TraHang.Margin = new System.Windows.Forms.Padding(6);
-            this.btn_TraHang.Name = "btn_TraHang";
-            this.btn_TraHang.Size = new System.Drawing.Size(242, 46);
-            this.btn_TraHang.TabIndex = 5;
-            // 
-=======
+            
             this.label4.Text = "Tổng tiền";
             // 
             // label5
@@ -505,7 +444,6 @@
             this.panel3.Size = new System.Drawing.Size(2, 450);
             this.panel3.TabIndex = 4;
             // 
->>>>>>> remotes/origin/linh_20201209
             // RentingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

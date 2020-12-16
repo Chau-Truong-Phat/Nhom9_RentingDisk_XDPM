@@ -35,6 +35,8 @@ namespace Nhom9_RentingDisk_XDPM
             customer = new Customer();
             records = new List<Record>();
             title = new Title();
+
+         
         }
         private void CreateDataGridView()
         {
@@ -104,13 +106,14 @@ namespace Nhom9_RentingDisk_XDPM
         private void txt_searchDiskReturn_Click(object sender, EventArgs e)
         {
             pnl_searchItemReturn.BackColor = Color.FromArgb(20, 173, 196);
+            txt_searchDiskReturn.Clear();
         }
 
         private void txt_numberPhone_TextChanged(object sender, EventArgs e)
         {
-            if (txt_numberPhone.Text != null)
+            if (txt_numberPhone.Text != "")
             {
-                customer = _customerBLL.searchCustomerbyPhone(txt_numberPhone.Text.Trim());
+                customer = _customerBLL.searchCustomerbyId(Convert.ToInt32(txt_numberPhone.Text.Trim()));
                 if (customer != null)
                 {
                     txt_nameCustomer.Text = customer.name;
@@ -124,7 +127,7 @@ namespace Nhom9_RentingDisk_XDPM
                             //title = _titleBLL.GetItemTitleById(item.idTitle);
                             if (item.idDisk != null && item.dueDate != null && item.rentDate != null)
                             {
-                                dgv_listItem.Rows.Add(i.ToString(), item.idDisk.ToString(), title.name,item.rentDate.ToString(), item.dueDate.ToString());
+                                dgv_listItem.Rows.Add(i.ToString(), item.idDisk.ToString(), item.lateFee,item.rentDate.ToString(), item.dueDate.ToString());
                             }
                             i++;
                         }
@@ -170,5 +173,18 @@ namespace Nhom9_RentingDisk_XDPM
         {
             OpenFormLateCharge();
         }
+        int i = 0;
+        private void txt_searchDiskReturn_TextChanged(object sender, EventArgs e)
+        {
+            Record disk = new Record();
+            disk = _recordBLL.GetDiskById(txt_searchDiskReturn.Text.Trim());
+            if (disk != null)
+            {
+                i += 1;
+                CreateDataGridView();
+                dgv_listItem.Rows.Add(i.ToString(), disk.idDisk.ToString(), disk.lateFee, disk.rentDate.ToString(), disk.dueDate.ToString());
+            }
+        }
+
     }
 }

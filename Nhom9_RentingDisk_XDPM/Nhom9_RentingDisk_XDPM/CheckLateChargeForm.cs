@@ -37,7 +37,7 @@ namespace Nhom9_RentingDisk_XDPM
             recordUnPaid = new List<Record>();
             recordPaid = new List<Record>();
             title = new Title();
-            lbl_lateFee.Text = tong.ToString() + "$";
+            lbl_lateFee.Text = tong.ToString() + " VND";
 
         }
         public CheckLateChargeForm(string idCustomer)
@@ -53,8 +53,8 @@ namespace Nhom9_RentingDisk_XDPM
             recordPaid = new List<Record>();
 
             _sendReturn = idCustomer;
-            txt_numberPhone.Text = _sendReturn;
-            lbl_lateFee.Text = tong.ToString() + "$";
+            txt_numberPhone.Text = _sendReturn; 
+            lbl_lateFee.Text = tong.ToString() + " VND";
 
         }
         private void CreateDataGridView()
@@ -95,10 +95,8 @@ namespace Nhom9_RentingDisk_XDPM
                 i++;
             }
             tong = (i - 1) * 1;
-            lbl_lateFee.Text = tong.ToString() + "$";
+            lbl_lateFee.Text = tong.ToString() + " VND";
         }
-    //    string FormatDate(this DateTime? dt, string format)
-    //=> dt == null ? "n/a" : ((DateTime)dt).ToString(format);
         private void txt_numberPhone_TextChanged(object sender, EventArgs e)
         {
             if (txt_numberPhone.Text != null)
@@ -138,7 +136,7 @@ namespace Nhom9_RentingDisk_XDPM
                 if (Convert.ToBoolean(row.Cells["Cancel"].Value))
                 {
                     tong += 1;
-                    lbl_lateFee.Text = tong.ToString() + "$";
+                    lbl_lateFee.Text = tong.ToString() + " VND";
                     record.idDisk = row.Cells[1].Value.ToString();
                     record.idCustomer = 0;
                     //record.idTitle = "000";
@@ -151,7 +149,7 @@ namespace Nhom9_RentingDisk_XDPM
                 else
                 {
                     tong -= 1;
-                    lbl_lateFee.Text = tong.ToString() + "$";
+                    lbl_lateFee.Text = tong.ToString() + " VND";
                     for (int item=0; item< recordPaid.Count;item++)
                     {
                         if (row.Cells[1].Value.ToString() == recordPaid[item].idDisk)
