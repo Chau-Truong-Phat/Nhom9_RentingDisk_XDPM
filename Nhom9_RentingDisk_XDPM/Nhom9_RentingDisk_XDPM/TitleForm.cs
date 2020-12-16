@@ -31,7 +31,21 @@ namespace Nhom9_RentingDisk_XDPM
 
             CreateDataGridViewTitle();
             CreateDataGridViewDisk();
-            
+            //Thêm đĩa
+            //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //dgv_title.Columns.Add(btn);
+            //btn.HeaderText = "Thêm đĩa";
+            //btn.Name = "btn_addDisk";
+            //btn.Text = "thêm";
+            //btn.UseColumnTextForButtonValue = true;
+            // xóa đĩa 
+            DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
+            dgv_disk.Columns.Add(btn2);
+            btn2.HeaderText = "Xóa đĩa";
+            btn2.Text = "Xóa";
+            btn2.Name = "btn_deteleDisk";
+            btn2.UseColumnTextForButtonValue = true;
+
         }
         private void CreateDataGridViewTitle()
         {
@@ -125,10 +139,12 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void dgv_title_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
+            
             if (dgv_title.SelectedRows.Count > 0 && dgv_title.SelectedRows[0].Cells[0].Value != null)
             {
                string id = dgv_title.SelectedRows[0].Cells[0].Value.ToString();
                DiskCreateDataGridView(id);
+               FillTextBox();
             }    
         }
         private void ClearTXT()
@@ -150,8 +166,15 @@ namespace Nhom9_RentingDisk_XDPM
             bindingSource.DataSource = titleBLL.GetListTitleByID(id);
             dgv_title.DataSource = bindingSource;
             CustomDataGridViewTitle();
-        }    
+        }
+        private void FillTextBox()
+        {
+            txt_addDiskID.DataBindings.Clear();
+            txt_addDiskName.DataBindings.Clear();
 
+            txt_addDiskID.DataBindings.Add("Text", bindingSource, "idTitle");
+            txt_addDiskName.DataBindings.Add("Text", bindingSource, "name");
+        }
         private void btn_add_title_Click(object sender, EventArgs e)
         {
             int typeTT = 1;
@@ -184,6 +207,52 @@ namespace Nhom9_RentingDisk_XDPM
         private void materialLabel7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgv_disk_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                DialogResult dr = MessageBox.Show("Bạn muốn XÓA đĩa này", "Xác Nhận Xóa ?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                var csID = dgv_disk.Rows[e.RowIndex].Cells["idDisk"].Value.ToString().Trim();
+                if (dr == DialogResult.Yes && csID != null)
+                {
+                    dgv_disk.Rows.RemoveAt(dgv_disk.Rows[e.RowIndex].Index);
+                    diskBLL.delete(csID);
+                }
+                else
+                {
+                    return;
+                }
+            }    
+        }
+
+        private void btn_addDisk_Click(object sender, EventArgs e)
+        {
+            if(txt_addDiskID.Text == "" || txt_addDiskName.Text == "")
+            {
+                MessageBox.Show("Bạn chưa chọn tiêu đề");
+                return;
+            }    
+            Disk disk = new Disk()
+            {
+                idDisk = "200" + txt_addDiskID.Text.ToString().Trim(),
+                name = txt_addDiskID.Text.ToString().Trim() + " - " + txt_addDiskName.Text.ToString().Trim(),
+                status = DataAccess.Entities.Enum.Status.OnShelf,
+                idTitle = txt_addDiskID.Text.ToString().Trim(),
+            };
+            Result result = null;
+            var taskCreate = Task.Factory.StartNew(() => result = diskBLL.add(disk));
+            taskCreate.Wait();
+
+            if (result.isSuccess)
+            {
+                MessageBox.Show(result.message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                MessageBox.Show(result.message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
     }
 }

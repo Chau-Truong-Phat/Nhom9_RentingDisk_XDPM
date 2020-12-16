@@ -36,6 +36,7 @@ namespace Nhom9_RentingDisk_XDPM
             dataGridView_customer.Columns["birthDate"].HeaderText = "Ngày sinh";
             // ẩn bảng phụ
             dataGridView_customer.Columns["Records"].Visible = false;
+            dataGridView_customer.Columns["Holdings"].Visible = false;
             // set chiều dài
             dataGridView_customer.Columns["idCustomer"].Width = 120;
             dataGridView_customer.Columns["name"].Width = 140;
@@ -116,6 +117,11 @@ namespace Nhom9_RentingDisk_XDPM
 
         private void btn_addCustomer_Click(object sender, EventArgs e)
         {
+            if(txt_customerName.Text == "" || txt_numberPhone.Text == "")
+            {
+                MessageBox.Show("Hãy nhập tên và số điện thoại");
+                return;
+            }    
             DialogResult dr = MessageBox.Show("Xác nhận thêm Khách Hàng này.\nXác Nhận ?", "Không", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dr == DialogResult.Yes)

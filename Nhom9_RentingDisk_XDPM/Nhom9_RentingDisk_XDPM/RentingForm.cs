@@ -98,7 +98,7 @@ namespace Nhom9_RentingDisk_XDPM
         private void RentingForm_Load(object sender, EventArgs e)
         {
             DataBindings.Clear();
-            CreateDataGridView("");
+            CreateDataGridView("1");
             CreateButtonDataGridView();
             btn_rentDisk.Enabled = false;
         }

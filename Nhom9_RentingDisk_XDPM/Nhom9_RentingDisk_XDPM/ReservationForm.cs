@@ -1,4 +1,5 @@
 ﻿using Business;
+using Business.Models;
 using DataAccess.DTO;
 using DataAccess.Entities;
 using System;
@@ -55,20 +56,22 @@ namespace Nhom9_RentingDisk_XDPM
             btn2.UseColumnTextForButtonValue = true;
 
         }
+        
         private void CreateDataGridView()
         {
-            bindingSource.DataSource = holdingBLL.GetAllHoding().Reverse<Holding>();
+            //Đổ dữ liệu
+            bindingSource.DataSource = holdingBLL.GetReservationHoldings().Reverse<ReservationHolding>();
             dgv_Reservation.DataSource = bindingSource;
-
+            // setup DataGrid
             dgv_Reservation.MultiSelect = false;
             dgv_Reservation.ReadOnly = true;
             dgv_Reservation.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            //dataGridView_customer.Columns["idCustomer"].Visible = false;
-            ////dataGridView_customer.Columns["Orders"].Visible = false;
             dgv_Reservation.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_Reservation.ClearSelection();
             dgv_Reservation.Rows[0].Selected = false;
+            // Đổi tên column
             
+
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
@@ -155,8 +158,7 @@ namespace Nhom9_RentingDisk_XDPM
                 if (result.isSuccess)
                 {
                     MessageBox.Show(result.message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    bindingSource.DataSource = holdingBLL.GetAllHoding().Reverse<Holding>();
-                    dgv_Reservation.DataSource = bindingSource;
+                    CreateDataGridView();
                 }
                 else
                 {
@@ -176,7 +178,7 @@ namespace Nhom9_RentingDisk_XDPM
             if(e.ColumnIndex == 0)
             {
                 DialogResult dr = MessageBox.Show("Bạn muốn HỦY đơn đặt hàng này .\nXác Nhận Hủy ?", "Hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                var csID = dgv_Reservation.Rows[e.RowIndex].Cells["idHolding"].Value.ToString().Trim();
+                var csID = dgv_Reservation.Rows[e.RowIndex].Cells["maDatHang"].Value.ToString().Trim();
                 if (dr == DialogResult.Yes && csID != null)
                 {
                     dgv_Reservation.Rows.RemoveAt(dgv_Reservation.Rows[e.RowIndex].Index);
@@ -190,8 +192,8 @@ namespace Nhom9_RentingDisk_XDPM
             else if (e.ColumnIndex == 1)
             {
                 DialogResult dr = MessageBox.Show("Xác nhận thuê đĩa này ?", "Thuê đĩa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                var csID = dgv_Reservation.Rows[e.RowIndex].Cells["idHolding"].Value.ToString().Trim();
-                var titleID = dgv_Reservation.Rows[e.RowIndex].Cells["idTitle"].Value.ToString().Trim();
+                var csID = dgv_Reservation.Rows[e.RowIndex].Cells["maDatHang"].Value.ToString().Trim();
+                var titleID = dgv_Reservation.Rows[e.RowIndex].Cells["maTieuDe"].Value.ToString().Trim();
 
                 if(titleID == null)
                 {
@@ -204,7 +206,7 @@ namespace Nhom9_RentingDisk_XDPM
                     return;
                 }    
                 var diskID = diskBLL.GetONEDiskByIDtitle(titleID).idDisk;
-                var cusID = dgv_Reservation.Rows[e.RowIndex].Cells["idCustomer"].Value.ToString().Trim();
+                var cusID = dgv_Reservation.Rows[e.RowIndex].Cells["maKhachHang"].Value.ToString().Trim();
                 if (dr == DialogResult.Yes && csID != null  && diskID != null && cusID != null)
                 {
                     Record record = new Record()
